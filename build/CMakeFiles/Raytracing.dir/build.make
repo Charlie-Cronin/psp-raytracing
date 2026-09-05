@@ -72,31 +72,31 @@ include CMakeFiles/Raytracing.dir/flags.make
 CMakeFiles/Raytracing.dir/codegen:
 .PHONY : CMakeFiles/Raytracing.dir/codegen
 
-CMakeFiles/Raytracing.dir/main.c.obj: CMakeFiles/Raytracing.dir/flags.make
-CMakeFiles/Raytracing.dir/main.c.obj: /home/c-cronin/Documents/GitHub/psp-raytracing/main.c
-CMakeFiles/Raytracing.dir/main.c.obj: CMakeFiles/Raytracing.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/c-cronin/Documents/GitHub/psp-raytracing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/Raytracing.dir/main.c.obj"
-	/home/c-cronin/pspdev/bin/psp-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Raytracing.dir/main.c.obj -MF CMakeFiles/Raytracing.dir/main.c.obj.d -o CMakeFiles/Raytracing.dir/main.c.obj -c /home/c-cronin/Documents/GitHub/psp-raytracing/main.c
+CMakeFiles/Raytracing.dir/main.cpp.obj: CMakeFiles/Raytracing.dir/flags.make
+CMakeFiles/Raytracing.dir/main.cpp.obj: /home/c-cronin/Documents/GitHub/psp-raytracing/main.cpp
+CMakeFiles/Raytracing.dir/main.cpp.obj: CMakeFiles/Raytracing.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/c-cronin/Documents/GitHub/psp-raytracing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Raytracing.dir/main.cpp.obj"
+	/home/c-cronin/pspdev/bin/psp-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Raytracing.dir/main.cpp.obj -MF CMakeFiles/Raytracing.dir/main.cpp.obj.d -o CMakeFiles/Raytracing.dir/main.cpp.obj -c /home/c-cronin/Documents/GitHub/psp-raytracing/main.cpp
 
-CMakeFiles/Raytracing.dir/main.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/Raytracing.dir/main.c.i"
-	/home/c-cronin/pspdev/bin/psp-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/c-cronin/Documents/GitHub/psp-raytracing/main.c > CMakeFiles/Raytracing.dir/main.c.i
+CMakeFiles/Raytracing.dir/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Raytracing.dir/main.cpp.i"
+	/home/c-cronin/pspdev/bin/psp-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/c-cronin/Documents/GitHub/psp-raytracing/main.cpp > CMakeFiles/Raytracing.dir/main.cpp.i
 
-CMakeFiles/Raytracing.dir/main.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/Raytracing.dir/main.c.s"
-	/home/c-cronin/pspdev/bin/psp-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/c-cronin/Documents/GitHub/psp-raytracing/main.c -o CMakeFiles/Raytracing.dir/main.c.s
+CMakeFiles/Raytracing.dir/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Raytracing.dir/main.cpp.s"
+	/home/c-cronin/pspdev/bin/psp-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/c-cronin/Documents/GitHub/psp-raytracing/main.cpp -o CMakeFiles/Raytracing.dir/main.cpp.s
 
 # Object files for target Raytracing
 Raytracing_OBJECTS = \
-"CMakeFiles/Raytracing.dir/main.c.obj"
+"CMakeFiles/Raytracing.dir/main.cpp.obj"
 
 # External object files for target Raytracing
 Raytracing_EXTERNAL_OBJECTS =
 
-Raytracing: CMakeFiles/Raytracing.dir/main.c.obj
+Raytracing: CMakeFiles/Raytracing.dir/main.cpp.obj
 Raytracing: CMakeFiles/Raytracing.dir/build.make
 Raytracing: CMakeFiles/Raytracing.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/c-cronin/Documents/GitHub/psp-raytracing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable Raytracing"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/c-cronin/Documents/GitHub/psp-raytracing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable Raytracing"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Raytracing.dir/link.txt --verbose=$(VERBOSE)
 	/usr/bin/cmake -E cmake_echo_color --cyan Not\ stripping\ binary\ for\ target\ Raytracing,\ build\ type\ is\ .
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Calling psp-fixup-imports for target Raytracing"

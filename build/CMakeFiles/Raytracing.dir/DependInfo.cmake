@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/c-cronin/Documents/GitHub/psp-raytracing/main.c" "CMakeFiles/Raytracing.dir/main.c.obj" "gcc" "CMakeFiles/Raytracing.dir/main.c.obj.d"
+  "/home/c-cronin/Documents/GitHub/psp-raytracing/main.cpp" "CMakeFiles/Raytracing.dir/main.cpp.obj" "gcc" "CMakeFiles/Raytracing.dir/main.cpp.obj.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

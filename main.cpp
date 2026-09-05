@@ -3,11 +3,15 @@
 #include <pspdisplay.h>
 #include <pspgu.h>
 
+#include "color.h"
+#include "vec3.h"
+#include "ray.h"
+
 // PSP_MODULE_INFO IS REQUIRED 
 // name attributes major version minor version
-PSP_MODULE_INFO("Raytracing-In-One-Weekend", 0, 1, 0);
+PSP_MODULE_INFO("Raytracing", 0, 1, 0);
 // starts the thread in user mode
-PSP_MAIN_THREAD_ATTR(PSP_THREAD_ATTR_USER);
+PSP_MAIN_THREAD_ATTR(THREAD_ATTR_VFPU | THREAD_ATTR_USER);
 
 #define BUFFER_WIDTH 512 //same width as vram
 #define BUFFER_HEIGHT 272
@@ -15,8 +19,11 @@ PSP_MAIN_THREAD_ATTR(PSP_THREAD_ATTR_USER);
 #define SCREEN_HEIGHT BUFFER_HEIGHT
 
 // render scale (later move to camera.h when done)
-#define IMAGE_WIDTH 256
-#define IMAGE_HEIGHT 128
+//#define IMAGE_WIDTH 256
+//#define IMAGE_HEIGHT 128
+
+#define IMAGE_WIDTH 512
+#define IMAGE_HEIGHT 256
 
 // display list
 char list[0x20000] __attribute__((aligned(64)));
@@ -87,21 +94,73 @@ void endGu(){
     sceGuTerm();
 }
 
+
+float hit_sphere(const point3& center, float radius, const ray& r){
+    vec3 oc = center - r.origin();
+    auto a = r.direction().length_squared();
+    auto h = dot(r.direction(), oc);
+    auto c = oc.length_squared() - radius * radius;
+    auto discriminant = h*h - a*c;
+
+    if (discriminant <= 0){
+        return -1.0f;
+    }else{
+        return (h - std::sqrt(discriminant))/(a);
+    }
+
+    
+}
+
+
+color ray_color(const ray& r){
+    auto t = hit_sphere(point3(0,0,-1),0.5f,r);
+    if (t > 0.0){
+        vec3 N = unit_vector(r.at(t) - vec3(0,0,-1));
+        return 0.5*color(N.x()+1, N.y()+1, N.z()+1);
+    }
+
+    vec3 unit_direction = unit_vector(r.direction());
+    auto a = 0.5*(unit_direction.y()+ 1.0);
+    return (1.0-a)*color(1.0,1.0,1.0) + a*color(0.5,0.7,1.0);
+}
+
+
+
+
+
+
+
 void render(){
+    int img_height = IMAGE_HEIGHT;
+
+
+    float focal_length = 1.0f;
+    float viewport_height = 2.0;
+    float viewport_width = viewport_height * ((float)(IMAGE_WIDTH)/IMAGE_HEIGHT);
+    auto camera_centre = point3(0,0,0);
+
+    auto viewport_u = vec3(viewport_width,0,0);
+    auto viewport_v = vec3(0, -viewport_height, 0);
+
+    auto pixel_delta_u = viewport_u / IMAGE_WIDTH;
+    auto pixel_delta_v = viewport_v / IMAGE_HEIGHT;
+
+    auto viewport_upper_left = camera_centre - vec3(0,0,focal_length) - viewport_u/2 - viewport_v/2;
+    auto pixel00_loc = viewport_upper_left + 0.5 * (pixel_delta_u + pixel_delta_v);
+
     for (int j = 0; j < IMAGE_HEIGHT; j++){
+        std::string msg = "Rendering Scene...\n" + std::to_string(j) + "/" + std::to_string(IMAGE_HEIGHT) + " lines done";
+        pspDebugScreenSetXY(0, 0);
+        pspDebugScreenPrintf("%s\n", msg.c_str());
         for (int i = 0; i < IMAGE_WIDTH; i++){
-            // main loop
-            float r = (float)i / (IMAGE_WIDTH-1);
-            float g = (float)j / (IMAGE_HEIGHT-1);
-            float b = 0.0f;
+            auto pixel_centre = pixel00_loc + (i * pixel_delta_u) + (j * pixel_delta_v);
+            auto ray_direction = pixel_centre - camera_centre;
 
-            int ir = (int)(255.999f * r);
-            int ig = (int)(255.999f * g);
-            int ib = (int)(255.999f * b);
+            ray r(camera_centre,ray_direction);
 
-            // create an array IMAGE_WIDTH pixels long for each j value
-            //ARGB
-            image[j*IMAGE_WIDTH+i] = (0xFF << 24) | (ib << 16) | (ig << 8) | ir;
+            color pixel_color = ray_color(r);
+
+            image[j*IMAGE_WIDTH+i] = write_color(pixel_color);
         }
     }
 
@@ -142,10 +201,15 @@ void drawToScreen(){
 int main(void){
     // use above functions to make exiting possible
     setup_callbacks();
-    initGu();
+    pspDebugScreenInit();
+    pspDebugScreenSetXY(0,0);
+    pspDebugScreenPrintf("Rendering Scene...\n");
+
 
     // render before main loop so the raytracing doesnt occur every frame
     render();
+
+    initGu();
 
     running = 1;
     while(running) {

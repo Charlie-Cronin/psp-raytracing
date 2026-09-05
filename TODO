@@ -1,0 +1,3 @@
+create an option menu on start so you can select different scenes 
+make scene for uv (color(float(i)/(IMAGE_WIDTH-1),float(j)/(IMAGE_HEIGHT-1),0.0f);)
+use the debug text (https://pspdev.github.io/basic_programs.html - hello world) to display current render progress
