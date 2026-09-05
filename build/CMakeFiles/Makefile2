@@ -63,11 +63,11 @@ CMAKE_BINARY_DIR = /home/c-cronin/Documents/GitHub/psp-raytracing/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/hello.dir/all
+all: CMakeFiles/Raytracing.dir/all
 .PHONY : all
 
 # The main recursive "codegen" target.
-codegen: CMakeFiles/hello.dir/codegen
+codegen: CMakeFiles/Raytracing.dir/codegen
 .PHONY : codegen
 
 # The main recursive "preinstall" target.
@@ -75,40 +75,40 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/hello.dir/clean
+clean: CMakeFiles/Raytracing.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/hello.dir
+# Target rules for target CMakeFiles/Raytracing.dir
 
 # All Build rule for target.
-CMakeFiles/hello.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/c-cronin/Documents/GitHub/psp-raytracing/build/CMakeFiles --progress-num=1,2 "Built target hello"
-.PHONY : CMakeFiles/hello.dir/all
+CMakeFiles/Raytracing.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Raytracing.dir/build.make CMakeFiles/Raytracing.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Raytracing.dir/build.make CMakeFiles/Raytracing.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/c-cronin/Documents/GitHub/psp-raytracing/build/CMakeFiles --progress-num=1,2 "Built target Raytracing"
+.PHONY : CMakeFiles/Raytracing.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/hello.dir/rule: cmake_check_build_system
+CMakeFiles/Raytracing.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/c-cronin/Documents/GitHub/psp-raytracing/build/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/hello.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/Raytracing.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/c-cronin/Documents/GitHub/psp-raytracing/build/CMakeFiles 0
-.PHONY : CMakeFiles/hello.dir/rule
+.PHONY : CMakeFiles/Raytracing.dir/rule
 
 # Convenience name for target.
-hello: CMakeFiles/hello.dir/rule
-.PHONY : hello
+Raytracing: CMakeFiles/Raytracing.dir/rule
+.PHONY : Raytracing
 
 # codegen rule for target.
-CMakeFiles/hello.dir/codegen:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/c-cronin/Documents/GitHub/psp-raytracing/build/CMakeFiles --progress-num=1,2 "Finished codegen for target hello"
-.PHONY : CMakeFiles/hello.dir/codegen
+CMakeFiles/Raytracing.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Raytracing.dir/build.make CMakeFiles/Raytracing.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/c-cronin/Documents/GitHub/psp-raytracing/build/CMakeFiles --progress-num=1,2 "Finished codegen for target Raytracing"
+.PHONY : CMakeFiles/Raytracing.dir/codegen
 
 # clean rule for target.
-CMakeFiles/hello.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/clean
-.PHONY : CMakeFiles/hello.dir/clean
+CMakeFiles/Raytracing.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Raytracing.dir/build.make CMakeFiles/Raytracing.dir/clean
+.PHONY : CMakeFiles/Raytracing.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

@@ -1,0 +1,1 @@
+/home/c-cronin/pspdev/bin/psp-gcc -I/home/c-cronin/pspdev/psp/include -I/home/c-cronin/pspdev/psp/sdk/include -DPSP -L/home/c-cronin/pspdev/lib -L/home/c-cronin/pspdev/psp/lib -L/home/c-cronin/pspdev/psp/sdk/lib -Wl,-zmax-page-size=128 CMakeFiles/Raytracing.dir/main.c.obj -o Raytracing  -lpspdebug -lpspdisplay -lpspge -lpspgu
