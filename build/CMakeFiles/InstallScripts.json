@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/c-cronin/Documents/GitHub/psp-raytracing/build/cmake_install.cmake"
+	],
+	"Parallel" : false
+}
