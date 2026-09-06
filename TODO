@@ -1,3 +1,15 @@
 create an option menu on start so you can select different scenes 
 make scene for uv (color(float(i)/(IMAGE_WIDTH-1),float(j)/(IMAGE_HEIGHT-1),0.0f);)
 use the debug text (https://pspdev.github.io/basic_programs.html - hello world) to display current render progress
+
+
+auto material_ground = make_shared<lambertian>(color(0.8f, 0.8f, 0.0f));
+    auto material_center = make_shared<lambertian>(color(0.1f, 0.2f, 0.5f));
+    auto material_left = make_shared<metal>(color(0.8f, 0.8f, 0.8f));
+    auto material_right = make_shared<metal>(color(0.8f, 0.6f, 0.2f));
+
+    //world definitions
+    world.add(make_shared<sphere>(point3( 0, -100.5f,   -1.0f),   100,     material_ground));
+    world.add(make_shared<sphere>(point3( 0,       0,   -1.2f),   0.5f,     material_center));
+    world.add(make_shared<sphere>(point3(-1,       0,   -1.0f),   0.5f,     material_left));
+    world.add(make_shared<sphere>(point3( 1,       0,   -1.0f),   0.5f,     material_right));

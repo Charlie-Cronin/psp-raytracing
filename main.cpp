@@ -5,6 +5,7 @@
 
 #include "rtweekend.h"
 
+#include "material.h"
 #include "hittable.h"
 #include "hittable_list.h"
 #include "sphere.h"
@@ -16,7 +17,8 @@ PSP_MODULE_INFO("Raytracing", 0, 1, 0);
 // starts the thread in user mode
 PSP_MAIN_THREAD_ATTR(THREAD_ATTR_VFPU | THREAD_ATTR_USER);
 
-#define BUFFER_WIDTH 512 //same width as vram
+//#define BUFFER_WIDTH 512 //same width as vram
+#define BUFFER_WIDTH 512 
 #define BUFFER_HEIGHT 272
 #define SCREEN_WIDTH 480
 #define SCREEN_HEIGHT BUFFER_HEIGHT
@@ -25,17 +27,21 @@ PSP_MAIN_THREAD_ATTR(THREAD_ATTR_VFPU | THREAD_ATTR_USER);
 //#define IMAGE_WIDTH 256
 //#define IMAGE_HEIGHT 128
 
-#define IMAGE_WIDTH 512
-#define IMAGE_HEIGHT 256
-#define SAMPLES 10
-#define MAX_DEPTH 20
+#define IMAGE_WIDTH 480
+#define IMAGE_HEIGHT 272
+
+//#define IMAGE_WIDTH 240
+//#define IMAGE_HEIGHT 136
+
+#define SAMPLES 25
+#define MAX_DEPTH 40
 
 // display list
 char list[0x20000] __attribute__((aligned(64)));
 // image buffer
 // stored as uint32_t as that is what the texture buffer in the tutorial is stored as
 // needs to be 16 bit alligned 
-uint32_t __attribute__((aligned(16))) image[IMAGE_WIDTH * IMAGE_HEIGHT];
+uint32_t __attribute__((aligned(16))) image[BUFFER_WIDTH * 512];
 int running;
 
 // from texture implimentations
@@ -48,7 +54,7 @@ typedef struct
 
 
 int exit_callback(int arg1, int arg2, void *common){
-    //sceKernelExitGame();
+    sceKernelExitGame();
     running = 0;
     return 0;
 }
@@ -62,8 +68,12 @@ int callback_thread(SceSize args, void *common){
     return 0;
 }
 
+PSP_MAIN_THREAD_STACK_SIZE_KB(512);
+
+
 int setup_callbacks(void){
-    int thid = sceKernelCreateThread("update_thread", callback_thread, 0x11, 0xFA0,0,0);
+    
+    int thid = sceKernelCreateThread("update_thread", callback_thread, 0x80000, 0xFA0,0,0);
     if (thid >= 0){
         // thread_id, length of data in bytes, pointer to arguments 
         sceKernelStartThread(thid, 0, 0);
@@ -101,26 +111,49 @@ void endGu(){
 
 
 
+
+
 void create(){
     hittable_list world;
-    world.add(make_shared<sphere>(point3(0,0,-1), 0.5f));
-    world.add(make_shared<sphere>(point3(0,-100.5f,-1), 100));
+    //material definitions
+    auto material_ground = make_shared<lambertian>(color(0.8f, 0.8f, 0.0f));
+    auto material_center = make_shared<lambertian>(color(0.1f, 0.2f, 0.5f));
+    auto material_left = make_shared<metal>(color(0.8f, 0.8f, 0.8f));
+    auto material_right = make_shared<metal>(color(0.8f, 0.6f, 0.2f));
+
+    //world definitions
+    world.add(make_shared<sphere>(point3( 0, -100.5f,   -1.0f),   100,     material_ground));
+    world.add(make_shared<sphere>(point3( 0,       0,   -1.2f),   0.5f,     material_center));
+    world.add(make_shared<sphere>(point3(-1,       0,   -1.0f),   0.5f,     material_left));
+    world.add(make_shared<sphere>(point3( 1,       0,   -1.0f),   0.5f,     material_right));
+    
 
     camera cam;
     
     cam.image_width = IMAGE_WIDTH;
     cam.image_height = IMAGE_HEIGHT;
+    cam.buffer_width = BUFFER_WIDTH;
     cam.samples_per_pixel = SAMPLES;
     cam.max_depth = MAX_DEPTH;
 
     cam.render(world,image);
 
     // write image to Gu Memory
+    sceKernelDcacheWritebackRange(image, sizeof(image));
     sceKernelDcacheWritebackInvalidateAll();
 }
 
+
+
+
+
+
+
+
 void drawToScreen(){
     static TextureVertex vertices[2];
+
+    float margin_y = 16.0f;
 
     // top left of texture
     vertices[0].u = 0.0f;
@@ -131,17 +164,23 @@ void drawToScreen(){
     vertices[0].z = 0.0f;
 
     // bottom right of texture
-    vertices[1].u = IMAGE_WIDTH;
-    vertices[1].v = IMAGE_HEIGHT;
+    vertices[1].u = (float)IMAGE_WIDTH;
+    vertices[1].v = (float)IMAGE_HEIGHT - 0.1f;
     vertices[1].colour = 0xFFFFFFFF;
-    vertices[1].x = SCREEN_WIDTH;  //takes up entire screen so range is top left -> bottom right of screen
-    vertices[1].y = SCREEN_HEIGHT;
+    vertices[1].x = (float)SCREEN_WIDTH;  //takes up entire screen so range is top left -> bottom right of screen
+    vertices[1].y = (float)SCREEN_HEIGHT;
     vertices[1].z = 0.0f;
 
     sceGuTexMode(GU_PSM_8888, 0, 0, GU_FALSE);
     sceGuTexFunc(GU_TFX_REPLACE, GU_TCC_RGB);
+
+    sceGuTexWrap(GU_CLAMP, GU_CLAMP);
+    sceGuTexFilter(GU_NEAREST, GU_NEAREST);
+
+
     // use rendered array as texture source
-    sceGuTexImage(0,IMAGE_WIDTH,IMAGE_HEIGHT,IMAGE_WIDTH,image);
+    void* uncached_image = (void*)((uint32_t)image | 0x40000000);
+    sceGuTexImage(0,BUFFER_WIDTH,512,BUFFER_WIDTH,uncached_image);
 
     sceGuEnable(GU_TEXTURE_2D);
     sceGuDrawArray(GU_SPRITES, GU_COLOR_8888 | GU_TEXTURE_32BITF | GU_VERTEX_32BITF | GU_TRANSFORM_2D, 2, 0, vertices);
@@ -166,7 +205,7 @@ int main(void){
     while(running) {
         // start 
         sceGuStart(GU_DIRECT, list);
-        sceGuClearColor(0xFF26170D);
+        sceGuClearColor(0xFF000000);
         sceGuClear(GU_COLOR_BUFFER_BIT);
 
         drawToScreen();
@@ -174,6 +213,7 @@ int main(void){
         sceGuFinish();
         sceGuSync(0,0);
         sceDisplayWaitVblankStart();
+        sceKernelDelayThread(1000);
         sceGuSwapBuffers();
 
     }

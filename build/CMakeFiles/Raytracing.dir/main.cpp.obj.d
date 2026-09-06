@@ -222,6 +222,7 @@ CMakeFiles/Raytracing.dir/main.cpp.obj: \
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/istream.tcc \
  /home/c-cronin/Documents/GitHub/psp-raytracing/interval.h \
  /home/c-cronin/Documents/GitHub/psp-raytracing/ray.h \
+ /home/c-cronin/Documents/GitHub/psp-raytracing/material.h \
  /home/c-cronin/Documents/GitHub/psp-raytracing/hittable.h \
  /home/c-cronin/Documents/GitHub/psp-raytracing/hittable_list.h \
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/vector \

@@ -2,17 +2,18 @@
 #define CAMERA_H
 
 #include "hittable.h"
+#include "material.h"
 
 class camera{
     public:
         //public params here
         int image_width;
         int image_height;
+        int buffer_width = 512;
         int samples_per_pixel = 25;
         int max_depth = 10;
 
         void render(const hittable& world, uint32_t* out){
-            uint32_t __attribute__((aligned(16))) image[image_width * image_height];
             initialize();
 
             for (int j = 0; j < image_height; j++){
@@ -30,13 +31,14 @@ class camera{
 
                     //ray r(centre,ray_direction);
 
-                    out[j*image_width+i] = write_color(pixel_color * pixel_samples_scale);
+                    out[j*buffer_width+i] = write_color(pixel_color * pixel_samples_scale);
                 }
             }
         }
 
     private:
         //private params here
+        float aspect_ratio;
         point3 centre; 
         point3 pixel00_loc;
         vec3 pixel_delta_u;
@@ -47,7 +49,8 @@ class camera{
         void initialize(){
             float focal_length = 1.0f;
             float viewport_height = 2.0;
-            float viewport_width = viewport_height * ((float)(image_width)/image_height);
+            aspect_ratio = 480.0f / 272.0f;
+            float viewport_width = viewport_height * aspect_ratio;
 
             pixel_samples_scale = 1.0 / samples_per_pixel;
 
@@ -78,20 +81,36 @@ class camera{
             return vec3(random_float() - 0.5f, random_float() -0.5f, 0);
         }
 
-        color ray_color(const ray& r, int depth, const hittable& world) const{
-            if(depth <= 0)
-                return color(0,0,0);
-            hit_record rec;
+        // use for loop instead of recurrsive function to save psp memory 
+        color ray_color(const ray& r_in, int depth, const hittable& world) const {
+            ray current_ray = r_in;
+            color accumulated_attenuation(1.0f, 1.0f, 1.0f);
 
-            if (world.hit(r, interval(0.001f, infinity_f), rec)) {
-                vec3 direction = rec.normal + random_unit_vector();
-                return 0.5f * ray_color(ray(rec.p, direction), depth-1, world);
+            for (int d = 0; d < depth; d++) {
+                hit_record rec;
+
+                if (world.hit(current_ray, interval(0.001f, infinity_f), rec)) {
+                    ray scattered;
+                    color attenuation;
+
+                    if (rec.mat->scatter(current_ray, rec, attenuation, scattered)) {
+                        accumulated_attenuation = accumulated_attenuation * attenuation;
+                        current_ray = scattered;
+                    } else {
+                        return color(0, 0, 0);
+                    }
+                } else {
+                    // Skybox hit
+                    vec3 unit_direction = unit_vector(current_ray.direction());
+                    auto a = 0.5f * (unit_direction.y() + 1.0f);
+                    color sky_color = (1.0f - a) * color(1.0f, 1.0f, 1.0f) + a * color(0.5f, 0.7f, 1.0f);
+                    return accumulated_attenuation * sky_color;
+                }
             }
 
-            vec3 unit_direction = unit_vector(r.direction());
-            auto a = 0.5*(unit_direction.y()+ 1.0);
-            return (1.0-a)*color(1.0,1.0,1.0) + a*color(0.5,0.7,1.0);
-        }
+        // Exceeded ray bounce limit
+        return color(0, 0, 0);
+    }
 
 
 };
