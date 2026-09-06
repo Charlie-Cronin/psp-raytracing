@@ -205,7 +205,7 @@ int main(void){
     running = 1;
     while(running) {
         // start 
-        scePowerTick(PSP_POWER_TICK_ALL);
+        //scePowerTick(PSP_POWER_TICK_ALL);
 
         sceGuStart(GU_DIRECT, list);
         sceGuClearColor(0xFF000000);
