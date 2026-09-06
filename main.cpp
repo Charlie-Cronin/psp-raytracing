@@ -28,6 +28,7 @@ PSP_MAIN_THREAD_ATTR(THREAD_ATTR_VFPU | THREAD_ATTR_USER);
 #define IMAGE_WIDTH 512
 #define IMAGE_HEIGHT 256
 #define SAMPLES 10
+#define MAX_DEPTH 20
 
 // display list
 char list[0x20000] __attribute__((aligned(64)));
@@ -110,6 +111,7 @@ void create(){
     cam.image_width = IMAGE_WIDTH;
     cam.image_height = IMAGE_HEIGHT;
     cam.samples_per_pixel = SAMPLES;
+    cam.max_depth = MAX_DEPTH;
 
     cam.render(world,image);
 

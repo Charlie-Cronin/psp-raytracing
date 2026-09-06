@@ -6,11 +6,24 @@
 
 using color = vec3;
 
+
+inline float linear_to_gamma(float linear_component){
+    if (linear_component > 0)
+        return std::sqrt(linear_component);
+    return 0;
+}
+
 inline uint32_t __attribute__((always_inline)) write_color(const color& pixel_color){
     // main loop
     float r = pixel_color.x();
     float g = pixel_color.y();
     float b = pixel_color.z();
+
+    //apply gamma transform
+    r = linear_to_gamma(r);
+    g = linear_to_gamma(g);
+    b = linear_to_gamma(b);
+
 
     static const interval intensity(0.000,0.999);
     int rbyte = (int)(256.0f * intensity.clamp(r));

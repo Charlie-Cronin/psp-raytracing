@@ -9,6 +9,7 @@ class camera{
         int image_width;
         int image_height;
         int samples_per_pixel = 25;
+        int max_depth = 10;
 
         void render(const hittable& world, uint32_t* out){
             uint32_t __attribute__((aligned(16))) image[image_width * image_height];
@@ -22,7 +23,7 @@ class camera{
                     color pixel_color(0,0,0);
                     for (int sample = 0; sample < samples_per_pixel; sample++){
                         ray r = get_ray(i, j);
-                        pixel_color += ray_color(r, world);
+                        pixel_color += ray_color(r,max_depth, world);
                     }
                     //auto pixel_centre = pixel00_loc + (i * pixel_delta_u) + (j * pixel_delta_v);
                     //auto ray_direction = pixel_centre - centre;
@@ -77,11 +78,14 @@ class camera{
             return vec3(random_float() - 0.5f, random_float() -0.5f, 0);
         }
 
-        color ray_color(const ray& r, const hittable& world) const{
+        color ray_color(const ray& r, int depth, const hittable& world) const{
+            if(depth <= 0)
+                return color(0,0,0);
             hit_record rec;
 
-            if (world.hit(r, interval(0, infinity_f), rec)) {
-                return 0.5f * (rec.normal + color(1,1,1));
+            if (world.hit(r, interval(0.001f, infinity_f), rec)) {
+                vec3 direction = rec.normal + random_unit_vector();
+                return 0.5f * ray_color(ray(rec.p, direction), depth-1, world);
             }
 
             vec3 unit_direction = unit_vector(r.direction());
