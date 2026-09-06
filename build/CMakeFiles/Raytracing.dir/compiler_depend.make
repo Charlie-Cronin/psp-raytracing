@@ -224,6 +224,7 @@ CMakeFiles/Raytracing.dir/main.cpp.obj: /home/c-cronin/Documents/GitHub/psp-rayt
   /home/c-cronin/pspdev/psp/sdk/include/psploadexec.h \
   /home/c-cronin/pspdev/psp/sdk/include/pspmoduleinfo.h \
   /home/c-cronin/pspdev/psp/sdk/include/pspmodulemgr.h \
+  /home/c-cronin/pspdev/psp/sdk/include/psppower.h \
   /home/c-cronin/pspdev/psp/sdk/include/pspstdio.h \
   /home/c-cronin/pspdev/psp/sdk/include/pspsysmem.h \
   /home/c-cronin/pspdev/psp/sdk/include/pspthreadman.h \
@@ -541,6 +542,8 @@ CMakeFiles/Raytracing.dir/main.cpp.obj: /home/c-cronin/Documents/GitHub/psp-rayt
 /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/atomic_base.h:
 
 /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/stl_iterator.h:
+
+/home/c-cronin/pspdev/psp/sdk/include/psppower.h:
 
 /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/ostream_insert.h:
 

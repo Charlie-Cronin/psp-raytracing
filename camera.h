@@ -20,6 +20,7 @@ class camera{
                 std::string msg = "Rendering Scene...\n" + std::to_string(j) + "/" + std::to_string(image_height) + " lines done";
                 pspDebugScreenSetXY(0, 0);
                 pspDebugScreenPrintf("%s\n", msg.c_str());
+                sceKernelDelayThread(1000);
                 for (int i = 0; i < image_width; i++){
                     color pixel_color(0,0,0);
                     for (int sample = 0; sample < samples_per_pixel; sample++){

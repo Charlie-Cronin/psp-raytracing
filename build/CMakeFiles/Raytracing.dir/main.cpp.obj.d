@@ -62,6 +62,7 @@ CMakeFiles/Raytracing.dir/main.cpp.obj: \
  /home/c-cronin/pspdev/psp/sdk/include/pspdisplay.h \
  /home/c-cronin/pspdev/psp/sdk/include/pspgu.h \
  /home/c-cronin/pspdev/psp/sdk/include/pspge.h \
+ /home/c-cronin/pspdev/psp/sdk/include/psppower.h \
  /home/c-cronin/Documents/GitHub/psp-raytracing/rtweekend.h \
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/cmath \
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/requires_hosted.h \

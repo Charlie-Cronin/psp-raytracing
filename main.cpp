@@ -2,6 +2,7 @@
 #include <pspdebug.h>
 #include <pspdisplay.h>
 #include <pspgu.h>
+#include <psppower.h>
 
 #include "rtweekend.h"
 
@@ -73,7 +74,7 @@ PSP_MAIN_THREAD_STACK_SIZE_KB(512);
 
 int setup_callbacks(void){
     
-    int thid = sceKernelCreateThread("update_thread", callback_thread, 0x80000, 0xFA0,0,0);
+    int thid = sceKernelCreateThread("update_thread", callback_thread, 0x11, 0xFA0,0,0);
     if (thid >= 0){
         // thread_id, length of data in bytes, pointer to arguments 
         sceKernelStartThread(thid, 0, 0);
@@ -204,6 +205,8 @@ int main(void){
     running = 1;
     while(running) {
         // start 
+        scePowerTick(PSP_POWER_TICK_ALL);
+
         sceGuStart(GU_DIRECT, list);
         sceGuClearColor(0xFF000000);
         sceGuClear(GU_COLOR_BUFFER_BIT);
@@ -212,8 +215,8 @@ int main(void){
 
         sceGuFinish();
         sceGuSync(0,0);
-        sceDisplayWaitVblankStart();
-        sceKernelDelayThread(1000);
+        sceDisplayWaitVblankStartCB();
+        sceKernelDelayThread(10000);
         sceGuSwapBuffers();
 
     }
