@@ -3,9 +3,12 @@
 #include <pspdisplay.h>
 #include <pspgu.h>
 
-#include "color.h"
-#include "vec3.h"
-#include "ray.h"
+#include "rtweekend.h"
+
+#include "hittable.h"
+#include "hittable_list.h"
+#include "sphere.h"
+#include "camera.h"
 
 // PSP_MODULE_INFO IS REQUIRED 
 // name attributes major version minor version
@@ -95,74 +98,18 @@ void endGu(){
 }
 
 
-float hit_sphere(const point3& center, float radius, const ray& r){
-    vec3 oc = center - r.origin();
-    auto a = r.direction().length_squared();
-    auto h = dot(r.direction(), oc);
-    auto c = oc.length_squared() - radius * radius;
-    auto discriminant = h*h - a*c;
 
-    if (discriminant <= 0){
-        return -1.0f;
-    }else{
-        return (h - std::sqrt(discriminant))/(a);
-    }
+void create(){
+    hittable_list world;
+    world.add(make_shared<sphere>(point3(0,0,-1), 0.5f));
+    world.add(make_shared<sphere>(point3(0,-100.5f,-1), 100));
 
+    camera cam;
     
-}
+    cam.image_width = IMAGE_WIDTH;
+    cam.image_height = IMAGE_HEIGHT;
 
-
-color ray_color(const ray& r){
-    auto t = hit_sphere(point3(0,0,-1),0.5f,r);
-    if (t > 0.0){
-        vec3 N = unit_vector(r.at(t) - vec3(0,0,-1));
-        return 0.5*color(N.x()+1, N.y()+1, N.z()+1);
-    }
-
-    vec3 unit_direction = unit_vector(r.direction());
-    auto a = 0.5*(unit_direction.y()+ 1.0);
-    return (1.0-a)*color(1.0,1.0,1.0) + a*color(0.5,0.7,1.0);
-}
-
-
-
-
-
-
-
-void render(){
-    int img_height = IMAGE_HEIGHT;
-
-
-    float focal_length = 1.0f;
-    float viewport_height = 2.0;
-    float viewport_width = viewport_height * ((float)(IMAGE_WIDTH)/IMAGE_HEIGHT);
-    auto camera_centre = point3(0,0,0);
-
-    auto viewport_u = vec3(viewport_width,0,0);
-    auto viewport_v = vec3(0, -viewport_height, 0);
-
-    auto pixel_delta_u = viewport_u / IMAGE_WIDTH;
-    auto pixel_delta_v = viewport_v / IMAGE_HEIGHT;
-
-    auto viewport_upper_left = camera_centre - vec3(0,0,focal_length) - viewport_u/2 - viewport_v/2;
-    auto pixel00_loc = viewport_upper_left + 0.5 * (pixel_delta_u + pixel_delta_v);
-
-    for (int j = 0; j < IMAGE_HEIGHT; j++){
-        std::string msg = "Rendering Scene...\n" + std::to_string(j) + "/" + std::to_string(IMAGE_HEIGHT) + " lines done";
-        pspDebugScreenSetXY(0, 0);
-        pspDebugScreenPrintf("%s\n", msg.c_str());
-        for (int i = 0; i < IMAGE_WIDTH; i++){
-            auto pixel_centre = pixel00_loc + (i * pixel_delta_u) + (j * pixel_delta_v);
-            auto ray_direction = pixel_centre - camera_centre;
-
-            ray r(camera_centre,ray_direction);
-
-            color pixel_color = ray_color(r);
-
-            image[j*IMAGE_WIDTH+i] = write_color(pixel_color);
-        }
-    }
+    cam.render(world,image);
 
     // write image to Gu Memory
     sceKernelDcacheWritebackInvalidateAll();
@@ -207,7 +154,7 @@ int main(void){
 
 
     // render before main loop so the raytracing doesnt occur every frame
-    render();
+    create();
 
     initGu();
 

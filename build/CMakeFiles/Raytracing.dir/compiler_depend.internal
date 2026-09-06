@@ -3,8 +3,14 @@
 
 CMakeFiles/Raytracing.dir/main.cpp.obj
  /home/c-cronin/Documents/GitHub/psp-raytracing/main.cpp
+ /home/c-cronin/Documents/GitHub/psp-raytracing/camera.h
  /home/c-cronin/Documents/GitHub/psp-raytracing/color.h
+ /home/c-cronin/Documents/GitHub/psp-raytracing/hittable.h
+ /home/c-cronin/Documents/GitHub/psp-raytracing/hittable_list.h
+ /home/c-cronin/Documents/GitHub/psp-raytracing/interval.h
  /home/c-cronin/Documents/GitHub/psp-raytracing/ray.h
+ /home/c-cronin/Documents/GitHub/psp-raytracing/rtweekend.h
+ /home/c-cronin/Documents/GitHub/psp-raytracing/sphere.h
  /home/c-cronin/Documents/GitHub/psp-raytracing/vec3.h
  /home/c-cronin/pspdev/lib/gcc/psp/15.2.0/include/limits.h
  /home/c-cronin/pspdev/lib/gcc/psp/15.2.0/include/stdarg.h
@@ -15,10 +21,15 @@ CMakeFiles/Raytracing.dir/main.cpp.obj
  /home/c-cronin/pspdev/psp/include/_newlib_version.h
  /home/c-cronin/pspdev/psp/include/alloca.h
  /home/c-cronin/pspdev/psp/include/bits/posix_opt.h
+ /home/c-cronin/pspdev/psp/include/c++/15.2.0/backward/auto_ptr.h
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/backward/binders.h
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/bit
+ /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/align.h
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/alloc_traits.h
+ /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/allocated_ptr.h
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/allocator.h
+ /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/atomic_base.h
+ /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/atomic_lockfree_defines.h
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/basic_ios.h
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/basic_ios.tcc
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/basic_string.h
@@ -57,22 +68,32 @@ CMakeFiles/Raytracing.dir/main.cpp.obj
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/range_access.h
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/refwrap.h
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/requires_hosted.h
+ /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/shared_ptr.h
+ /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/shared_ptr_atomic.h
+ /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/shared_ptr_base.h
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/specfun.h
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/std_abs.h
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/stl_algobase.h
+ /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/stl_bvector.h
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/stl_construct.h
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/stl_function.h
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/stl_iterator.h
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/stl_iterator_base_funcs.h
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/stl_iterator_base_types.h
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/stl_pair.h
+ /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/stl_raw_storage_iter.h
+ /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/stl_tempbuf.h
+ /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/stl_uninitialized.h
+ /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/stl_vector.h
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/streambuf.tcc
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/streambuf_iterator.h
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/string_view.tcc
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/stringfwd.h
+ /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/unique_ptr.h
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/uses_allocator.h
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/uses_allocator_args.h
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/utility.h
+ /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/vector.tcc
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/version.h
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/cctype
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/cerrno
@@ -87,8 +108,10 @@ CMakeFiles/Raytracing.dir/main.cpp.obj
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/debug/assertions.h
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/debug/debug.h
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/exception
+ /home/c-cronin/pspdev/psp/include/c++/15.2.0/ext/aligned_buffer.h
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/ext/alloc_traits.h
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/ext/atomicity.h
+ /home/c-cronin/pspdev/psp/include/c++/15.2.0/ext/concurrence.h
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/ext/numeric_traits.h
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/ext/string_conversions.h
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/ext/type_traits.h
@@ -98,6 +121,7 @@ CMakeFiles/Raytracing.dir/main.cpp.obj
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/iostream
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/istream
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/limits
+ /home/c-cronin/pspdev/psp/include/c++/15.2.0/memory
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/new
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/ostream
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/psp/bits/atomic_word.h
@@ -111,6 +135,8 @@ CMakeFiles/Raytracing.dir/main.cpp.obj
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/psp/bits/gthr-default.h
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/psp/bits/gthr.h
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/psp/bits/os_defines.h
+ /home/c-cronin/pspdev/psp/include/c++/15.2.0/pstl/execution_defs.h
+ /home/c-cronin/pspdev/psp/include/c++/15.2.0/pstl/glue_memory_defs.h
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/pstl/pstl_config.h
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/stdexcept
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/streambuf
@@ -132,6 +158,7 @@ CMakeFiles/Raytracing.dir/main.cpp.obj
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/tuple
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/type_traits
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/typeinfo
+ /home/c-cronin/pspdev/psp/include/c++/15.2.0/vector
  /home/c-cronin/pspdev/psp/include/ctype.h
  /home/c-cronin/pspdev/psp/include/errno.h
  /home/c-cronin/pspdev/psp/include/limits.h

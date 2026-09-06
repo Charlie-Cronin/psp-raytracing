@@ -62,8 +62,7 @@ CMakeFiles/Raytracing.dir/main.cpp.obj: \
  /home/c-cronin/pspdev/psp/sdk/include/pspdisplay.h \
  /home/c-cronin/pspdev/psp/sdk/include/pspgu.h \
  /home/c-cronin/pspdev/psp/sdk/include/pspge.h \
- /home/c-cronin/Documents/GitHub/psp-raytracing/color.h \
- /home/c-cronin/Documents/GitHub/psp-raytracing/vec3.h \
+ /home/c-cronin/Documents/GitHub/psp-raytracing/rtweekend.h \
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/cmath \
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/requires_hosted.h \
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/psp/bits/c++config.h \
@@ -110,33 +109,40 @@ CMakeFiles/Raytracing.dir/main.cpp.obj: \
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/tr1/poly_hermite.tcc \
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/tr1/poly_laguerre.tcc \
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/tr1/riemann_zeta.tcc \
- /home/c-cronin/pspdev/psp/include/c++/15.2.0/iostream \
- /home/c-cronin/pspdev/psp/include/c++/15.2.0/ostream \
- /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/ostream.h \
- /home/c-cronin/pspdev/psp/include/c++/15.2.0/ios \
+ /home/c-cronin/pspdev/psp/include/c++/15.2.0/memory \
+ /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/memoryfwd.h \
+ /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/allocator.h \
+ /home/c-cronin/pspdev/psp/include/c++/15.2.0/psp/bits/c++allocator.h \
+ /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/new_allocator.h \
+ /home/c-cronin/pspdev/psp/include/c++/15.2.0/new \
+ /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/exception.h \
+ /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/stl_tempbuf.h \
+ /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/stl_construct.h \
+ /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/stl_uninitialized.h \
+ /home/c-cronin/pspdev/psp/include/c++/15.2.0/ext/alloc_traits.h \
+ /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/alloc_traits.h \
+ /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/stl_raw_storage_iter.h \
+ /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/align.h \
+ /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/uses_allocator.h \
+ /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/unique_ptr.h \
+ /home/c-cronin/pspdev/psp/include/c++/15.2.0/tuple \
+ /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/invoke.h \
+ /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/stl_function.h \
+ /home/c-cronin/pspdev/psp/include/c++/15.2.0/backward/binders.h \
+ /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/functional_hash.h \
+ /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/hash_bytes.h \
+ /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/shared_ptr.h \
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/iosfwd \
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/stringfwd.h \
- /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/memoryfwd.h \
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/postypes.h \
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/cwchar \
  /home/c-cronin/pspdev/psp/include/wchar.h \
  /home/c-cronin/pspdev/lib/gcc/psp/15.2.0/include/stdarg.h \
- /home/c-cronin/pspdev/psp/include/c++/15.2.0/exception \
- /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/exception.h \
- /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/exception_ptr.h \
- /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/cxxabi_init_exception.h \
+ /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/shared_ptr_base.h \
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/typeinfo \
- /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/hash_bytes.h \
- /home/c-cronin/pspdev/psp/include/c++/15.2.0/new \
- /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/nested_exception.h \
- /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/char_traits.h \
- /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/localefwd.h \
- /home/c-cronin/pspdev/psp/include/c++/15.2.0/psp/bits/c++locale.h \
- /home/c-cronin/pspdev/psp/include/c++/15.2.0/clocale \
- /home/c-cronin/pspdev/psp/include/locale.h \
- /home/c-cronin/pspdev/psp/include/c++/15.2.0/cctype \
- /home/c-cronin/pspdev/psp/include/ctype.h \
- /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/ios_base.h \
+ /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/allocated_ptr.h \
+ /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/refwrap.h \
+ /home/c-cronin/pspdev/psp/include/c++/15.2.0/ext/aligned_buffer.h \
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/ext/atomicity.h \
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/psp/bits/gthr.h \
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/psp/bits/gthr-default.h \
@@ -151,25 +157,39 @@ CMakeFiles/Raytracing.dir/main.cpp.obj: \
  /home/c-cronin/pspdev/psp/include/setjmp.h \
  /home/c-cronin/pspdev/psp/include/machine/setjmp.h \
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/psp/bits/atomic_word.h \
+ /home/c-cronin/pspdev/psp/include/c++/15.2.0/ext/concurrence.h \
+ /home/c-cronin/pspdev/psp/include/c++/15.2.0/exception \
+ /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/exception_ptr.h \
+ /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/cxxabi_init_exception.h \
+ /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/nested_exception.h \
+ /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/shared_ptr_atomic.h \
+ /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/atomic_base.h \
+ /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/atomic_lockfree_defines.h \
+ /home/c-cronin/pspdev/psp/include/c++/15.2.0/backward/auto_ptr.h \
+ /home/c-cronin/pspdev/psp/include/c++/15.2.0/pstl/glue_memory_defs.h \
+ /home/c-cronin/pspdev/psp/include/c++/15.2.0/pstl/execution_defs.h \
+ /home/c-cronin/Documents/GitHub/psp-raytracing/color.h \
+ /home/c-cronin/Documents/GitHub/psp-raytracing/vec3.h \
+ /home/c-cronin/pspdev/psp/include/c++/15.2.0/iostream \
+ /home/c-cronin/pspdev/psp/include/c++/15.2.0/ostream \
+ /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/ostream.h \
+ /home/c-cronin/pspdev/psp/include/c++/15.2.0/ios \
+ /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/char_traits.h \
+ /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/localefwd.h \
+ /home/c-cronin/pspdev/psp/include/c++/15.2.0/psp/bits/c++locale.h \
+ /home/c-cronin/pspdev/psp/include/c++/15.2.0/clocale \
+ /home/c-cronin/pspdev/psp/include/locale.h \
+ /home/c-cronin/pspdev/psp/include/c++/15.2.0/cctype \
+ /home/c-cronin/pspdev/psp/include/ctype.h \
+ /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/ios_base.h \
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/locale_classes.h \
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/string \
- /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/allocator.h \
- /home/c-cronin/pspdev/psp/include/c++/15.2.0/psp/bits/c++allocator.h \
- /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/new_allocator.h \
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/ostream_insert.h \
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/cxxabi_forced.h \
- /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/stl_function.h \
- /home/c-cronin/pspdev/psp/include/c++/15.2.0/backward/binders.h \
- /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/refwrap.h \
- /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/invoke.h \
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/range_access.h \
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/initializer_list \
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/basic_string.h \
- /home/c-cronin/pspdev/psp/include/c++/15.2.0/ext/alloc_traits.h \
- /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/alloc_traits.h \
- /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/stl_construct.h \
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/string_view \
- /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/functional_hash.h \
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/string_view.tcc \
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/ext/string_conversions.h \
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/cstdlib \
@@ -181,9 +201,7 @@ CMakeFiles/Raytracing.dir/main.cpp.obj: \
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/basic_string.tcc \
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/memory_resource.h \
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/cstddef \
- /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/uses_allocator.h \
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/uses_allocator_args.h \
- /home/c-cronin/pspdev/psp/include/c++/15.2.0/tuple \
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/locale_classes.tcc \
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/system_error \
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/psp/bits/error_constants.h \
@@ -202,4 +220,13 @@ CMakeFiles/Raytracing.dir/main.cpp.obj: \
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/ostream.tcc \
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/istream \
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/istream.tcc \
- /home/c-cronin/Documents/GitHub/psp-raytracing/ray.h
+ /home/c-cronin/Documents/GitHub/psp-raytracing/ray.h \
+ /home/c-cronin/Documents/GitHub/psp-raytracing/interval.h \
+ /home/c-cronin/Documents/GitHub/psp-raytracing/hittable.h \
+ /home/c-cronin/Documents/GitHub/psp-raytracing/hittable_list.h \
+ /home/c-cronin/pspdev/psp/include/c++/15.2.0/vector \
+ /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/stl_vector.h \
+ /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/stl_bvector.h \
+ /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/vector.tcc \
+ /home/c-cronin/Documents/GitHub/psp-raytracing/sphere.h \
+ /home/c-cronin/Documents/GitHub/psp-raytracing/camera.h
