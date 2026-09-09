@@ -28,11 +28,11 @@ PSP_MAIN_THREAD_ATTR(THREAD_ATTR_VFPU | THREAD_ATTR_USER);
 //#define IMAGE_WIDTH 256
 //#define IMAGE_HEIGHT 128
 
-#define IMAGE_WIDTH 480
-#define IMAGE_HEIGHT 272
+//#define IMAGE_WIDTH 480
+//#define IMAGE_HEIGHT 272
 
-//#define IMAGE_WIDTH 240
-//#define IMAGE_HEIGHT 136
+#define IMAGE_WIDTH 240
+#define IMAGE_HEIGHT 136
 
 #define SAMPLES 25
 #define MAX_DEPTH 40
@@ -119,14 +119,16 @@ void create(){
     //material definitions
     auto material_ground = make_shared<lambertian>(color(0.8f, 0.8f, 0.0f));
     auto material_center = make_shared<lambertian>(color(0.1f, 0.2f, 0.5f));
-    auto material_left = make_shared<metal>(color(0.8f, 0.8f, 0.8f));
-    auto material_right = make_shared<metal>(color(0.8f, 0.6f, 0.2f));
+    auto material_left = make_shared<metal>(color(0.8f, 0.8f, 0.8f), 0.0f);
+    auto material_right = make_shared<dielectric>(1.5f);
+    auto material_bubble = make_shared<dielectric>(1.0f / 1.5f);
 
     //world definitions
     world.add(make_shared<sphere>(point3( 0, -100.5f,   -1.0f),   100,     material_ground));
     world.add(make_shared<sphere>(point3( 0,       0,   -1.2f),   0.5f,     material_center));
-    world.add(make_shared<sphere>(point3(-1,       0,   -1.0f),   0.5f,     material_left));
-    world.add(make_shared<sphere>(point3( 1,       0,   -1.0f),   0.5f,     material_right));
+    world.add(make_shared<sphere>(point3(-1,       0,   -1.0f),   0.5f,     material_right));
+    world.add(make_shared<sphere>(point3(-1,       0,   -1.0f),   0.4f,     material_bubble));
+    world.add(make_shared<sphere>(point3( 1,       0,   -1.0f),   0.5f,     material_left));
     
 
     camera cam;

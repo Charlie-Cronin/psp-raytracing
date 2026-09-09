@@ -2117,3 +2117,810 @@ events:
       
       
 ...
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/c-cronin/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.2/Modules/CMakeDetermineSystem.cmake:207 (message)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      The target system is: Generic - 1 - mips
+      The host system is: Linux - 6.14.0-37-generic - x86_64
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/home/c-cronin/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:462 (find_file)"
+      - "/home/c-cronin/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:500 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "/home/c-cronin/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "/home/c-cronin/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/home/c-cronin/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.2/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCCompilerId.c.in"
+    candidate_directories:
+      - "/home/c-cronin/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.2/Modules/"
+    found: "/home/c-cronin/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.2/Modules/CMakeCCompilerId.c.in"
+    search_context:
+      ENV{PATH}:
+        - "/home/c-cronin/.local/bin"
+        - "/home/c-cronin/.local/bin"
+        - "/home/c-cronin/.cargo/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/snap/bin"
+        - "/home/c-cronin/dotnet"
+        - "/home/c-cronin/dotnet"
+        - "/home/c-cronin/pspdev/bin"
+      CMAKE_INSTALL_PREFIX: "/home/c-cronin/pspdev/psp"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/home/c-cronin/pspdev"
+        - "/home/c-cronin/pspdev/psp"
+        - "/home/c-cronin/pspdev/psp/sdk"
+      CMAKE_FIND_ROOT_PATH: "/home/c-cronin/pspdev;/home/c-cronin/pspdev/psp;/home/c-cronin/pspdev/psp/sdk"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/c-cronin/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/home/c-cronin/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/home/c-cronin/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.2/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: /home/c-cronin/pspdev/bin/psp-gcc 
+      Build flags: -I/home/c-cronin/pspdev/psp/include;-I/home/c-cronin/pspdev/psp/sdk/include;-DPSP
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+      
+      The C compiler identification is GNU, found in:
+        /home/c-cronin/Documents/GitHub/psp-raytracing/build/CMakeFiles/4.2.0/CompilerIdC/a.out
+      
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/home/c-cronin/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:462 (find_file)"
+      - "/home/c-cronin/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:500 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "/home/c-cronin/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "/home/c-cronin/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/home/c-cronin/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.2/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCXXCompilerId.cpp.in"
+    candidate_directories:
+      - "/home/c-cronin/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.2/Modules/"
+    found: "/home/c-cronin/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.2/Modules/CMakeCXXCompilerId.cpp.in"
+    search_context:
+      ENV{PATH}:
+        - "/home/c-cronin/.local/bin"
+        - "/home/c-cronin/.local/bin"
+        - "/home/c-cronin/.cargo/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/snap/bin"
+        - "/home/c-cronin/dotnet"
+        - "/home/c-cronin/dotnet"
+        - "/home/c-cronin/pspdev/bin"
+      CMAKE_INSTALL_PREFIX: "/home/c-cronin/pspdev/psp"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/home/c-cronin/pspdev"
+        - "/home/c-cronin/pspdev/psp"
+        - "/home/c-cronin/pspdev/psp/sdk"
+      CMAKE_FIND_ROOT_PATH: "/home/c-cronin/pspdev;/home/c-cronin/pspdev/psp;/home/c-cronin/pspdev/psp/sdk"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/c-cronin/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/home/c-cronin/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/home/c-cronin/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.2/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: /home/c-cronin/pspdev/bin/psp-g++ 
+      Build flags: -I/home/c-cronin/pspdev/psp/include;-I/home/c-cronin/pspdev/psp/sdk/include;-DPSP
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+      
+      The CXX compiler identification is GNU, found in:
+        /home/c-cronin/Documents/GitHub/psp-raytracing/build/CMakeFiles/4.2.0/CompilerIdCXX/a.out
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/c-cronin/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.2/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
+      - "/home/c-cronin/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.2/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "/home/c-cronin/Documents/GitHub/psp-raytracing/build/CMakeFiles/CMakeScratch/TryCompile-5rtTgb"
+      binary: "/home/c-cronin/Documents/GitHub/psp-raytracing/build/CMakeFiles/CMakeScratch/TryCompile-5rtTgb"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-I/home/c-cronin/pspdev/psp/include -I/home/c-cronin/pspdev/psp/sdk/include -DPSP"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: "-L/home/c-cronin/pspdev/lib -L/home/c-cronin/pspdev/psp/lib -L/home/c-cronin/pspdev/psp/sdk/lib -Wl,-zmax-page-size=128"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/home/c-cronin/Documents/GitHub/psp-raytracing/build/CMakeFiles/CMakeScratch/TryCompile-5rtTgb'
+        
+        Run Build Command(s): /home/c-cronin/.local/lib/python3.12/site-packages/cmake/data/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_f04bd/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_f04bd.dir/build.make CMakeFiles/cmTC_f04bd.dir/build
+        gmake[1]: Entering directory '/home/c-cronin/Documents/GitHub/psp-raytracing/build/CMakeFiles/CMakeScratch/TryCompile-5rtTgb'
+        Building C object CMakeFiles/cmTC_f04bd.dir/CMakeCCompilerABI.c.obj
+        /home/c-cronin/pspdev/bin/psp-gcc -DPSP -D_PSP_FW_VERSION=600 -D__PSP__  -I/home/c-cronin/pspdev/psp/include -I/home/c-cronin/pspdev/psp/sdk/include -DPSP    -v -o CMakeFiles/cmTC_f04bd.dir/CMakeCCompilerABI.c.obj -c /home/c-cronin/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.2/Modules/CMakeCCompilerABI.c
+        Using built-in specs.
+        COLLECT_GCC=/home/c-cronin/pspdev/bin/psp-gcc
+        Target: psp
+        Configured with: ../configure --quiet --prefix=/home/runner/work/pspdev/pspdev/pspdev --target=psp --with-sysroot=/home/runner/work/pspdev/pspdev/pspdev/psp --with-native-system-header-dir=/include --enable-languages=c,c++ --with-float=hard --with-newlib --disable-libssp --disable-multilib --enable-threads=posix --disable-tls --disable-nls --silent
+        Thread model: posix
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 15.2.0 (GCC) 
+        COLLECT_GCC_OPTIONS='-D' 'PSP' '-D' '_PSP_FW_VERSION=600' '-D' '__PSP__' '-I' '/home/c-cronin/pspdev/psp/include' '-I' '/home/c-cronin/pspdev/psp/sdk/include' '-D' 'PSP' '-v' '-o' 'CMakeFiles/cmTC_f04bd.dir/CMakeCCompilerABI.c.obj' '-c' '-mhard-float' '-msingle-float' '-dumpdir' 'CMakeFiles/cmTC_f04bd.dir/'
+         /home/c-cronin/pspdev/bin/../libexec/gcc/psp/15.2.0/cc1 -quiet -v -I /home/c-cronin/pspdev/psp/include -I /home/c-cronin/pspdev/psp/sdk/include -iprefix /home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/ -isysroot /home/c-cronin/pspdev/bin/../psp -DPSP=1 -D__PSP__=1 -D_PSP=1 -D__psp__=1 -D PSP -D _PSP_FW_VERSION=600 -D __PSP__ -D PSP /home/c-cronin/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.2/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_f04bd.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mhard-float -msingle-float -version -o /tmp/ccNrP2dW.s
+        GNU C23 (GCC) version 15.2.0 (psp)
+        	compiled by GNU C version 13.3.0, GMP version 6.3.0, MPFR version 4.2.1, MPC version 1.3.1, isl version none
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring duplicate directory "/home/c-cronin/pspdev/bin/../lib/gcc/../../lib/gcc/psp/15.2.0/include"
+        ignoring nonexistent directory "/home/c-cronin/pspdev/bin/../psp/usr/local/include"
+        ignoring duplicate directory "/home/c-cronin/pspdev/bin/../lib/gcc/../../lib/gcc/psp/15.2.0/include-fixed"
+        ignoring duplicate directory "/home/c-cronin/pspdev/bin/../lib/gcc/../../lib/gcc/psp/15.2.0/../../../../psp/include"
+        ignoring duplicate directory "/home/c-cronin/pspdev/bin/../psp/include"
+        ignoring duplicate directory "/home/c-cronin/pspdev/psp/include"
+          as it is a non-system directory that duplicates a system directory
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /home/c-cronin/pspdev/psp/sdk/include
+         /home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/include
+         /home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/include-fixed
+         /home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/../../../../psp/include
+        End of search list.
+        Compiler executable checksum: c6f8ef09427540da6441936b4af383ee
+        COLLECT_GCC_OPTIONS='-D' 'PSP' '-D' '_PSP_FW_VERSION=600' '-D' '__PSP__' '-I' '/home/c-cronin/pspdev/psp/include' '-I' '/home/c-cronin/pspdev/psp/sdk/include' '-D' 'PSP' '-v' '-o' 'CMakeFiles/cmTC_f04bd.dir/CMakeCCompilerABI.c.obj' '-c' '-mhard-float' '-msingle-float' '-dumpdir' 'CMakeFiles/cmTC_f04bd.dir/'
+         /home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/../../../../psp/bin/as -EL -O1 -mabi=eabi -mhard-float -msingle-float -o CMakeFiles/cmTC_f04bd.dir/CMakeCCompilerABI.c.obj /tmp/ccNrP2dW.s
+        COMPILER_PATH=/home/c-cronin/pspdev/bin/../libexec/gcc/psp/15.2.0/:/home/c-cronin/pspdev/bin/../libexec/gcc/:/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/../../../../psp/bin/
+        LIBRARY_PATH=/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/:/home/c-cronin/pspdev/bin/../lib/gcc/:/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/../../../../psp/lib/:/home/c-cronin/pspdev/bin/../psp/lib/
+        COLLECT_GCC_OPTIONS='-D' 'PSP' '-D' '_PSP_FW_VERSION=600' '-D' '__PSP__' '-I' '/home/c-cronin/pspdev/psp/include' '-I' '/home/c-cronin/pspdev/psp/sdk/include' '-D' 'PSP' '-v' '-o' 'CMakeFiles/cmTC_f04bd.dir/CMakeCCompilerABI.c.obj' '-c' '-mhard-float' '-msingle-float' '-dumpdir' 'CMakeFiles/cmTC_f04bd.dir/CMakeCCompilerABI.c.'
+        Linking C executable cmTC_f04bd
+        /home/c-cronin/.local/lib/python3.12/site-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f04bd.dir/link.txt --verbose=1
+        Using built-in specs.
+        COLLECT_GCC=/home/c-cronin/pspdev/bin/psp-gcc
+        COLLECT_LTO_WRAPPER=/home/c-cronin/pspdev/bin/../libexec/gcc/psp/15.2.0/lto-wrapper
+        Target: psp
+        Configured with: ../configure --quiet --prefix=/home/runner/work/pspdev/pspdev/pspdev --target=psp --with-sysroot=/home/runner/work/pspdev/pspdev/pspdev/psp --with-native-system-header-dir=/include --enable-languages=c,c++ --with-float=hard --with-newlib --disable-libssp --disable-multilib --enable-threads=posix --disable-tls --disable-nls --silent
+        Thread model: posix
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 15.2.0 (GCC) 
+        COMPILER_PATH=/home/c-cronin/pspdev/bin/../libexec/gcc/psp/15.2.0/:/home/c-cronin/pspdev/bin/../libexec/gcc/:/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/../../../../psp/bin/
+        LIBRARY_PATH=/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/:/home/c-cronin/pspdev/bin/../lib/gcc/:/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/../../../../psp/lib/:/home/c-cronin/pspdev/bin/../psp/lib/
+        COLLECT_GCC_OPTIONS='-I' '/home/c-cronin/pspdev/psp/include' '-I' '/home/c-cronin/pspdev/psp/sdk/include' '-D' 'PSP' '-L/home/c-cronin/pspdev/lib' '-L/home/c-cronin/pspdev/psp/lib' '-L/home/c-cronin/pspdev/psp/sdk/lib' '-v' '-o' 'cmTC_f04bd' '-L/home/c-cronin/pspdev/lib' '-L/home/c-cronin/pspdev/psp/lib' '-L/home/c-cronin/pspdev/psp/sdk/lib' '-mhard-float' '-msingle-float' '-dumpdir' 'cmTC_f04bd.'
+         /home/c-cronin/pspdev/bin/../libexec/gcc/psp/15.2.0/collect2 -plugin /home/c-cronin/pspdev/bin/../libexec/gcc/psp/15.2.0/liblto_plugin.so -plugin-opt=/home/c-cronin/pspdev/bin/../libexec/gcc/psp/15.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccufC3hS.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lm -plugin-opt=-pass-through=-lpthreadglue -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-lcglue -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lpsputility -plugin-opt=-pass-through=-lpsprtc -plugin-opt=-pass-through=-lpspnet_inet -plugin-opt=-pass-through=-lpspnet_resolver -plugin-opt=-pass-through=-lpspsdk -plugin-opt=-pass-through=-lpspmodinfo -plugin-opt=-pass-through=-lpspuser -plugin-opt=-pass-through=-lgcc --sysroot=/home/c-cronin/pspdev/bin/../psp -EL -o cmTC_f04bd /home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/../../../../psp/lib/crt0.o /home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/crti.o /home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/crtbegin.o -L/home/c-cronin/pspdev/lib -L/home/c-cronin/pspdev/psp/lib -L/home/c-cronin/pspdev/psp/sdk/lib -L/home/c-cronin/pspdev/lib -L/home/c-cronin/pspdev/psp/lib -L/home/c-cronin/pspdev/psp/sdk/lib -L/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0 -L/home/c-cronin/pspdev/bin/../lib/gcc -L/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/../../../../psp/lib -L/home/c-cronin/pspdev/bin/../psp/lib -zmax-page-size=128 CMakeFiles/cmTC_f04bd.dir/CMakeCCompilerABI.c.obj -lgcc -lm --start-group -lpthreadglue -lpthread -lcglue -lc --end-group -lpsputility -lpsprtc -lpspnet_inet -lpspnet_resolver -lpspsdk -lpspmodinfo -lpspuser -lgcc /home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/crtend.o /home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/crtn.o
+        /home/c-cronin/pspdev/bin/../libexec/gcc/psp/15.2.0/lto-wrapper -fresolution=/tmp/ccufC3hS.res -flinker-output=exec /home/c-cronin/pspdev/psp/lib/libpthread.a@0x612a6 /home/c-cronin/pspdev/psp/lib/libpthread.a@0x6333a /home/c-cronin/pspdev/psp/lib/libpthread.a@0x65632 /home/c-cronin/pspdev/psp/lib/libpthread.a@0x67106 /home/c-cronin/pspdev/psp/lib/libpthread.a@0x1aae /home/c-cronin/pspdev/psp/lib/libpthread.a@0x5162 /home/c-cronin/pspdev/psp/lib/libpthread.a@0x6f76 /home/c-cronin/pspdev/psp/lib/libpthread.a@0xb5c6 /home/c-cronin/pspdev/psp/lib/libpthread.a@0x1a782 /home/c-cronin/pspdev/psp/lib/libpthread.a@0x1c66e /home/c-cronin/pspdev/psp/lib/libpthread.a@0x27482 /home/c-cronin/pspdev/psp/lib/libpthread.a@0x54ff6 /home/c-cronin/pspdev/psp/lib/libpthread.a@0x59a76 /home/c-cronin/pspdev/psp/lib/libpthread.a@0x5d56e /home/c-cronin/pspdev/psp/lib/libpthread.a@0x5f0b2 /home/c-cronin/pspdev/psp/lib/libpthread.a@0x6941a /home/c-cronin/pspdev/psp/lib/libpthread.a@0x6a946 /home/c-cronin/pspdev/psp/lib/libpthread.a@0x6cebe /home/c-cronin/pspdev/psp/lib/libpthread.a@0x36ba 
+        /home/c-cronin/pspdev/bin/../libexec/gcc/psp/15.2.0/lto-wrapper -fresolution=/tmp/ccufC3hS.res -flinker-output=exec /home/c-cronin/pspdev/psp/lib/libpthread.a@0x612a6 /home/c-cronin/pspdev/psp/lib/libpthread.a@0x6333a /home/c-cronin/pspdev/psp/lib/libpthread.a@0x65632 /home/c-cronin/pspdev/psp/lib/libpthread.a@0x67106 /home/c-cronin/pspdev/psp/lib/libpthread.a@0x1aae /home/c-cronin/pspdev/psp/lib/libpthread.a@0x5162 /home/c-cronin/pspdev/psp/lib/libpthread.a@0x6f76 /home/c-cronin/pspdev/psp/lib/libpthread.a@0xb5c6 /home/c-cronin/pspdev/psp/lib/libpthread.a@0x1a782 /home/c-cronin/pspdev/psp/lib/libpthread.a@0x1c66e /home/c-cronin/pspdev/psp/lib/libpthread.a@0x27482 /home/c-cronin/pspdev/psp/lib/libpthread.a@0x54ff6 /home/c-cronin/pspdev/psp/lib/libpthread.a@0x59a76 /home/c-cronin/pspdev/psp/lib/libpthread.a@0x5d56e /home/c-cronin/pspdev/psp/lib/libpthread.a@0x5f0b2 /home/c-cronin/pspdev/psp/lib/libpthread.a@0x6941a /home/c-cronin/pspdev/psp/lib/libpthread.a@0x6a946 /home/c-cronin/pspdev/psp/lib/libpthread.a@0x6cebe /home/c-cronin/pspdev/psp/lib/libpthread.a@0x36ba 
+        /home/c-cronin/pspdev/bin/psp-gcc @/tmp/ccXuWcAp
+        Using built-in specs.
+        COLLECT_GCC=/home/c-cronin/pspdev/bin/psp-gcc
+        Target: psp
+        Configured with: ../configure --quiet --prefix=/home/runner/work/pspdev/pspdev/pspdev --target=psp --with-sysroot=/home/runner/work/pspdev/pspdev/pspdev/psp --with-native-system-header-dir=/include --enable-languages=c,c++ --with-float=hard --with-newlib --disable-libssp --disable-multilib --enable-threads=posix --disable-tls --disable-nls --silent
+        Thread model: posix
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 15.2.0 (GCC) 
+        COLLECT_GCC_OPTIONS='-c' '-fno-openmp' '-fno-openacc' '-fno-pie' '-fcf-protection=none' '-mno-gpopt' '-mhard-float' '-msingle-float' '-O3' '-L/home/c-cronin/pspdev/lib' '-L/home/c-cronin/pspdev/psp/lib' '-L/home/c-cronin/pspdev/psp/sdk/lib' '-v' '-L/home/c-cronin/pspdev/lib' '-L/home/c-cronin/pspdev/psp/lib' '-L/home/c-cronin/pspdev/psp/sdk/lib' '-mhard-float' '-msingle-float'   '-fltrans-output-list=/tmp/ccD9ziSn.ltrans.out' '-fwpa' '-fresolution=/tmp/ccufC3hS.res' '-flinker-output=exec'
+         /home/c-cronin/pspdev/bin/../lib/gcc/../../libexec/gcc/psp/15.2.0/lto1 -quiet -dumpbase ./cmTC_f04bd.wpa -mno-gpopt -mhard-float -msingle-float -mhard-float -msingle-float -O3 -version -fno-openmp -fno-openacc -fno-pie -fcf-protection=none -fltrans-output-list=/tmp/ccD9ziSn.ltrans.out -fwpa -fresolution=/tmp/ccufC3hS.res -flinker-output=exec @/tmp/ccVnHG5D
+        GNU GIMPLE (GCC) version 15.2.0 (psp)
+        	compiled by GNU C version 13.3.0, GMP version 6.3.0, MPFR version 4.2.1, MPC version 1.3.1, isl version none
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        COMPILER_PATH=/home/c-cronin/pspdev/bin/../lib/gcc/../../libexec/gcc/psp/15.2.0/:/home/c-cronin/pspdev/bin/../lib/gcc/../../libexec/gcc/:/home/c-cronin/pspdev/bin/../libexec/gcc/psp/15.2.0/:/home/c-cronin/pspdev/bin/../libexec/gcc/psp/15.2.0/:/home/c-cronin/pspdev/bin/../libexec/gcc/:/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/../../../../psp/bin/:/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/../../../../psp/bin/
+        LIBRARY_PATH=/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/:/home/c-cronin/pspdev/bin/../lib/gcc/:/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/../../../../psp/lib/:/home/c-cronin/pspdev/bin/../psp/lib/
+        COLLECT_GCC_OPTIONS='-c' '-fno-openmp' '-fno-openacc' '-fno-pie' '-fcf-protection=none' '-mno-gpopt' '-mhard-float' '-msingle-float' '-O3' '-L/home/c-cronin/pspdev/lib' '-L/home/c-cronin/pspdev/psp/lib' '-L/home/c-cronin/pspdev/psp/sdk/lib' '-v' '-L/home/c-cronin/pspdev/lib' '-L/home/c-cronin/pspdev/psp/lib' '-L/home/c-cronin/pspdev/psp/sdk/lib' '-mhard-float' '-msingle-float'   '-fltrans-output-list=/tmp/ccD9ziSn.ltrans.out' '-fwpa' '-fresolution=/tmp/ccufC3hS.res' '-flinker-output=exec' '-dumpdir' './cmTC_f04bd.wpa.'
+        /home/c-cronin/pspdev/bin/psp-gcc @/tmp/ccLz0Rbk
+        Using built-in specs.
+        COLLECT_GCC=/home/c-cronin/pspdev/bin/psp-gcc
+        Target: psp
+        Configured with: ../configure --quiet --prefix=/home/runner/work/pspdev/pspdev/pspdev --target=psp --with-sysroot=/home/runner/work/pspdev/pspdev/pspdev/psp --with-native-system-header-dir=/include --enable-languages=c,c++ --with-float=hard --with-newlib --disable-libssp --disable-multilib --enable-threads=posix --disable-tls --disable-nls --silent
+        Thread model: posix
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 15.2.0 (GCC) 
+        COLLECT_GCC_OPTIONS='-c' '-fno-openmp' '-fno-openacc' '-fno-pie' '-fcf-protection=none' '-mno-gpopt' '-mhard-float' '-msingle-float' '-O3' '-L/home/c-cronin/pspdev/lib' '-L/home/c-cronin/pspdev/psp/lib' '-L/home/c-cronin/pspdev/psp/sdk/lib' '-v' '-L/home/c-cronin/pspdev/lib' '-L/home/c-cronin/pspdev/psp/lib' '-L/home/c-cronin/pspdev/psp/sdk/lib' '-mhard-float' '-msingle-float'   '-fltrans' '-o' '/tmp/ccD9ziSn.ltrans0.ltrans.o'
+         /home/c-cronin/pspdev/bin/../lib/gcc/../../libexec/gcc/psp/15.2.0/lto1 -quiet -dumpbase ./cmTC_f04bd.ltrans0.ltrans -mno-gpopt -mhard-float -msingle-float -mhard-float -msingle-float -O3 -version -fno-openmp -fno-openacc -fno-pie -fcf-protection=none -fltrans @/tmp/ccbn0LQf -o /tmp/ccLRi9pV.s
+        GNU GIMPLE (GCC) version 15.2.0 (psp)
+        	compiled by GNU C version 13.3.0, GMP version 6.3.0, MPFR version 4.2.1, MPC version 1.3.1, isl version none
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        COLLECT_GCC_OPTIONS='-c' '-fno-openmp' '-fno-openacc' '-fno-pie' '-fcf-protection=none' '-mno-gpopt' '-mhard-float' '-msingle-float' '-O3' '-L/home/c-cronin/pspdev/lib' '-L/home/c-cronin/pspdev/psp/lib' '-L/home/c-cronin/pspdev/psp/sdk/lib' '-v' '-L/home/c-cronin/pspdev/lib' '-L/home/c-cronin/pspdev/psp/lib' '-L/home/c-cronin/pspdev/psp/sdk/lib' '-mhard-float' '-msingle-float'   '-fltrans' '-o' '/tmp/ccD9ziSn.ltrans0.ltrans.o'
+         /home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/../../../../psp/bin/as -EL -O2 -mabi=eabi -mhard-float -mhard-float -msingle-float -msingle-float -o /tmp/ccD9ziSn.ltrans0.ltrans.o /tmp/ccLRi9pV.s
+        COMPILER_PATH=/home/c-cronin/pspdev/bin/../lib/gcc/../../libexec/gcc/psp/15.2.0/:/home/c-cronin/pspdev/bin/../lib/gcc/../../libexec/gcc/:/home/c-cronin/pspdev/bin/../libexec/gcc/psp/15.2.0/:/home/c-cronin/pspdev/bin/../libexec/gcc/psp/15.2.0/:/home/c-cronin/pspdev/bin/../libexec/gcc/:/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/../../../../psp/bin/:/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/../../../../psp/bin/
+        LIBRARY_PATH=/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/:/home/c-cronin/pspdev/bin/../lib/gcc/:/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/../../../../psp/lib/:/home/c-cronin/pspdev/bin/../psp/lib/
+        COLLECT_GCC_OPTIONS='-c' '-fno-openmp' '-fno-openacc' '-fno-pie' '-fcf-protection=none' '-mno-gpopt' '-mhard-float' '-msingle-float' '-O3' '-L/home/c-cronin/pspdev/lib' '-L/home/c-cronin/pspdev/psp/lib' '-L/home/c-cronin/pspdev/psp/sdk/lib' '-v' '-L/home/c-cronin/pspdev/lib' '-L/home/c-cronin/pspdev/psp/lib' '-L/home/c-cronin/pspdev/psp/sdk/lib' '-mhard-float' '-msingle-float'   '-fltrans' '-o' '/tmp/ccD9ziSn.ltrans0.ltrans.o' '-dumpdir' './cmTC_f04bd.ltrans0.ltrans.'
+        COLLECT_GCC_OPTIONS='-I' '/home/c-cronin/pspdev/psp/include' '-I' '/home/c-cronin/pspdev/psp/sdk/include' '-D' 'PSP' '-L/home/c-cronin/pspdev/lib' '-L/home/c-cronin/pspdev/psp/lib' '-L/home/c-cronin/pspdev/psp/sdk/lib' '-v' '-o' 'cmTC_f04bd' '-L/home/c-cronin/pspdev/lib' '-L/home/c-cronin/pspdev/psp/lib' '-L/home/c-cronin/pspdev/psp/sdk/lib' '-mhard-float' '-msingle-float' '-dumpdir' 'cmTC_f04bd.'
+        /home/c-cronin/pspdev/bin/psp-gcc -I/home/c-cronin/pspdev/psp/include -I/home/c-cronin/pspdev/psp/sdk/include -DPSP  -L/home/c-cronin/pspdev/lib -L/home/c-cronin/pspdev/psp/lib -L/home/c-cronin/pspdev/psp/sdk/lib -Wl,-zmax-page-size=128 -v CMakeFiles/cmTC_f04bd.dir/CMakeCCompilerABI.c.obj -o cmTC_f04bd   -L/home/c-cronin/pspdev/lib  -L/home/c-cronin/pspdev/psp/lib  -L/home/c-cronin/pspdev/psp/sdk/lib
+        gmake[1]: Leaving directory '/home/c-cronin/Documents/GitHub/psp-raytracing/build/CMakeFiles/CMakeScratch/TryCompile-5rtTgb'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/c-cronin/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.2/Modules/CMakeDetermineCompilerABI.cmake:217 (message)"
+      - "/home/c-cronin/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.2/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Parsed C implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/home/c-cronin/pspdev/psp/sdk/include]
+          add: [/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/include]
+          add: [/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/include-fixed]
+          add: [/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/../../../../psp/include]
+        end of search list found
+        collapse include dir [/home/c-cronin/pspdev/psp/sdk/include] ==> [/home/c-cronin/pspdev/psp/sdk/include]
+        collapse include dir [/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/include] ==> [/home/c-cronin/pspdev/lib/gcc/psp/15.2.0/include]
+        collapse include dir [/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/include-fixed] ==> [/home/c-cronin/pspdev/lib/gcc/psp/15.2.0/include-fixed]
+        collapse include dir [/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/../../../../psp/include] ==> [/home/c-cronin/pspdev/psp/include]
+        implicit include dirs: [/home/c-cronin/pspdev/psp/sdk/include;/home/c-cronin/pspdev/lib/gcc/psp/15.2.0/include;/home/c-cronin/pspdev/lib/gcc/psp/15.2.0/include-fixed;/home/c-cronin/pspdev/psp/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/c-cronin/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.2/Modules/CMakeDetermineCompilerABI.cmake:253 (message)"
+      - "/home/c-cronin/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.2/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
+        ignore line: [Change Dir: '/home/c-cronin/Documents/GitHub/psp-raytracing/build/CMakeFiles/CMakeScratch/TryCompile-5rtTgb']
+        ignore line: []
+        ignore line: [Run Build Command(s): /home/c-cronin/.local/lib/python3.12/site-packages/cmake/data/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_f04bd/fast]
+        ignore line: [/usr/bin/gmake  -f CMakeFiles/cmTC_f04bd.dir/build.make CMakeFiles/cmTC_f04bd.dir/build]
+        ignore line: [gmake[1]: Entering directory '/home/c-cronin/Documents/GitHub/psp-raytracing/build/CMakeFiles/CMakeScratch/TryCompile-5rtTgb']
+        ignore line: [Building C object CMakeFiles/cmTC_f04bd.dir/CMakeCCompilerABI.c.obj]
+        ignore line: [/home/c-cronin/pspdev/bin/psp-gcc -DPSP -D_PSP_FW_VERSION=600 -D__PSP__  -I/home/c-cronin/pspdev/psp/include -I/home/c-cronin/pspdev/psp/sdk/include -DPSP    -v -o CMakeFiles/cmTC_f04bd.dir/CMakeCCompilerABI.c.obj -c /home/c-cronin/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.2/Modules/CMakeCCompilerABI.c]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/home/c-cronin/pspdev/bin/psp-gcc]
+        ignore line: [Target: psp]
+        ignore line: [Configured with: ../configure --quiet --prefix=/home/runner/work/pspdev/pspdev/pspdev --target=psp --with-sysroot=/home/runner/work/pspdev/pspdev/pspdev/psp --with-native-system-header-dir=/include --enable-languages=c c++ --with-float=hard --with-newlib --disable-libssp --disable-multilib --enable-threads=posix --disable-tls --disable-nls --silent]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 15.2.0 (GCC) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-D' 'PSP' '-D' '_PSP_FW_VERSION=600' '-D' '__PSP__' '-I' '/home/c-cronin/pspdev/psp/include' '-I' '/home/c-cronin/pspdev/psp/sdk/include' '-D' 'PSP' '-v' '-o' 'CMakeFiles/cmTC_f04bd.dir/CMakeCCompilerABI.c.obj' '-c' '-mhard-float' '-msingle-float' '-dumpdir' 'CMakeFiles/cmTC_f04bd.dir/']
+        ignore line: [ /home/c-cronin/pspdev/bin/../libexec/gcc/psp/15.2.0/cc1 -quiet -v -I /home/c-cronin/pspdev/psp/include -I /home/c-cronin/pspdev/psp/sdk/include -iprefix /home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/ -isysroot /home/c-cronin/pspdev/bin/../psp -DPSP=1 -D__PSP__=1 -D_PSP=1 -D__psp__=1 -D PSP -D _PSP_FW_VERSION=600 -D __PSP__ -D PSP /home/c-cronin/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.2/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_f04bd.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mhard-float -msingle-float -version -o /tmp/ccNrP2dW.s]
+        ignore line: [GNU C23 (GCC) version 15.2.0 (psp)]
+        ignore line: [	compiled by GNU C version 13.3.0  GMP version 6.3.0  MPFR version 4.2.1  MPC version 1.3.1  isl version none]
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring duplicate directory "/home/c-cronin/pspdev/bin/../lib/gcc/../../lib/gcc/psp/15.2.0/include"]
+        ignore line: [ignoring nonexistent directory "/home/c-cronin/pspdev/bin/../psp/usr/local/include"]
+        ignore line: [ignoring duplicate directory "/home/c-cronin/pspdev/bin/../lib/gcc/../../lib/gcc/psp/15.2.0/include-fixed"]
+        ignore line: [ignoring duplicate directory "/home/c-cronin/pspdev/bin/../lib/gcc/../../lib/gcc/psp/15.2.0/../../../../psp/include"]
+        ignore line: [ignoring duplicate directory "/home/c-cronin/pspdev/bin/../psp/include"]
+        ignore line: [ignoring duplicate directory "/home/c-cronin/pspdev/psp/include"]
+        ignore line: [  as it is a non-system directory that duplicates a system directory]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /home/c-cronin/pspdev/psp/sdk/include]
+        ignore line: [ /home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/include]
+        ignore line: [ /home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/include-fixed]
+        ignore line: [ /home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/../../../../psp/include]
+        ignore line: [End of search list.]
+        ignore line: [Compiler executable checksum: c6f8ef09427540da6441936b4af383ee]
+        ignore line: [COLLECT_GCC_OPTIONS='-D' 'PSP' '-D' '_PSP_FW_VERSION=600' '-D' '__PSP__' '-I' '/home/c-cronin/pspdev/psp/include' '-I' '/home/c-cronin/pspdev/psp/sdk/include' '-D' 'PSP' '-v' '-o' 'CMakeFiles/cmTC_f04bd.dir/CMakeCCompilerABI.c.obj' '-c' '-mhard-float' '-msingle-float' '-dumpdir' 'CMakeFiles/cmTC_f04bd.dir/']
+        ignore line: [ /home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/../../../../psp/bin/as -EL -O1 -mabi=eabi -mhard-float -msingle-float -o CMakeFiles/cmTC_f04bd.dir/CMakeCCompilerABI.c.obj /tmp/ccNrP2dW.s]
+        ignore line: [COMPILER_PATH=/home/c-cronin/pspdev/bin/../libexec/gcc/psp/15.2.0/:/home/c-cronin/pspdev/bin/../libexec/gcc/:/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/../../../../psp/bin/]
+        ignore line: [LIBRARY_PATH=/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/:/home/c-cronin/pspdev/bin/../lib/gcc/:/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/../../../../psp/lib/:/home/c-cronin/pspdev/bin/../psp/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-D' 'PSP' '-D' '_PSP_FW_VERSION=600' '-D' '__PSP__' '-I' '/home/c-cronin/pspdev/psp/include' '-I' '/home/c-cronin/pspdev/psp/sdk/include' '-D' 'PSP' '-v' '-o' 'CMakeFiles/cmTC_f04bd.dir/CMakeCCompilerABI.c.obj' '-c' '-mhard-float' '-msingle-float' '-dumpdir' 'CMakeFiles/cmTC_f04bd.dir/CMakeCCompilerABI.c.']
+        ignore line: [Linking C executable cmTC_f04bd]
+        ignore line: [/home/c-cronin/.local/lib/python3.12/site-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f04bd.dir/link.txt --verbose=1]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/home/c-cronin/pspdev/bin/psp-gcc]
+        ignore line: [COLLECT_LTO_WRAPPER=/home/c-cronin/pspdev/bin/../libexec/gcc/psp/15.2.0/lto-wrapper]
+        ignore line: [Target: psp]
+        ignore line: [Configured with: ../configure --quiet --prefix=/home/runner/work/pspdev/pspdev/pspdev --target=psp --with-sysroot=/home/runner/work/pspdev/pspdev/pspdev/psp --with-native-system-header-dir=/include --enable-languages=c c++ --with-float=hard --with-newlib --disable-libssp --disable-multilib --enable-threads=posix --disable-tls --disable-nls --silent]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 15.2.0 (GCC) ]
+        ignore line: [COMPILER_PATH=/home/c-cronin/pspdev/bin/../libexec/gcc/psp/15.2.0/:/home/c-cronin/pspdev/bin/../libexec/gcc/:/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/../../../../psp/bin/]
+        ignore line: [LIBRARY_PATH=/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/:/home/c-cronin/pspdev/bin/../lib/gcc/:/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/../../../../psp/lib/:/home/c-cronin/pspdev/bin/../psp/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-I' '/home/c-cronin/pspdev/psp/include' '-I' '/home/c-cronin/pspdev/psp/sdk/include' '-D' 'PSP' '-L/home/c-cronin/pspdev/lib' '-L/home/c-cronin/pspdev/psp/lib' '-L/home/c-cronin/pspdev/psp/sdk/lib' '-v' '-o' 'cmTC_f04bd' '-L/home/c-cronin/pspdev/lib' '-L/home/c-cronin/pspdev/psp/lib' '-L/home/c-cronin/pspdev/psp/sdk/lib' '-mhard-float' '-msingle-float' '-dumpdir' 'cmTC_f04bd.']
+        link line: [ /home/c-cronin/pspdev/bin/../libexec/gcc/psp/15.2.0/collect2 -plugin /home/c-cronin/pspdev/bin/../libexec/gcc/psp/15.2.0/liblto_plugin.so -plugin-opt=/home/c-cronin/pspdev/bin/../libexec/gcc/psp/15.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccufC3hS.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lm -plugin-opt=-pass-through=-lpthreadglue -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-lcglue -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lpsputility -plugin-opt=-pass-through=-lpsprtc -plugin-opt=-pass-through=-lpspnet_inet -plugin-opt=-pass-through=-lpspnet_resolver -plugin-opt=-pass-through=-lpspsdk -plugin-opt=-pass-through=-lpspmodinfo -plugin-opt=-pass-through=-lpspuser -plugin-opt=-pass-through=-lgcc --sysroot=/home/c-cronin/pspdev/bin/../psp -EL -o cmTC_f04bd /home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/../../../../psp/lib/crt0.o /home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/crti.o /home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/crtbegin.o -L/home/c-cronin/pspdev/lib -L/home/c-cronin/pspdev/psp/lib -L/home/c-cronin/pspdev/psp/sdk/lib -L/home/c-cronin/pspdev/lib -L/home/c-cronin/pspdev/psp/lib -L/home/c-cronin/pspdev/psp/sdk/lib -L/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0 -L/home/c-cronin/pspdev/bin/../lib/gcc -L/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/../../../../psp/lib -L/home/c-cronin/pspdev/bin/../psp/lib -zmax-page-size=128 CMakeFiles/cmTC_f04bd.dir/CMakeCCompilerABI.c.obj -lgcc -lm --start-group -lpthreadglue -lpthread -lcglue -lc --end-group -lpsputility -lpsprtc -lpspnet_inet -lpspnet_resolver -lpspsdk -lpspmodinfo -lpspuser -lgcc /home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/crtend.o /home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/crtn.o]
+          arg [/home/c-cronin/pspdev/bin/../libexec/gcc/psp/15.2.0/collect2] ==> ignore
+          arg [-plugin] ==> ignore
+          arg [/home/c-cronin/pspdev/bin/../libexec/gcc/psp/15.2.0/liblto_plugin.so] ==> ignore
+          arg [-plugin-opt=/home/c-cronin/pspdev/bin/../libexec/gcc/psp/15.2.0/lto-wrapper] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/ccufC3hS.res] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lm] ==> ignore
+          arg [-plugin-opt=-pass-through=-lpthreadglue] ==> ignore
+          arg [-plugin-opt=-pass-through=-lpthread] ==> ignore
+          arg [-plugin-opt=-pass-through=-lcglue] ==> ignore
+          arg [-plugin-opt=-pass-through=-lc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lpsputility] ==> ignore
+          arg [-plugin-opt=-pass-through=-lpsprtc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lpspnet_inet] ==> ignore
+          arg [-plugin-opt=-pass-through=-lpspnet_resolver] ==> ignore
+          arg [-plugin-opt=-pass-through=-lpspsdk] ==> ignore
+          arg [-plugin-opt=-pass-through=-lpspmodinfo] ==> ignore
+          arg [-plugin-opt=-pass-through=-lpspuser] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [--sysroot=/home/c-cronin/pspdev/bin/../psp] ==> ignore
+          arg [-EL] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_f04bd] ==> ignore
+          arg [/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/../../../../psp/lib/crt0.o] ==> obj [/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/../../../../psp/lib/crt0.o]
+          arg [/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/crti.o] ==> obj [/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/crti.o]
+          arg [/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/crtbegin.o] ==> obj [/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/crtbegin.o]
+          arg [-L/home/c-cronin/pspdev/lib] ==> dir [/home/c-cronin/pspdev/lib]
+          arg [-L/home/c-cronin/pspdev/psp/lib] ==> dir [/home/c-cronin/pspdev/psp/lib]
+          arg [-L/home/c-cronin/pspdev/psp/sdk/lib] ==> dir [/home/c-cronin/pspdev/psp/sdk/lib]
+          arg [-L/home/c-cronin/pspdev/lib] ==> dir [/home/c-cronin/pspdev/lib]
+          arg [-L/home/c-cronin/pspdev/psp/lib] ==> dir [/home/c-cronin/pspdev/psp/lib]
+          arg [-L/home/c-cronin/pspdev/psp/sdk/lib] ==> dir [/home/c-cronin/pspdev/psp/sdk/lib]
+          arg [-L/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0] ==> dir [/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0]
+          arg [-L/home/c-cronin/pspdev/bin/../lib/gcc] ==> dir [/home/c-cronin/pspdev/bin/../lib/gcc]
+          arg [-L/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/../../../../psp/lib] ==> dir [/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/../../../../psp/lib]
+          arg [-L/home/c-cronin/pspdev/bin/../psp/lib] ==> dir [/home/c-cronin/pspdev/bin/../psp/lib]
+          arg [-zmax-page-size=128] ==> ignore
+          arg [CMakeFiles/cmTC_f04bd.dir/CMakeCCompilerABI.c.obj] ==> ignore
+          arg [-lgcc] ==> lib [gcc]
+          arg [-lm] ==> lib [m]
+          arg [--start-group] ==> ignore
+          arg [-lpthreadglue] ==> lib [pthreadglue]
+          arg [-lpthread] ==> lib [pthread]
+          arg [-lcglue] ==> lib [cglue]
+          arg [-lc] ==> lib [c]
+          arg [--end-group] ==> ignore
+          arg [-lpsputility] ==> lib [psputility]
+          arg [-lpsprtc] ==> lib [psprtc]
+          arg [-lpspnet_inet] ==> lib [pspnet_inet]
+          arg [-lpspnet_resolver] ==> lib [pspnet_resolver]
+          arg [-lpspsdk] ==> lib [pspsdk]
+          arg [-lpspmodinfo] ==> lib [pspmodinfo]
+          arg [-lpspuser] ==> lib [pspuser]
+          arg [-lgcc] ==> lib [gcc]
+          arg [/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/crtend.o] ==> obj [/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/crtend.o]
+          arg [/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/crtn.o] ==> obj [/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/crtn.o]
+        ignore line: [/home/c-cronin/pspdev/bin/../libexec/gcc/psp/15.2.0/lto-wrapper -fresolution=/tmp/ccufC3hS.res -flinker-output=exec /home/c-cronin/pspdev/psp/lib/libpthread.a@0x612a6 /home/c-cronin/pspdev/psp/lib/libpthread.a@0x6333a /home/c-cronin/pspdev/psp/lib/libpthread.a@0x65632 /home/c-cronin/pspdev/psp/lib/libpthread.a@0x67106 /home/c-cronin/pspdev/psp/lib/libpthread.a@0x1aae /home/c-cronin/pspdev/psp/lib/libpthread.a@0x5162 /home/c-cronin/pspdev/psp/lib/libpthread.a@0x6f76 /home/c-cronin/pspdev/psp/lib/libpthread.a@0xb5c6 /home/c-cronin/pspdev/psp/lib/libpthread.a@0x1a782 /home/c-cronin/pspdev/psp/lib/libpthread.a@0x1c66e /home/c-cronin/pspdev/psp/lib/libpthread.a@0x27482 /home/c-cronin/pspdev/psp/lib/libpthread.a@0x54ff6 /home/c-cronin/pspdev/psp/lib/libpthread.a@0x59a76 /home/c-cronin/pspdev/psp/lib/libpthread.a@0x5d56e /home/c-cronin/pspdev/psp/lib/libpthread.a@0x5f0b2 /home/c-cronin/pspdev/psp/lib/libpthread.a@0x6941a /home/c-cronin/pspdev/psp/lib/libpthread.a@0x6a946 /home/c-cronin/pspdev/psp/lib/libpthread.a@0x6cebe /home/c-cronin/pspdev/psp/lib/libpthread.a@0x36ba ]
+        ignore line: [/home/c-cronin/pspdev/bin/../libexec/gcc/psp/15.2.0/lto-wrapper -fresolution=/tmp/ccufC3hS.res -flinker-output=exec /home/c-cronin/pspdev/psp/lib/libpthread.a@0x612a6 /home/c-cronin/pspdev/psp/lib/libpthread.a@0x6333a /home/c-cronin/pspdev/psp/lib/libpthread.a@0x65632 /home/c-cronin/pspdev/psp/lib/libpthread.a@0x67106 /home/c-cronin/pspdev/psp/lib/libpthread.a@0x1aae /home/c-cronin/pspdev/psp/lib/libpthread.a@0x5162 /home/c-cronin/pspdev/psp/lib/libpthread.a@0x6f76 /home/c-cronin/pspdev/psp/lib/libpthread.a@0xb5c6 /home/c-cronin/pspdev/psp/lib/libpthread.a@0x1a782 /home/c-cronin/pspdev/psp/lib/libpthread.a@0x1c66e /home/c-cronin/pspdev/psp/lib/libpthread.a@0x27482 /home/c-cronin/pspdev/psp/lib/libpthread.a@0x54ff6 /home/c-cronin/pspdev/psp/lib/libpthread.a@0x59a76 /home/c-cronin/pspdev/psp/lib/libpthread.a@0x5d56e /home/c-cronin/pspdev/psp/lib/libpthread.a@0x5f0b2 /home/c-cronin/pspdev/psp/lib/libpthread.a@0x6941a /home/c-cronin/pspdev/psp/lib/libpthread.a@0x6a946 /home/c-cronin/pspdev/psp/lib/libpthread.a@0x6cebe /home/c-cronin/pspdev/psp/lib/libpthread.a@0x36ba ]
+        ignore line: [/home/c-cronin/pspdev/bin/psp-gcc @/tmp/ccXuWcAp]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/home/c-cronin/pspdev/bin/psp-gcc]
+        ignore line: [Target: psp]
+        ignore line: [Configured with: ../configure --quiet --prefix=/home/runner/work/pspdev/pspdev/pspdev --target=psp --with-sysroot=/home/runner/work/pspdev/pspdev/pspdev/psp --with-native-system-header-dir=/include --enable-languages=c c++ --with-float=hard --with-newlib --disable-libssp --disable-multilib --enable-threads=posix --disable-tls --disable-nls --silent]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 15.2.0 (GCC) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-c' '-fno-openmp' '-fno-openacc' '-fno-pie' '-fcf-protection=none' '-mno-gpopt' '-mhard-float' '-msingle-float' '-O3' '-L/home/c-cronin/pspdev/lib' '-L/home/c-cronin/pspdev/psp/lib' '-L/home/c-cronin/pspdev/psp/sdk/lib' '-v' '-L/home/c-cronin/pspdev/lib' '-L/home/c-cronin/pspdev/psp/lib' '-L/home/c-cronin/pspdev/psp/sdk/lib' '-mhard-float' '-msingle-float'   '-fltrans-output-list=/tmp/ccD9ziSn.ltrans.out' '-fwpa' '-fresolution=/tmp/ccufC3hS.res' '-flinker-output=exec']
+        ignore line: [ /home/c-cronin/pspdev/bin/../lib/gcc/../../libexec/gcc/psp/15.2.0/lto1 -quiet -dumpbase ./cmTC_f04bd.wpa -mno-gpopt -mhard-float -msingle-float -mhard-float -msingle-float -O3 -version -fno-openmp -fno-openacc -fno-pie -fcf-protection=none -fltrans-output-list=/tmp/ccD9ziSn.ltrans.out -fwpa -fresolution=/tmp/ccufC3hS.res -flinker-output=exec @/tmp/ccVnHG5D]
+        ignore line: [GNU GIMPLE (GCC) version 15.2.0 (psp)]
+        ignore line: [	compiled by GNU C version 13.3.0  GMP version 6.3.0  MPFR version 4.2.1  MPC version 1.3.1  isl version none]
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [COMPILER_PATH=/home/c-cronin/pspdev/bin/../lib/gcc/../../libexec/gcc/psp/15.2.0/:/home/c-cronin/pspdev/bin/../lib/gcc/../../libexec/gcc/:/home/c-cronin/pspdev/bin/../libexec/gcc/psp/15.2.0/:/home/c-cronin/pspdev/bin/../libexec/gcc/psp/15.2.0/:/home/c-cronin/pspdev/bin/../libexec/gcc/:/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/../../../../psp/bin/:/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/../../../../psp/bin/]
+        ignore line: [LIBRARY_PATH=/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/:/home/c-cronin/pspdev/bin/../lib/gcc/:/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/../../../../psp/lib/:/home/c-cronin/pspdev/bin/../psp/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-c' '-fno-openmp' '-fno-openacc' '-fno-pie' '-fcf-protection=none' '-mno-gpopt' '-mhard-float' '-msingle-float' '-O3' '-L/home/c-cronin/pspdev/lib' '-L/home/c-cronin/pspdev/psp/lib' '-L/home/c-cronin/pspdev/psp/sdk/lib' '-v' '-L/home/c-cronin/pspdev/lib' '-L/home/c-cronin/pspdev/psp/lib' '-L/home/c-cronin/pspdev/psp/sdk/lib' '-mhard-float' '-msingle-float'   '-fltrans-output-list=/tmp/ccD9ziSn.ltrans.out' '-fwpa' '-fresolution=/tmp/ccufC3hS.res' '-flinker-output=exec' '-dumpdir' './cmTC_f04bd.wpa.']
+        ignore line: [/home/c-cronin/pspdev/bin/psp-gcc @/tmp/ccLz0Rbk]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/home/c-cronin/pspdev/bin/psp-gcc]
+        ignore line: [Target: psp]
+        ignore line: [Configured with: ../configure --quiet --prefix=/home/runner/work/pspdev/pspdev/pspdev --target=psp --with-sysroot=/home/runner/work/pspdev/pspdev/pspdev/psp --with-native-system-header-dir=/include --enable-languages=c c++ --with-float=hard --with-newlib --disable-libssp --disable-multilib --enable-threads=posix --disable-tls --disable-nls --silent]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 15.2.0 (GCC) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-c' '-fno-openmp' '-fno-openacc' '-fno-pie' '-fcf-protection=none' '-mno-gpopt' '-mhard-float' '-msingle-float' '-O3' '-L/home/c-cronin/pspdev/lib' '-L/home/c-cronin/pspdev/psp/lib' '-L/home/c-cronin/pspdev/psp/sdk/lib' '-v' '-L/home/c-cronin/pspdev/lib' '-L/home/c-cronin/pspdev/psp/lib' '-L/home/c-cronin/pspdev/psp/sdk/lib' '-mhard-float' '-msingle-float'   '-fltrans' '-o' '/tmp/ccD9ziSn.ltrans0.ltrans.o']
+        ignore line: [ /home/c-cronin/pspdev/bin/../lib/gcc/../../libexec/gcc/psp/15.2.0/lto1 -quiet -dumpbase ./cmTC_f04bd.ltrans0.ltrans -mno-gpopt -mhard-float -msingle-float -mhard-float -msingle-float -O3 -version -fno-openmp -fno-openacc -fno-pie -fcf-protection=none -fltrans @/tmp/ccbn0LQf -o /tmp/ccLRi9pV.s]
+        ignore line: [GNU GIMPLE (GCC) version 15.2.0 (psp)]
+        ignore line: [	compiled by GNU C version 13.3.0  GMP version 6.3.0  MPFR version 4.2.1  MPC version 1.3.1  isl version none]
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [COLLECT_GCC_OPTIONS='-c' '-fno-openmp' '-fno-openacc' '-fno-pie' '-fcf-protection=none' '-mno-gpopt' '-mhard-float' '-msingle-float' '-O3' '-L/home/c-cronin/pspdev/lib' '-L/home/c-cronin/pspdev/psp/lib' '-L/home/c-cronin/pspdev/psp/sdk/lib' '-v' '-L/home/c-cronin/pspdev/lib' '-L/home/c-cronin/pspdev/psp/lib' '-L/home/c-cronin/pspdev/psp/sdk/lib' '-mhard-float' '-msingle-float'   '-fltrans' '-o' '/tmp/ccD9ziSn.ltrans0.ltrans.o']
+        ignore line: [ /home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/../../../../psp/bin/as -EL -O2 -mabi=eabi -mhard-float -mhard-float -msingle-float -msingle-float -o /tmp/ccD9ziSn.ltrans0.ltrans.o /tmp/ccLRi9pV.s]
+        ignore line: [COMPILER_PATH=/home/c-cronin/pspdev/bin/../lib/gcc/../../libexec/gcc/psp/15.2.0/:/home/c-cronin/pspdev/bin/../lib/gcc/../../libexec/gcc/:/home/c-cronin/pspdev/bin/../libexec/gcc/psp/15.2.0/:/home/c-cronin/pspdev/bin/../libexec/gcc/psp/15.2.0/:/home/c-cronin/pspdev/bin/../libexec/gcc/:/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/../../../../psp/bin/:/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/../../../../psp/bin/]
+        ignore line: [LIBRARY_PATH=/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/:/home/c-cronin/pspdev/bin/../lib/gcc/:/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/../../../../psp/lib/:/home/c-cronin/pspdev/bin/../psp/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-c' '-fno-openmp' '-fno-openacc' '-fno-pie' '-fcf-protection=none' '-mno-gpopt' '-mhard-float' '-msingle-float' '-O3' '-L/home/c-cronin/pspdev/lib' '-L/home/c-cronin/pspdev/psp/lib' '-L/home/c-cronin/pspdev/psp/sdk/lib' '-v' '-L/home/c-cronin/pspdev/lib' '-L/home/c-cronin/pspdev/psp/lib' '-L/home/c-cronin/pspdev/psp/sdk/lib' '-mhard-float' '-msingle-float'   '-fltrans' '-o' '/tmp/ccD9ziSn.ltrans0.ltrans.o' '-dumpdir' './cmTC_f04bd.ltrans0.ltrans.']
+        ignore line: [COLLECT_GCC_OPTIONS='-I' '/home/c-cronin/pspdev/psp/include' '-I' '/home/c-cronin/pspdev/psp/sdk/include' '-D' 'PSP' '-L/home/c-cronin/pspdev/lib' '-L/home/c-cronin/pspdev/psp/lib' '-L/home/c-cronin/pspdev/psp/sdk/lib' '-v' '-o' 'cmTC_f04bd' '-L/home/c-cronin/pspdev/lib' '-L/home/c-cronin/pspdev/psp/lib' '-L/home/c-cronin/pspdev/psp/sdk/lib' '-mhard-float' '-msingle-float' '-dumpdir' 'cmTC_f04bd.']
+        ignore line: [/home/c-cronin/pspdev/bin/psp-gcc -I/home/c-cronin/pspdev/psp/include -I/home/c-cronin/pspdev/psp/sdk/include -DPSP  -L/home/c-cronin/pspdev/lib -L/home/c-cronin/pspdev/psp/lib -L/home/c-cronin/pspdev/psp/sdk/lib -Wl -zmax-page-size=128 -v CMakeFiles/cmTC_f04bd.dir/CMakeCCompilerABI.c.obj -o cmTC_f04bd   -L/home/c-cronin/pspdev/lib  -L/home/c-cronin/pspdev/psp/lib  -L/home/c-cronin/pspdev/psp/sdk/lib]
+        ignore line: [gmake[1]: Leaving directory '/home/c-cronin/Documents/GitHub/psp-raytracing/build/CMakeFiles/CMakeScratch/TryCompile-5rtTgb']
+        ignore line: []
+        ignore line: []
+        collapse obj [/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/../../../../psp/lib/crt0.o] ==> [/home/c-cronin/pspdev/psp/lib/crt0.o]
+        collapse obj [/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/crti.o] ==> [/home/c-cronin/pspdev/lib/gcc/psp/15.2.0/crti.o]
+        collapse obj [/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/crtbegin.o] ==> [/home/c-cronin/pspdev/lib/gcc/psp/15.2.0/crtbegin.o]
+        collapse obj [/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/crtend.o] ==> [/home/c-cronin/pspdev/lib/gcc/psp/15.2.0/crtend.o]
+        collapse obj [/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/crtn.o] ==> [/home/c-cronin/pspdev/lib/gcc/psp/15.2.0/crtn.o]
+        collapse library dir [/home/c-cronin/pspdev/lib] ==> [/home/c-cronin/pspdev/lib]
+        collapse library dir [/home/c-cronin/pspdev/psp/lib] ==> [/home/c-cronin/pspdev/psp/lib]
+        collapse library dir [/home/c-cronin/pspdev/psp/sdk/lib] ==> [/home/c-cronin/pspdev/psp/sdk/lib]
+        collapse library dir [/home/c-cronin/pspdev/lib] ==> [/home/c-cronin/pspdev/lib]
+        collapse library dir [/home/c-cronin/pspdev/psp/lib] ==> [/home/c-cronin/pspdev/psp/lib]
+        collapse library dir [/home/c-cronin/pspdev/psp/sdk/lib] ==> [/home/c-cronin/pspdev/psp/sdk/lib]
+        collapse library dir [/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0] ==> [/home/c-cronin/pspdev/lib/gcc/psp/15.2.0]
+        collapse library dir [/home/c-cronin/pspdev/bin/../lib/gcc] ==> [/home/c-cronin/pspdev/lib/gcc]
+        collapse library dir [/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/../../../../psp/lib] ==> [/home/c-cronin/pspdev/psp/lib]
+        collapse library dir [/home/c-cronin/pspdev/bin/../psp/lib] ==> [/home/c-cronin/pspdev/psp/lib]
+        implicit libs: [gcc;m;pthreadglue;pthread;cglue;c;psputility;psprtc;pspnet_inet;pspnet_resolver;pspsdk;pspmodinfo;pspuser;gcc]
+        implicit objs: [/home/c-cronin/pspdev/psp/lib/crt0.o;/home/c-cronin/pspdev/lib/gcc/psp/15.2.0/crti.o;/home/c-cronin/pspdev/lib/gcc/psp/15.2.0/crtbegin.o;/home/c-cronin/pspdev/lib/gcc/psp/15.2.0/crtend.o;/home/c-cronin/pspdev/lib/gcc/psp/15.2.0/crtn.o]
+        implicit dirs: [/home/c-cronin/pspdev/lib;/home/c-cronin/pspdev/psp/lib;/home/c-cronin/pspdev/psp/sdk/lib;/home/c-cronin/pspdev/lib/gcc/psp/15.2.0;/home/c-cronin/pspdev/lib/gcc]
+        implicit fwks: []
+      
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/c-cronin/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.2/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
+      - "/home/c-cronin/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.2/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "/home/c-cronin/Documents/GitHub/psp-raytracing/build/CMakeFiles/CMakeScratch/TryCompile-0HMg5O"
+      binary: "/home/c-cronin/Documents/GitHub/psp-raytracing/build/CMakeFiles/CMakeScratch/TryCompile-0HMg5O"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "-I/home/c-cronin/pspdev/psp/include -I/home/c-cronin/pspdev/psp/sdk/include -DPSP"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_CXX_SCAN_FOR_MODULES: "OFF"
+      CMAKE_EXE_LINKER_FLAGS: "-L/home/c-cronin/pspdev/lib -L/home/c-cronin/pspdev/psp/lib -L/home/c-cronin/pspdev/psp/sdk/lib -Wl,-zmax-page-size=128"
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/home/c-cronin/Documents/GitHub/psp-raytracing/build/CMakeFiles/CMakeScratch/TryCompile-0HMg5O'
+        
+        Run Build Command(s): /home/c-cronin/.local/lib/python3.12/site-packages/cmake/data/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_90da0/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_90da0.dir/build.make CMakeFiles/cmTC_90da0.dir/build
+        gmake[1]: Entering directory '/home/c-cronin/Documents/GitHub/psp-raytracing/build/CMakeFiles/CMakeScratch/TryCompile-0HMg5O'
+        Building CXX object CMakeFiles/cmTC_90da0.dir/CMakeCXXCompilerABI.cpp.obj
+        /home/c-cronin/pspdev/bin/psp-g++ -DPSP -D_PSP_FW_VERSION=600 -D__PSP__  -I/home/c-cronin/pspdev/psp/include -I/home/c-cronin/pspdev/psp/sdk/include -DPSP    -v -o CMakeFiles/cmTC_90da0.dir/CMakeCXXCompilerABI.cpp.obj -c /home/c-cronin/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.2/Modules/CMakeCXXCompilerABI.cpp
+        Using built-in specs.
+        COLLECT_GCC=/home/c-cronin/pspdev/bin/psp-g++
+        Target: psp
+        Configured with: ../configure --quiet --prefix=/home/runner/work/pspdev/pspdev/pspdev --target=psp --with-sysroot=/home/runner/work/pspdev/pspdev/pspdev/psp --with-native-system-header-dir=/include --enable-languages=c,c++ --with-float=hard --with-newlib --disable-libssp --disable-multilib --enable-threads=posix --disable-tls --disable-nls --silent
+        Thread model: posix
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 15.2.0 (GCC) 
+        COLLECT_GCC_OPTIONS='-D' 'PSP' '-D' '_PSP_FW_VERSION=600' '-D' '__PSP__' '-I' '/home/c-cronin/pspdev/psp/include' '-I' '/home/c-cronin/pspdev/psp/sdk/include' '-D' 'PSP' '-v' '-o' 'CMakeFiles/cmTC_90da0.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mhard-float' '-msingle-float' '-dumpdir' 'CMakeFiles/cmTC_90da0.dir/'
+         /home/c-cronin/pspdev/bin/../libexec/gcc/psp/15.2.0/cc1plus -quiet -v -I /home/c-cronin/pspdev/psp/include -I /home/c-cronin/pspdev/psp/sdk/include -iprefix /home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/ -isysroot /home/c-cronin/pspdev/bin/../psp -DPSP=1 -D__PSP__=1 -D_PSP=1 -D__psp__=1 -D PSP -D _PSP_FW_VERSION=600 -D __PSP__ -D PSP /home/c-cronin/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.2/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_90da0.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mhard-float -msingle-float -version -o /tmp/ccM7pWqw.s
+        GNU C++17 (GCC) version 15.2.0 (psp)
+        	compiled by GNU C version 13.3.0, GMP version 6.3.0, MPFR version 4.2.1, MPC version 1.3.1, isl version none
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring duplicate directory "/home/c-cronin/pspdev/bin/../lib/gcc/../../lib/gcc/psp/15.2.0/../../../../psp/include/c++/15.2.0"
+        ignoring duplicate directory "/home/c-cronin/pspdev/bin/../lib/gcc/../../lib/gcc/psp/15.2.0/../../../../psp/include/c++/15.2.0/psp"
+        ignoring duplicate directory "/home/c-cronin/pspdev/bin/../lib/gcc/../../lib/gcc/psp/15.2.0/../../../../psp/include/c++/15.2.0/backward"
+        ignoring duplicate directory "/home/c-cronin/pspdev/bin/../lib/gcc/../../lib/gcc/psp/15.2.0/include"
+        ignoring nonexistent directory "/home/c-cronin/pspdev/bin/../psp/usr/local/include"
+        ignoring duplicate directory "/home/c-cronin/pspdev/bin/../lib/gcc/../../lib/gcc/psp/15.2.0/include-fixed"
+        ignoring duplicate directory "/home/c-cronin/pspdev/bin/../lib/gcc/../../lib/gcc/psp/15.2.0/../../../../psp/include"
+        ignoring duplicate directory "/home/c-cronin/pspdev/bin/../psp/include"
+        ignoring duplicate directory "/home/c-cronin/pspdev/psp/include"
+          as it is a non-system directory that duplicates a system directory
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /home/c-cronin/pspdev/psp/sdk/include
+         /home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/../../../../psp/include/c++/15.2.0
+         /home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/../../../../psp/include/c++/15.2.0/psp
+         /home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/../../../../psp/include/c++/15.2.0/backward
+         /home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/include
+         /home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/include-fixed
+         /home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/../../../../psp/include
+        End of search list.
+        Compiler executable checksum: f61a546ae188412cf6621dece911ab31
+        COLLECT_GCC_OPTIONS='-D' 'PSP' '-D' '_PSP_FW_VERSION=600' '-D' '__PSP__' '-I' '/home/c-cronin/pspdev/psp/include' '-I' '/home/c-cronin/pspdev/psp/sdk/include' '-D' 'PSP' '-v' '-o' 'CMakeFiles/cmTC_90da0.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mhard-float' '-msingle-float' '-dumpdir' 'CMakeFiles/cmTC_90da0.dir/'
+         /home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/../../../../psp/bin/as -EL -O1 -mabi=eabi -mhard-float -msingle-float -o CMakeFiles/cmTC_90da0.dir/CMakeCXXCompilerABI.cpp.obj /tmp/ccM7pWqw.s
+        COMPILER_PATH=/home/c-cronin/pspdev/bin/../libexec/gcc/psp/15.2.0/:/home/c-cronin/pspdev/bin/../libexec/gcc/:/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/../../../../psp/bin/
+        LIBRARY_PATH=/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/:/home/c-cronin/pspdev/bin/../lib/gcc/:/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/../../../../psp/lib/:/home/c-cronin/pspdev/bin/../psp/lib/
+        COLLECT_GCC_OPTIONS='-D' 'PSP' '-D' '_PSP_FW_VERSION=600' '-D' '__PSP__' '-I' '/home/c-cronin/pspdev/psp/include' '-I' '/home/c-cronin/pspdev/psp/sdk/include' '-D' 'PSP' '-v' '-o' 'CMakeFiles/cmTC_90da0.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mhard-float' '-msingle-float' '-dumpdir' 'CMakeFiles/cmTC_90da0.dir/CMakeCXXCompilerABI.cpp.'
+        Linking CXX executable cmTC_90da0
+        /home/c-cronin/.local/lib/python3.12/site-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_90da0.dir/link.txt --verbose=1
+        Using built-in specs.
+        COLLECT_GCC=/home/c-cronin/pspdev/bin/psp-g++
+        COLLECT_LTO_WRAPPER=/home/c-cronin/pspdev/bin/../libexec/gcc/psp/15.2.0/lto-wrapper
+        Target: psp
+        Configured with: ../configure --quiet --prefix=/home/runner/work/pspdev/pspdev/pspdev --target=psp --with-sysroot=/home/runner/work/pspdev/pspdev/pspdev/psp --with-native-system-header-dir=/include --enable-languages=c,c++ --with-float=hard --with-newlib --disable-libssp --disable-multilib --enable-threads=posix --disable-tls --disable-nls --silent
+        Thread model: posix
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 15.2.0 (GCC) 
+        COMPILER_PATH=/home/c-cronin/pspdev/bin/../libexec/gcc/psp/15.2.0/:/home/c-cronin/pspdev/bin/../libexec/gcc/:/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/../../../../psp/bin/
+        LIBRARY_PATH=/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/:/home/c-cronin/pspdev/bin/../lib/gcc/:/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/../../../../psp/lib/:/home/c-cronin/pspdev/bin/../psp/lib/
+        COLLECT_GCC_OPTIONS='-I' '/home/c-cronin/pspdev/psp/include' '-I' '/home/c-cronin/pspdev/psp/sdk/include' '-D' 'PSP' '-L/home/c-cronin/pspdev/lib' '-L/home/c-cronin/pspdev/psp/lib' '-L/home/c-cronin/pspdev/psp/sdk/lib' '-v' '-o' 'cmTC_90da0' '-L/home/c-cronin/pspdev/lib' '-L/home/c-cronin/pspdev/psp/lib' '-L/home/c-cronin/pspdev/psp/sdk/lib' '-mhard-float' '-msingle-float' '-dumpdir' 'cmTC_90da0.'
+         /home/c-cronin/pspdev/bin/../libexec/gcc/psp/15.2.0/collect2 -plugin /home/c-cronin/pspdev/bin/../libexec/gcc/psp/15.2.0/liblto_plugin.so -plugin-opt=/home/c-cronin/pspdev/bin/../libexec/gcc/psp/15.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/cczUkECi.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lm -plugin-opt=-pass-through=-lpthreadglue -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-lcglue -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lpsputility -plugin-opt=-pass-through=-lpsprtc -plugin-opt=-pass-through=-lpspnet_inet -plugin-opt=-pass-through=-lpspnet_resolver -plugin-opt=-pass-through=-lpspsdk -plugin-opt=-pass-through=-lpspmodinfo -plugin-opt=-pass-through=-lpspuser -plugin-opt=-pass-through=-lgcc --sysroot=/home/c-cronin/pspdev/bin/../psp -EL -o cmTC_90da0 /home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/../../../../psp/lib/crt0.o /home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/crti.o /home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/crtbegin.o -L/home/c-cronin/pspdev/lib -L/home/c-cronin/pspdev/psp/lib -L/home/c-cronin/pspdev/psp/sdk/lib -L/home/c-cronin/pspdev/lib -L/home/c-cronin/pspdev/psp/lib -L/home/c-cronin/pspdev/psp/sdk/lib -L/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0 -L/home/c-cronin/pspdev/bin/../lib/gcc -L/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/../../../../psp/lib -L/home/c-cronin/pspdev/bin/../psp/lib -zmax-page-size=128 CMakeFiles/cmTC_90da0.dir/CMakeCXXCompilerABI.cpp.obj -lstdc++ -lm -lgcc -lm --start-group -lpthreadglue -lpthread -lcglue -lc --end-group -lpsputility -lpsprtc -lpspnet_inet -lpspnet_resolver -lpspsdk -lpspmodinfo -lpspuser -lgcc /home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/crtend.o /home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/crtn.o
+        /home/c-cronin/pspdev/bin/../libexec/gcc/psp/15.2.0/lto-wrapper -fresolution=/tmp/cczUkECi.res -flinker-output=exec /home/c-cronin/pspdev/psp/lib/libpthread.a@0x612a6 /home/c-cronin/pspdev/psp/lib/libpthread.a@0x6333a /home/c-cronin/pspdev/psp/lib/libpthread.a@0x65632 /home/c-cronin/pspdev/psp/lib/libpthread.a@0x67106 /home/c-cronin/pspdev/psp/lib/libpthread.a@0x1aae /home/c-cronin/pspdev/psp/lib/libpthread.a@0x5162 /home/c-cronin/pspdev/psp/lib/libpthread.a@0x6f76 /home/c-cronin/pspdev/psp/lib/libpthread.a@0xb5c6 /home/c-cronin/pspdev/psp/lib/libpthread.a@0x1a782 /home/c-cronin/pspdev/psp/lib/libpthread.a@0x1c66e /home/c-cronin/pspdev/psp/lib/libpthread.a@0x27482 /home/c-cronin/pspdev/psp/lib/libpthread.a@0x54ff6 /home/c-cronin/pspdev/psp/lib/libpthread.a@0x59a76 /home/c-cronin/pspdev/psp/lib/libpthread.a@0x5d56e /home/c-cronin/pspdev/psp/lib/libpthread.a@0x5f0b2 /home/c-cronin/pspdev/psp/lib/libpthread.a@0x6941a /home/c-cronin/pspdev/psp/lib/libpthread.a@0x6a946 /home/c-cronin/pspdev/psp/lib/libpthread.a@0x6cebe /home/c-cronin/pspdev/psp/lib/libpthread.a@0x36ba 
+        /home/c-cronin/pspdev/bin/../libexec/gcc/psp/15.2.0/lto-wrapper -fresolution=/tmp/cczUkECi.res -flinker-output=exec /home/c-cronin/pspdev/psp/lib/libpthread.a@0x612a6 /home/c-cronin/pspdev/psp/lib/libpthread.a@0x6333a /home/c-cronin/pspdev/psp/lib/libpthread.a@0x65632 /home/c-cronin/pspdev/psp/lib/libpthread.a@0x67106 /home/c-cronin/pspdev/psp/lib/libpthread.a@0x1aae /home/c-cronin/pspdev/psp/lib/libpthread.a@0x5162 /home/c-cronin/pspdev/psp/lib/libpthread.a@0x6f76 /home/c-cronin/pspdev/psp/lib/libpthread.a@0xb5c6 /home/c-cronin/pspdev/psp/lib/libpthread.a@0x1a782 /home/c-cronin/pspdev/psp/lib/libpthread.a@0x1c66e /home/c-cronin/pspdev/psp/lib/libpthread.a@0x27482 /home/c-cronin/pspdev/psp/lib/libpthread.a@0x54ff6 /home/c-cronin/pspdev/psp/lib/libpthread.a@0x59a76 /home/c-cronin/pspdev/psp/lib/libpthread.a@0x5d56e /home/c-cronin/pspdev/psp/lib/libpthread.a@0x5f0b2 /home/c-cronin/pspdev/psp/lib/libpthread.a@0x6941a /home/c-cronin/pspdev/psp/lib/libpthread.a@0x6a946 /home/c-cronin/pspdev/psp/lib/libpthread.a@0x6cebe /home/c-cronin/pspdev/psp/lib/libpthread.a@0x36ba 
+        /home/c-cronin/pspdev/bin/psp-g++ @/tmp/ccY6x4tb
+        Using built-in specs.
+        COLLECT_GCC=/home/c-cronin/pspdev/bin/psp-g++
+        Target: psp
+        Configured with: ../configure --quiet --prefix=/home/runner/work/pspdev/pspdev/pspdev --target=psp --with-sysroot=/home/runner/work/pspdev/pspdev/pspdev/psp --with-native-system-header-dir=/include --enable-languages=c,c++ --with-float=hard --with-newlib --disable-libssp --disable-multilib --enable-threads=posix --disable-tls --disable-nls --silent
+        Thread model: posix
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 15.2.0 (GCC) 
+        COLLECT_GCC_OPTIONS='-c' '-fno-openmp' '-fno-openacc' '-fno-pie' '-fcf-protection=none' '-mno-gpopt' '-mhard-float' '-msingle-float' '-O3' '-L/home/c-cronin/pspdev/lib' '-L/home/c-cronin/pspdev/psp/lib' '-L/home/c-cronin/pspdev/psp/sdk/lib' '-v' '-L/home/c-cronin/pspdev/lib' '-L/home/c-cronin/pspdev/psp/lib' '-L/home/c-cronin/pspdev/psp/sdk/lib' '-mhard-float' '-msingle-float'   '-fltrans-output-list=/tmp/ccXSGmhA.ltrans.out' '-fwpa' '-fresolution=/tmp/cczUkECi.res' '-flinker-output=exec'
+         /home/c-cronin/pspdev/bin/../lib/gcc/../../libexec/gcc/psp/15.2.0/lto1 -quiet -dumpbase ./cmTC_90da0.wpa -mno-gpopt -mhard-float -msingle-float -mhard-float -msingle-float -O3 -version -fno-openmp -fno-openacc -fno-pie -fcf-protection=none -fltrans-output-list=/tmp/ccXSGmhA.ltrans.out -fwpa -fresolution=/tmp/cczUkECi.res -flinker-output=exec @/tmp/ccGJ4B6H
+        GNU GIMPLE (GCC) version 15.2.0 (psp)
+        	compiled by GNU C version 13.3.0, GMP version 6.3.0, MPFR version 4.2.1, MPC version 1.3.1, isl version none
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        COMPILER_PATH=/home/c-cronin/pspdev/bin/../lib/gcc/../../libexec/gcc/psp/15.2.0/:/home/c-cronin/pspdev/bin/../lib/gcc/../../libexec/gcc/:/home/c-cronin/pspdev/bin/../libexec/gcc/psp/15.2.0/:/home/c-cronin/pspdev/bin/../libexec/gcc/psp/15.2.0/:/home/c-cronin/pspdev/bin/../libexec/gcc/:/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/../../../../psp/bin/:/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/../../../../psp/bin/
+        LIBRARY_PATH=/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/:/home/c-cronin/pspdev/bin/../lib/gcc/:/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/../../../../psp/lib/:/home/c-cronin/pspdev/bin/../psp/lib/
+        COLLECT_GCC_OPTIONS='-c' '-fno-openmp' '-fno-openacc' '-fno-pie' '-fcf-protection=none' '-mno-gpopt' '-mhard-float' '-msingle-float' '-O3' '-L/home/c-cronin/pspdev/lib' '-L/home/c-cronin/pspdev/psp/lib' '-L/home/c-cronin/pspdev/psp/sdk/lib' '-v' '-L/home/c-cronin/pspdev/lib' '-L/home/c-cronin/pspdev/psp/lib' '-L/home/c-cronin/pspdev/psp/sdk/lib' '-mhard-float' '-msingle-float'   '-fltrans-output-list=/tmp/ccXSGmhA.ltrans.out' '-fwpa' '-fresolution=/tmp/cczUkECi.res' '-flinker-output=exec' '-dumpdir' './cmTC_90da0.wpa.'
+        /home/c-cronin/pspdev/bin/psp-g++ @/tmp/ccxR4CfH
+        Using built-in specs.
+        COLLECT_GCC=/home/c-cronin/pspdev/bin/psp-g++
+        Target: psp
+        Configured with: ../configure --quiet --prefix=/home/runner/work/pspdev/pspdev/pspdev --target=psp --with-sysroot=/home/runner/work/pspdev/pspdev/pspdev/psp --with-native-system-header-dir=/include --enable-languages=c,c++ --with-float=hard --with-newlib --disable-libssp --disable-multilib --enable-threads=posix --disable-tls --disable-nls --silent
+        Thread model: posix
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 15.2.0 (GCC) 
+        COLLECT_GCC_OPTIONS='-c' '-fno-openmp' '-fno-openacc' '-fno-pie' '-fcf-protection=none' '-mno-gpopt' '-mhard-float' '-msingle-float' '-O3' '-L/home/c-cronin/pspdev/lib' '-L/home/c-cronin/pspdev/psp/lib' '-L/home/c-cronin/pspdev/psp/sdk/lib' '-v' '-L/home/c-cronin/pspdev/lib' '-L/home/c-cronin/pspdev/psp/lib' '-L/home/c-cronin/pspdev/psp/sdk/lib' '-mhard-float' '-msingle-float'   '-fltrans' '-o' '/tmp/ccXSGmhA.ltrans0.ltrans.o'
+         /home/c-cronin/pspdev/bin/../lib/gcc/../../libexec/gcc/psp/15.2.0/lto1 -quiet -dumpbase ./cmTC_90da0.ltrans0.ltrans -mno-gpopt -mhard-float -msingle-float -mhard-float -msingle-float -O3 -version -fno-openmp -fno-openacc -fno-pie -fcf-protection=none -fltrans @/tmp/ccrDgkVS -o /tmp/ccTq6BRW.s
+        GNU GIMPLE (GCC) version 15.2.0 (psp)
+        	compiled by GNU C version 13.3.0, GMP version 6.3.0, MPFR version 4.2.1, MPC version 1.3.1, isl version none
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        COLLECT_GCC_OPTIONS='-c' '-fno-openmp' '-fno-openacc' '-fno-pie' '-fcf-protection=none' '-mno-gpopt' '-mhard-float' '-msingle-float' '-O3' '-L/home/c-cronin/pspdev/lib' '-L/home/c-cronin/pspdev/psp/lib' '-L/home/c-cronin/pspdev/psp/sdk/lib' '-v' '-L/home/c-cronin/pspdev/lib' '-L/home/c-cronin/pspdev/psp/lib' '-L/home/c-cronin/pspdev/psp/sdk/lib' '-mhard-float' '-msingle-float'   '-fltrans' '-o' '/tmp/ccXSGmhA.ltrans0.ltrans.o'
+         /home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/../../../../psp/bin/as -EL -O2 -mabi=eabi -mhard-float -mhard-float -msingle-float -msingle-float -o /tmp/ccXSGmhA.ltrans0.ltrans.o /tmp/ccTq6BRW.s
+        COMPILER_PATH=/home/c-cronin/pspdev/bin/../lib/gcc/../../libexec/gcc/psp/15.2.0/:/home/c-cronin/pspdev/bin/../lib/gcc/../../libexec/gcc/:/home/c-cronin/pspdev/bin/../libexec/gcc/psp/15.2.0/:/home/c-cronin/pspdev/bin/../libexec/gcc/psp/15.2.0/:/home/c-cronin/pspdev/bin/../libexec/gcc/:/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/../../../../psp/bin/:/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/../../../../psp/bin/
+        LIBRARY_PATH=/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/:/home/c-cronin/pspdev/bin/../lib/gcc/:/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/../../../../psp/lib/:/home/c-cronin/pspdev/bin/../psp/lib/
+        COLLECT_GCC_OPTIONS='-c' '-fno-openmp' '-fno-openacc' '-fno-pie' '-fcf-protection=none' '-mno-gpopt' '-mhard-float' '-msingle-float' '-O3' '-L/home/c-cronin/pspdev/lib' '-L/home/c-cronin/pspdev/psp/lib' '-L/home/c-cronin/pspdev/psp/sdk/lib' '-v' '-L/home/c-cronin/pspdev/lib' '-L/home/c-cronin/pspdev/psp/lib' '-L/home/c-cronin/pspdev/psp/sdk/lib' '-mhard-float' '-msingle-float'   '-fltrans' '-o' '/tmp/ccXSGmhA.ltrans0.ltrans.o' '-dumpdir' './cmTC_90da0.ltrans0.ltrans.'
+        COLLECT_GCC_OPTIONS='-I' '/home/c-cronin/pspdev/psp/include' '-I' '/home/c-cronin/pspdev/psp/sdk/include' '-D' 'PSP' '-L/home/c-cronin/pspdev/lib' '-L/home/c-cronin/pspdev/psp/lib' '-L/home/c-cronin/pspdev/psp/sdk/lib' '-v' '-o' 'cmTC_90da0' '-L/home/c-cronin/pspdev/lib' '-L/home/c-cronin/pspdev/psp/lib' '-L/home/c-cronin/pspdev/psp/sdk/lib' '-mhard-float' '-msingle-float' '-dumpdir' 'cmTC_90da0.'
+        /home/c-cronin/pspdev/bin/psp-g++ -I/home/c-cronin/pspdev/psp/include -I/home/c-cronin/pspdev/psp/sdk/include -DPSP  -L/home/c-cronin/pspdev/lib -L/home/c-cronin/pspdev/psp/lib -L/home/c-cronin/pspdev/psp/sdk/lib -Wl,-zmax-page-size=128 -v CMakeFiles/cmTC_90da0.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_90da0   -L/home/c-cronin/pspdev/lib  -L/home/c-cronin/pspdev/psp/lib  -L/home/c-cronin/pspdev/psp/sdk/lib
+        gmake[1]: Leaving directory '/home/c-cronin/Documents/GitHub/psp-raytracing/build/CMakeFiles/CMakeScratch/TryCompile-0HMg5O'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/c-cronin/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.2/Modules/CMakeDetermineCompilerABI.cmake:217 (message)"
+      - "/home/c-cronin/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.2/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Parsed CXX implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/home/c-cronin/pspdev/psp/sdk/include]
+          add: [/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/../../../../psp/include/c++/15.2.0]
+          add: [/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/../../../../psp/include/c++/15.2.0/psp]
+          add: [/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/../../../../psp/include/c++/15.2.0/backward]
+          add: [/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/include]
+          add: [/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/include-fixed]
+          add: [/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/../../../../psp/include]
+        end of search list found
+        collapse include dir [/home/c-cronin/pspdev/psp/sdk/include] ==> [/home/c-cronin/pspdev/psp/sdk/include]
+        collapse include dir [/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/../../../../psp/include/c++/15.2.0] ==> [/home/c-cronin/pspdev/psp/include/c++/15.2.0]
+        collapse include dir [/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/../../../../psp/include/c++/15.2.0/psp] ==> [/home/c-cronin/pspdev/psp/include/c++/15.2.0/psp]
+        collapse include dir [/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/../../../../psp/include/c++/15.2.0/backward] ==> [/home/c-cronin/pspdev/psp/include/c++/15.2.0/backward]
+        collapse include dir [/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/include] ==> [/home/c-cronin/pspdev/lib/gcc/psp/15.2.0/include]
+        collapse include dir [/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/include-fixed] ==> [/home/c-cronin/pspdev/lib/gcc/psp/15.2.0/include-fixed]
+        collapse include dir [/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/../../../../psp/include] ==> [/home/c-cronin/pspdev/psp/include]
+        implicit include dirs: [/home/c-cronin/pspdev/psp/sdk/include;/home/c-cronin/pspdev/psp/include/c++/15.2.0;/home/c-cronin/pspdev/psp/include/c++/15.2.0/psp;/home/c-cronin/pspdev/psp/include/c++/15.2.0/backward;/home/c-cronin/pspdev/lib/gcc/psp/15.2.0/include;/home/c-cronin/pspdev/lib/gcc/psp/15.2.0/include-fixed;/home/c-cronin/pspdev/psp/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/c-cronin/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.2/Modules/CMakeDetermineCompilerABI.cmake:253 (message)"
+      - "/home/c-cronin/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.2/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
+        ignore line: [Change Dir: '/home/c-cronin/Documents/GitHub/psp-raytracing/build/CMakeFiles/CMakeScratch/TryCompile-0HMg5O']
+        ignore line: []
+        ignore line: [Run Build Command(s): /home/c-cronin/.local/lib/python3.12/site-packages/cmake/data/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_90da0/fast]
+        ignore line: [/usr/bin/gmake  -f CMakeFiles/cmTC_90da0.dir/build.make CMakeFiles/cmTC_90da0.dir/build]
+        ignore line: [gmake[1]: Entering directory '/home/c-cronin/Documents/GitHub/psp-raytracing/build/CMakeFiles/CMakeScratch/TryCompile-0HMg5O']
+        ignore line: [Building CXX object CMakeFiles/cmTC_90da0.dir/CMakeCXXCompilerABI.cpp.obj]
+        ignore line: [/home/c-cronin/pspdev/bin/psp-g++ -DPSP -D_PSP_FW_VERSION=600 -D__PSP__  -I/home/c-cronin/pspdev/psp/include -I/home/c-cronin/pspdev/psp/sdk/include -DPSP    -v -o CMakeFiles/cmTC_90da0.dir/CMakeCXXCompilerABI.cpp.obj -c /home/c-cronin/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.2/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/home/c-cronin/pspdev/bin/psp-g++]
+        ignore line: [Target: psp]
+        ignore line: [Configured with: ../configure --quiet --prefix=/home/runner/work/pspdev/pspdev/pspdev --target=psp --with-sysroot=/home/runner/work/pspdev/pspdev/pspdev/psp --with-native-system-header-dir=/include --enable-languages=c c++ --with-float=hard --with-newlib --disable-libssp --disable-multilib --enable-threads=posix --disable-tls --disable-nls --silent]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 15.2.0 (GCC) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-D' 'PSP' '-D' '_PSP_FW_VERSION=600' '-D' '__PSP__' '-I' '/home/c-cronin/pspdev/psp/include' '-I' '/home/c-cronin/pspdev/psp/sdk/include' '-D' 'PSP' '-v' '-o' 'CMakeFiles/cmTC_90da0.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mhard-float' '-msingle-float' '-dumpdir' 'CMakeFiles/cmTC_90da0.dir/']
+        ignore line: [ /home/c-cronin/pspdev/bin/../libexec/gcc/psp/15.2.0/cc1plus -quiet -v -I /home/c-cronin/pspdev/psp/include -I /home/c-cronin/pspdev/psp/sdk/include -iprefix /home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/ -isysroot /home/c-cronin/pspdev/bin/../psp -DPSP=1 -D__PSP__=1 -D_PSP=1 -D__psp__=1 -D PSP -D _PSP_FW_VERSION=600 -D __PSP__ -D PSP /home/c-cronin/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.2/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_90da0.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mhard-float -msingle-float -version -o /tmp/ccM7pWqw.s]
+        ignore line: [GNU C++17 (GCC) version 15.2.0 (psp)]
+        ignore line: [	compiled by GNU C version 13.3.0  GMP version 6.3.0  MPFR version 4.2.1  MPC version 1.3.1  isl version none]
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring duplicate directory "/home/c-cronin/pspdev/bin/../lib/gcc/../../lib/gcc/psp/15.2.0/../../../../psp/include/c++/15.2.0"]
+        ignore line: [ignoring duplicate directory "/home/c-cronin/pspdev/bin/../lib/gcc/../../lib/gcc/psp/15.2.0/../../../../psp/include/c++/15.2.0/psp"]
+        ignore line: [ignoring duplicate directory "/home/c-cronin/pspdev/bin/../lib/gcc/../../lib/gcc/psp/15.2.0/../../../../psp/include/c++/15.2.0/backward"]
+        ignore line: [ignoring duplicate directory "/home/c-cronin/pspdev/bin/../lib/gcc/../../lib/gcc/psp/15.2.0/include"]
+        ignore line: [ignoring nonexistent directory "/home/c-cronin/pspdev/bin/../psp/usr/local/include"]
+        ignore line: [ignoring duplicate directory "/home/c-cronin/pspdev/bin/../lib/gcc/../../lib/gcc/psp/15.2.0/include-fixed"]
+        ignore line: [ignoring duplicate directory "/home/c-cronin/pspdev/bin/../lib/gcc/../../lib/gcc/psp/15.2.0/../../../../psp/include"]
+        ignore line: [ignoring duplicate directory "/home/c-cronin/pspdev/bin/../psp/include"]
+        ignore line: [ignoring duplicate directory "/home/c-cronin/pspdev/psp/include"]
+        ignore line: [  as it is a non-system directory that duplicates a system directory]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /home/c-cronin/pspdev/psp/sdk/include]
+        ignore line: [ /home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/../../../../psp/include/c++/15.2.0]
+        ignore line: [ /home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/../../../../psp/include/c++/15.2.0/psp]
+        ignore line: [ /home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/../../../../psp/include/c++/15.2.0/backward]
+        ignore line: [ /home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/include]
+        ignore line: [ /home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/include-fixed]
+        ignore line: [ /home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/../../../../psp/include]
+        ignore line: [End of search list.]
+        ignore line: [Compiler executable checksum: f61a546ae188412cf6621dece911ab31]
+        ignore line: [COLLECT_GCC_OPTIONS='-D' 'PSP' '-D' '_PSP_FW_VERSION=600' '-D' '__PSP__' '-I' '/home/c-cronin/pspdev/psp/include' '-I' '/home/c-cronin/pspdev/psp/sdk/include' '-D' 'PSP' '-v' '-o' 'CMakeFiles/cmTC_90da0.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mhard-float' '-msingle-float' '-dumpdir' 'CMakeFiles/cmTC_90da0.dir/']
+        ignore line: [ /home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/../../../../psp/bin/as -EL -O1 -mabi=eabi -mhard-float -msingle-float -o CMakeFiles/cmTC_90da0.dir/CMakeCXXCompilerABI.cpp.obj /tmp/ccM7pWqw.s]
+        ignore line: [COMPILER_PATH=/home/c-cronin/pspdev/bin/../libexec/gcc/psp/15.2.0/:/home/c-cronin/pspdev/bin/../libexec/gcc/:/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/../../../../psp/bin/]
+        ignore line: [LIBRARY_PATH=/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/:/home/c-cronin/pspdev/bin/../lib/gcc/:/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/../../../../psp/lib/:/home/c-cronin/pspdev/bin/../psp/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-D' 'PSP' '-D' '_PSP_FW_VERSION=600' '-D' '__PSP__' '-I' '/home/c-cronin/pspdev/psp/include' '-I' '/home/c-cronin/pspdev/psp/sdk/include' '-D' 'PSP' '-v' '-o' 'CMakeFiles/cmTC_90da0.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mhard-float' '-msingle-float' '-dumpdir' 'CMakeFiles/cmTC_90da0.dir/CMakeCXXCompilerABI.cpp.']
+        ignore line: [Linking CXX executable cmTC_90da0]
+        ignore line: [/home/c-cronin/.local/lib/python3.12/site-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_90da0.dir/link.txt --verbose=1]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/home/c-cronin/pspdev/bin/psp-g++]
+        ignore line: [COLLECT_LTO_WRAPPER=/home/c-cronin/pspdev/bin/../libexec/gcc/psp/15.2.0/lto-wrapper]
+        ignore line: [Target: psp]
+        ignore line: [Configured with: ../configure --quiet --prefix=/home/runner/work/pspdev/pspdev/pspdev --target=psp --with-sysroot=/home/runner/work/pspdev/pspdev/pspdev/psp --with-native-system-header-dir=/include --enable-languages=c c++ --with-float=hard --with-newlib --disable-libssp --disable-multilib --enable-threads=posix --disable-tls --disable-nls --silent]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 15.2.0 (GCC) ]
+        ignore line: [COMPILER_PATH=/home/c-cronin/pspdev/bin/../libexec/gcc/psp/15.2.0/:/home/c-cronin/pspdev/bin/../libexec/gcc/:/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/../../../../psp/bin/]
+        ignore line: [LIBRARY_PATH=/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/:/home/c-cronin/pspdev/bin/../lib/gcc/:/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/../../../../psp/lib/:/home/c-cronin/pspdev/bin/../psp/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-I' '/home/c-cronin/pspdev/psp/include' '-I' '/home/c-cronin/pspdev/psp/sdk/include' '-D' 'PSP' '-L/home/c-cronin/pspdev/lib' '-L/home/c-cronin/pspdev/psp/lib' '-L/home/c-cronin/pspdev/psp/sdk/lib' '-v' '-o' 'cmTC_90da0' '-L/home/c-cronin/pspdev/lib' '-L/home/c-cronin/pspdev/psp/lib' '-L/home/c-cronin/pspdev/psp/sdk/lib' '-mhard-float' '-msingle-float' '-dumpdir' 'cmTC_90da0.']
+        link line: [ /home/c-cronin/pspdev/bin/../libexec/gcc/psp/15.2.0/collect2 -plugin /home/c-cronin/pspdev/bin/../libexec/gcc/psp/15.2.0/liblto_plugin.so -plugin-opt=/home/c-cronin/pspdev/bin/../libexec/gcc/psp/15.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/cczUkECi.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lm -plugin-opt=-pass-through=-lpthreadglue -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-lcglue -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lpsputility -plugin-opt=-pass-through=-lpsprtc -plugin-opt=-pass-through=-lpspnet_inet -plugin-opt=-pass-through=-lpspnet_resolver -plugin-opt=-pass-through=-lpspsdk -plugin-opt=-pass-through=-lpspmodinfo -plugin-opt=-pass-through=-lpspuser -plugin-opt=-pass-through=-lgcc --sysroot=/home/c-cronin/pspdev/bin/../psp -EL -o cmTC_90da0 /home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/../../../../psp/lib/crt0.o /home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/crti.o /home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/crtbegin.o -L/home/c-cronin/pspdev/lib -L/home/c-cronin/pspdev/psp/lib -L/home/c-cronin/pspdev/psp/sdk/lib -L/home/c-cronin/pspdev/lib -L/home/c-cronin/pspdev/psp/lib -L/home/c-cronin/pspdev/psp/sdk/lib -L/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0 -L/home/c-cronin/pspdev/bin/../lib/gcc -L/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/../../../../psp/lib -L/home/c-cronin/pspdev/bin/../psp/lib -zmax-page-size=128 CMakeFiles/cmTC_90da0.dir/CMakeCXXCompilerABI.cpp.obj -lstdc++ -lm -lgcc -lm --start-group -lpthreadglue -lpthread -lcglue -lc --end-group -lpsputility -lpsprtc -lpspnet_inet -lpspnet_resolver -lpspsdk -lpspmodinfo -lpspuser -lgcc /home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/crtend.o /home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/crtn.o]
+          arg [/home/c-cronin/pspdev/bin/../libexec/gcc/psp/15.2.0/collect2] ==> ignore
+          arg [-plugin] ==> ignore
+          arg [/home/c-cronin/pspdev/bin/../libexec/gcc/psp/15.2.0/liblto_plugin.so] ==> ignore
+          arg [-plugin-opt=/home/c-cronin/pspdev/bin/../libexec/gcc/psp/15.2.0/lto-wrapper] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/cczUkECi.res] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lm] ==> ignore
+          arg [-plugin-opt=-pass-through=-lpthreadglue] ==> ignore
+          arg [-plugin-opt=-pass-through=-lpthread] ==> ignore
+          arg [-plugin-opt=-pass-through=-lcglue] ==> ignore
+          arg [-plugin-opt=-pass-through=-lc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lpsputility] ==> ignore
+          arg [-plugin-opt=-pass-through=-lpsprtc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lpspnet_inet] ==> ignore
+          arg [-plugin-opt=-pass-through=-lpspnet_resolver] ==> ignore
+          arg [-plugin-opt=-pass-through=-lpspsdk] ==> ignore
+          arg [-plugin-opt=-pass-through=-lpspmodinfo] ==> ignore
+          arg [-plugin-opt=-pass-through=-lpspuser] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [--sysroot=/home/c-cronin/pspdev/bin/../psp] ==> ignore
+          arg [-EL] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_90da0] ==> ignore
+          arg [/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/../../../../psp/lib/crt0.o] ==> obj [/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/../../../../psp/lib/crt0.o]
+          arg [/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/crti.o] ==> obj [/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/crti.o]
+          arg [/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/crtbegin.o] ==> obj [/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/crtbegin.o]
+          arg [-L/home/c-cronin/pspdev/lib] ==> dir [/home/c-cronin/pspdev/lib]
+          arg [-L/home/c-cronin/pspdev/psp/lib] ==> dir [/home/c-cronin/pspdev/psp/lib]
+          arg [-L/home/c-cronin/pspdev/psp/sdk/lib] ==> dir [/home/c-cronin/pspdev/psp/sdk/lib]
+          arg [-L/home/c-cronin/pspdev/lib] ==> dir [/home/c-cronin/pspdev/lib]
+          arg [-L/home/c-cronin/pspdev/psp/lib] ==> dir [/home/c-cronin/pspdev/psp/lib]
+          arg [-L/home/c-cronin/pspdev/psp/sdk/lib] ==> dir [/home/c-cronin/pspdev/psp/sdk/lib]
+          arg [-L/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0] ==> dir [/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0]
+          arg [-L/home/c-cronin/pspdev/bin/../lib/gcc] ==> dir [/home/c-cronin/pspdev/bin/../lib/gcc]
+          arg [-L/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/../../../../psp/lib] ==> dir [/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/../../../../psp/lib]
+          arg [-L/home/c-cronin/pspdev/bin/../psp/lib] ==> dir [/home/c-cronin/pspdev/bin/../psp/lib]
+          arg [-zmax-page-size=128] ==> ignore
+          arg [CMakeFiles/cmTC_90da0.dir/CMakeCXXCompilerABI.cpp.obj] ==> ignore
+          arg [-lstdc++] ==> lib [stdc++]
+          arg [-lm] ==> lib [m]
+          arg [-lgcc] ==> lib [gcc]
+          arg [-lm] ==> lib [m]
+          arg [--start-group] ==> ignore
+          arg [-lpthreadglue] ==> lib [pthreadglue]
+          arg [-lpthread] ==> lib [pthread]
+          arg [-lcglue] ==> lib [cglue]
+          arg [-lc] ==> lib [c]
+          arg [--end-group] ==> ignore
+          arg [-lpsputility] ==> lib [psputility]
+          arg [-lpsprtc] ==> lib [psprtc]
+          arg [-lpspnet_inet] ==> lib [pspnet_inet]
+          arg [-lpspnet_resolver] ==> lib [pspnet_resolver]
+          arg [-lpspsdk] ==> lib [pspsdk]
+          arg [-lpspmodinfo] ==> lib [pspmodinfo]
+          arg [-lpspuser] ==> lib [pspuser]
+          arg [-lgcc] ==> lib [gcc]
+          arg [/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/crtend.o] ==> obj [/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/crtend.o]
+          arg [/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/crtn.o] ==> obj [/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/crtn.o]
+        ignore line: [/home/c-cronin/pspdev/bin/../libexec/gcc/psp/15.2.0/lto-wrapper -fresolution=/tmp/cczUkECi.res -flinker-output=exec /home/c-cronin/pspdev/psp/lib/libpthread.a@0x612a6 /home/c-cronin/pspdev/psp/lib/libpthread.a@0x6333a /home/c-cronin/pspdev/psp/lib/libpthread.a@0x65632 /home/c-cronin/pspdev/psp/lib/libpthread.a@0x67106 /home/c-cronin/pspdev/psp/lib/libpthread.a@0x1aae /home/c-cronin/pspdev/psp/lib/libpthread.a@0x5162 /home/c-cronin/pspdev/psp/lib/libpthread.a@0x6f76 /home/c-cronin/pspdev/psp/lib/libpthread.a@0xb5c6 /home/c-cronin/pspdev/psp/lib/libpthread.a@0x1a782 /home/c-cronin/pspdev/psp/lib/libpthread.a@0x1c66e /home/c-cronin/pspdev/psp/lib/libpthread.a@0x27482 /home/c-cronin/pspdev/psp/lib/libpthread.a@0x54ff6 /home/c-cronin/pspdev/psp/lib/libpthread.a@0x59a76 /home/c-cronin/pspdev/psp/lib/libpthread.a@0x5d56e /home/c-cronin/pspdev/psp/lib/libpthread.a@0x5f0b2 /home/c-cronin/pspdev/psp/lib/libpthread.a@0x6941a /home/c-cronin/pspdev/psp/lib/libpthread.a@0x6a946 /home/c-cronin/pspdev/psp/lib/libpthread.a@0x6cebe /home/c-cronin/pspdev/psp/lib/libpthread.a@0x36ba ]
+        ignore line: [/home/c-cronin/pspdev/bin/../libexec/gcc/psp/15.2.0/lto-wrapper -fresolution=/tmp/cczUkECi.res -flinker-output=exec /home/c-cronin/pspdev/psp/lib/libpthread.a@0x612a6 /home/c-cronin/pspdev/psp/lib/libpthread.a@0x6333a /home/c-cronin/pspdev/psp/lib/libpthread.a@0x65632 /home/c-cronin/pspdev/psp/lib/libpthread.a@0x67106 /home/c-cronin/pspdev/psp/lib/libpthread.a@0x1aae /home/c-cronin/pspdev/psp/lib/libpthread.a@0x5162 /home/c-cronin/pspdev/psp/lib/libpthread.a@0x6f76 /home/c-cronin/pspdev/psp/lib/libpthread.a@0xb5c6 /home/c-cronin/pspdev/psp/lib/libpthread.a@0x1a782 /home/c-cronin/pspdev/psp/lib/libpthread.a@0x1c66e /home/c-cronin/pspdev/psp/lib/libpthread.a@0x27482 /home/c-cronin/pspdev/psp/lib/libpthread.a@0x54ff6 /home/c-cronin/pspdev/psp/lib/libpthread.a@0x59a76 /home/c-cronin/pspdev/psp/lib/libpthread.a@0x5d56e /home/c-cronin/pspdev/psp/lib/libpthread.a@0x5f0b2 /home/c-cronin/pspdev/psp/lib/libpthread.a@0x6941a /home/c-cronin/pspdev/psp/lib/libpthread.a@0x6a946 /home/c-cronin/pspdev/psp/lib/libpthread.a@0x6cebe /home/c-cronin/pspdev/psp/lib/libpthread.a@0x36ba ]
+        ignore line: [/home/c-cronin/pspdev/bin/psp-g++ @/tmp/ccY6x4tb]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/home/c-cronin/pspdev/bin/psp-g++]
+        ignore line: [Target: psp]
+        ignore line: [Configured with: ../configure --quiet --prefix=/home/runner/work/pspdev/pspdev/pspdev --target=psp --with-sysroot=/home/runner/work/pspdev/pspdev/pspdev/psp --with-native-system-header-dir=/include --enable-languages=c c++ --with-float=hard --with-newlib --disable-libssp --disable-multilib --enable-threads=posix --disable-tls --disable-nls --silent]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 15.2.0 (GCC) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-c' '-fno-openmp' '-fno-openacc' '-fno-pie' '-fcf-protection=none' '-mno-gpopt' '-mhard-float' '-msingle-float' '-O3' '-L/home/c-cronin/pspdev/lib' '-L/home/c-cronin/pspdev/psp/lib' '-L/home/c-cronin/pspdev/psp/sdk/lib' '-v' '-L/home/c-cronin/pspdev/lib' '-L/home/c-cronin/pspdev/psp/lib' '-L/home/c-cronin/pspdev/psp/sdk/lib' '-mhard-float' '-msingle-float'   '-fltrans-output-list=/tmp/ccXSGmhA.ltrans.out' '-fwpa' '-fresolution=/tmp/cczUkECi.res' '-flinker-output=exec']
+        ignore line: [ /home/c-cronin/pspdev/bin/../lib/gcc/../../libexec/gcc/psp/15.2.0/lto1 -quiet -dumpbase ./cmTC_90da0.wpa -mno-gpopt -mhard-float -msingle-float -mhard-float -msingle-float -O3 -version -fno-openmp -fno-openacc -fno-pie -fcf-protection=none -fltrans-output-list=/tmp/ccXSGmhA.ltrans.out -fwpa -fresolution=/tmp/cczUkECi.res -flinker-output=exec @/tmp/ccGJ4B6H]
+        ignore line: [GNU GIMPLE (GCC) version 15.2.0 (psp)]
+        ignore line: [	compiled by GNU C version 13.3.0  GMP version 6.3.0  MPFR version 4.2.1  MPC version 1.3.1  isl version none]
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [COMPILER_PATH=/home/c-cronin/pspdev/bin/../lib/gcc/../../libexec/gcc/psp/15.2.0/:/home/c-cronin/pspdev/bin/../lib/gcc/../../libexec/gcc/:/home/c-cronin/pspdev/bin/../libexec/gcc/psp/15.2.0/:/home/c-cronin/pspdev/bin/../libexec/gcc/psp/15.2.0/:/home/c-cronin/pspdev/bin/../libexec/gcc/:/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/../../../../psp/bin/:/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/../../../../psp/bin/]
+        ignore line: [LIBRARY_PATH=/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/:/home/c-cronin/pspdev/bin/../lib/gcc/:/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/../../../../psp/lib/:/home/c-cronin/pspdev/bin/../psp/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-c' '-fno-openmp' '-fno-openacc' '-fno-pie' '-fcf-protection=none' '-mno-gpopt' '-mhard-float' '-msingle-float' '-O3' '-L/home/c-cronin/pspdev/lib' '-L/home/c-cronin/pspdev/psp/lib' '-L/home/c-cronin/pspdev/psp/sdk/lib' '-v' '-L/home/c-cronin/pspdev/lib' '-L/home/c-cronin/pspdev/psp/lib' '-L/home/c-cronin/pspdev/psp/sdk/lib' '-mhard-float' '-msingle-float'   '-fltrans-output-list=/tmp/ccXSGmhA.ltrans.out' '-fwpa' '-fresolution=/tmp/cczUkECi.res' '-flinker-output=exec' '-dumpdir' './cmTC_90da0.wpa.']
+        ignore line: [/home/c-cronin/pspdev/bin/psp-g++ @/tmp/ccxR4CfH]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/home/c-cronin/pspdev/bin/psp-g++]
+        ignore line: [Target: psp]
+        ignore line: [Configured with: ../configure --quiet --prefix=/home/runner/work/pspdev/pspdev/pspdev --target=psp --with-sysroot=/home/runner/work/pspdev/pspdev/pspdev/psp --with-native-system-header-dir=/include --enable-languages=c c++ --with-float=hard --with-newlib --disable-libssp --disable-multilib --enable-threads=posix --disable-tls --disable-nls --silent]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 15.2.0 (GCC) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-c' '-fno-openmp' '-fno-openacc' '-fno-pie' '-fcf-protection=none' '-mno-gpopt' '-mhard-float' '-msingle-float' '-O3' '-L/home/c-cronin/pspdev/lib' '-L/home/c-cronin/pspdev/psp/lib' '-L/home/c-cronin/pspdev/psp/sdk/lib' '-v' '-L/home/c-cronin/pspdev/lib' '-L/home/c-cronin/pspdev/psp/lib' '-L/home/c-cronin/pspdev/psp/sdk/lib' '-mhard-float' '-msingle-float'   '-fltrans' '-o' '/tmp/ccXSGmhA.ltrans0.ltrans.o']
+        ignore line: [ /home/c-cronin/pspdev/bin/../lib/gcc/../../libexec/gcc/psp/15.2.0/lto1 -quiet -dumpbase ./cmTC_90da0.ltrans0.ltrans -mno-gpopt -mhard-float -msingle-float -mhard-float -msingle-float -O3 -version -fno-openmp -fno-openacc -fno-pie -fcf-protection=none -fltrans @/tmp/ccrDgkVS -o /tmp/ccTq6BRW.s]
+        ignore line: [GNU GIMPLE (GCC) version 15.2.0 (psp)]
+        ignore line: [	compiled by GNU C version 13.3.0  GMP version 6.3.0  MPFR version 4.2.1  MPC version 1.3.1  isl version none]
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [COLLECT_GCC_OPTIONS='-c' '-fno-openmp' '-fno-openacc' '-fno-pie' '-fcf-protection=none' '-mno-gpopt' '-mhard-float' '-msingle-float' '-O3' '-L/home/c-cronin/pspdev/lib' '-L/home/c-cronin/pspdev/psp/lib' '-L/home/c-cronin/pspdev/psp/sdk/lib' '-v' '-L/home/c-cronin/pspdev/lib' '-L/home/c-cronin/pspdev/psp/lib' '-L/home/c-cronin/pspdev/psp/sdk/lib' '-mhard-float' '-msingle-float'   '-fltrans' '-o' '/tmp/ccXSGmhA.ltrans0.ltrans.o']
+        ignore line: [ /home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/../../../../psp/bin/as -EL -O2 -mabi=eabi -mhard-float -mhard-float -msingle-float -msingle-float -o /tmp/ccXSGmhA.ltrans0.ltrans.o /tmp/ccTq6BRW.s]
+        ignore line: [COMPILER_PATH=/home/c-cronin/pspdev/bin/../lib/gcc/../../libexec/gcc/psp/15.2.0/:/home/c-cronin/pspdev/bin/../lib/gcc/../../libexec/gcc/:/home/c-cronin/pspdev/bin/../libexec/gcc/psp/15.2.0/:/home/c-cronin/pspdev/bin/../libexec/gcc/psp/15.2.0/:/home/c-cronin/pspdev/bin/../libexec/gcc/:/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/../../../../psp/bin/:/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/../../../../psp/bin/]
+        ignore line: [LIBRARY_PATH=/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/:/home/c-cronin/pspdev/bin/../lib/gcc/:/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/../../../../psp/lib/:/home/c-cronin/pspdev/bin/../psp/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-c' '-fno-openmp' '-fno-openacc' '-fno-pie' '-fcf-protection=none' '-mno-gpopt' '-mhard-float' '-msingle-float' '-O3' '-L/home/c-cronin/pspdev/lib' '-L/home/c-cronin/pspdev/psp/lib' '-L/home/c-cronin/pspdev/psp/sdk/lib' '-v' '-L/home/c-cronin/pspdev/lib' '-L/home/c-cronin/pspdev/psp/lib' '-L/home/c-cronin/pspdev/psp/sdk/lib' '-mhard-float' '-msingle-float'   '-fltrans' '-o' '/tmp/ccXSGmhA.ltrans0.ltrans.o' '-dumpdir' './cmTC_90da0.ltrans0.ltrans.']
+        ignore line: [COLLECT_GCC_OPTIONS='-I' '/home/c-cronin/pspdev/psp/include' '-I' '/home/c-cronin/pspdev/psp/sdk/include' '-D' 'PSP' '-L/home/c-cronin/pspdev/lib' '-L/home/c-cronin/pspdev/psp/lib' '-L/home/c-cronin/pspdev/psp/sdk/lib' '-v' '-o' 'cmTC_90da0' '-L/home/c-cronin/pspdev/lib' '-L/home/c-cronin/pspdev/psp/lib' '-L/home/c-cronin/pspdev/psp/sdk/lib' '-mhard-float' '-msingle-float' '-dumpdir' 'cmTC_90da0.']
+        ignore line: [/home/c-cronin/pspdev/bin/psp-g++ -I/home/c-cronin/pspdev/psp/include -I/home/c-cronin/pspdev/psp/sdk/include -DPSP  -L/home/c-cronin/pspdev/lib -L/home/c-cronin/pspdev/psp/lib -L/home/c-cronin/pspdev/psp/sdk/lib -Wl -zmax-page-size=128 -v CMakeFiles/cmTC_90da0.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_90da0   -L/home/c-cronin/pspdev/lib  -L/home/c-cronin/pspdev/psp/lib  -L/home/c-cronin/pspdev/psp/sdk/lib]
+        ignore line: [gmake[1]: Leaving directory '/home/c-cronin/Documents/GitHub/psp-raytracing/build/CMakeFiles/CMakeScratch/TryCompile-0HMg5O']
+        ignore line: []
+        ignore line: []
+        collapse obj [/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/../../../../psp/lib/crt0.o] ==> [/home/c-cronin/pspdev/psp/lib/crt0.o]
+        collapse obj [/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/crti.o] ==> [/home/c-cronin/pspdev/lib/gcc/psp/15.2.0/crti.o]
+        collapse obj [/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/crtbegin.o] ==> [/home/c-cronin/pspdev/lib/gcc/psp/15.2.0/crtbegin.o]
+        collapse obj [/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/crtend.o] ==> [/home/c-cronin/pspdev/lib/gcc/psp/15.2.0/crtend.o]
+        collapse obj [/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/crtn.o] ==> [/home/c-cronin/pspdev/lib/gcc/psp/15.2.0/crtn.o]
+        collapse library dir [/home/c-cronin/pspdev/lib] ==> [/home/c-cronin/pspdev/lib]
+        collapse library dir [/home/c-cronin/pspdev/psp/lib] ==> [/home/c-cronin/pspdev/psp/lib]
+        collapse library dir [/home/c-cronin/pspdev/psp/sdk/lib] ==> [/home/c-cronin/pspdev/psp/sdk/lib]
+        collapse library dir [/home/c-cronin/pspdev/lib] ==> [/home/c-cronin/pspdev/lib]
+        collapse library dir [/home/c-cronin/pspdev/psp/lib] ==> [/home/c-cronin/pspdev/psp/lib]
+        collapse library dir [/home/c-cronin/pspdev/psp/sdk/lib] ==> [/home/c-cronin/pspdev/psp/sdk/lib]
+        collapse library dir [/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0] ==> [/home/c-cronin/pspdev/lib/gcc/psp/15.2.0]
+        collapse library dir [/home/c-cronin/pspdev/bin/../lib/gcc] ==> [/home/c-cronin/pspdev/lib/gcc]
+        collapse library dir [/home/c-cronin/pspdev/bin/../lib/gcc/psp/15.2.0/../../../../psp/lib] ==> [/home/c-cronin/pspdev/psp/lib]
+        collapse library dir [/home/c-cronin/pspdev/bin/../psp/lib] ==> [/home/c-cronin/pspdev/psp/lib]
+        implicit libs: [stdc++;m;gcc;m;pthreadglue;pthread;cglue;c;psputility;psprtc;pspnet_inet;pspnet_resolver;pspsdk;pspmodinfo;pspuser;gcc]
+        implicit objs: [/home/c-cronin/pspdev/psp/lib/crt0.o;/home/c-cronin/pspdev/lib/gcc/psp/15.2.0/crti.o;/home/c-cronin/pspdev/lib/gcc/psp/15.2.0/crtbegin.o;/home/c-cronin/pspdev/lib/gcc/psp/15.2.0/crtend.o;/home/c-cronin/pspdev/lib/gcc/psp/15.2.0/crtn.o]
+        implicit dirs: [/home/c-cronin/pspdev/lib;/home/c-cronin/pspdev/psp/lib;/home/c-cronin/pspdev/psp/sdk/lib;/home/c-cronin/pspdev/lib/gcc/psp/15.2.0;/home/c-cronin/pspdev/lib/gcc]
+        implicit fwks: []
+      
+      
+...
