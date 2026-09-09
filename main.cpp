@@ -28,16 +28,16 @@ PSP_MAIN_THREAD_ATTR(THREAD_ATTR_VFPU | THREAD_ATTR_USER);
 //#define IMAGE_WIDTH 256
 //#define IMAGE_HEIGHT 128
 
-//#define IMAGE_WIDTH 480
-//#define IMAGE_HEIGHT 272
+#define IMAGE_WIDTH 480
+#define IMAGE_HEIGHT 272
 
-#define IMAGE_WIDTH 240
-#define IMAGE_HEIGHT 136
+//#define IMAGE_WIDTH 240
+//#define IMAGE_HEIGHT 136
 
 //#define SAMPLES 25
 //#define MAX_DEPTH 40
 
-#define SAMPLES 10
+#define SAMPLES 15
 #define MAX_DEPTH 25
 
 // display list
