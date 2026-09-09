@@ -34,8 +34,11 @@ PSP_MAIN_THREAD_ATTR(THREAD_ATTR_VFPU | THREAD_ATTR_USER);
 #define IMAGE_WIDTH 240
 #define IMAGE_HEIGHT 136
 
-#define SAMPLES 25
-#define MAX_DEPTH 40
+//#define SAMPLES 25
+//#define MAX_DEPTH 40
+
+#define SAMPLES 10
+#define MAX_DEPTH 25
 
 // display list
 char list[0x20000] __attribute__((aligned(64)));
@@ -117,19 +120,60 @@ void endGu(){
 void create(){
     hittable_list world;
     //material definitions
-    auto material_ground = make_shared<lambertian>(color(0.8f, 0.8f, 0.0f));
-    auto material_center = make_shared<lambertian>(color(0.1f, 0.2f, 0.5f));
-    auto material_left = make_shared<metal>(color(0.8f, 0.8f, 0.8f), 0.0f);
-    auto material_right = make_shared<dielectric>(1.5f);
-    auto material_bubble = make_shared<dielectric>(1.0f / 1.5f);
+    //auto material_ground = make_shared<lambertian>(color(0.8f, 0.8f, 0.0f));
+    //auto material_center = make_shared<lambertian>(color(0.1f, 0.2f, 0.5f));
+    //auto material_left = make_shared<metal>(color(0.8f, 0.8f, 0.8f), 0.0f);
+    //auto material_right = make_shared<dielectric>(1.5f);
+    //auto material_bubble = make_shared<dielectric>(1.0f / 1.5f);
 
     //world definitions
-    world.add(make_shared<sphere>(point3( 0, -100.5f,   -1.0f),   100,     material_ground));
-    world.add(make_shared<sphere>(point3( 0,       0,   -1.2f),   0.5f,     material_center));
-    world.add(make_shared<sphere>(point3(-1,       0,   -1.0f),   0.5f,     material_right));
-    world.add(make_shared<sphere>(point3(-1,       0,   -1.0f),   0.4f,     material_bubble));
-    world.add(make_shared<sphere>(point3( 1,       0,   -1.0f),   0.5f,     material_left));
+    //world.add(make_shared<sphere>(point3( 0, -100.5f,   -1.0f),   100,     material_ground));
+    //world.add(make_shared<sphere>(point3( 0,       0,   -1.2f),   0.5f,     material_center));
+    //world.add(make_shared<sphere>(point3(-1,       0,   -1.0f),   0.5f,     material_right));
+    //world.add(make_shared<sphere>(point3(-1,       0,   -1.0f),   0.4f,     material_bubble));
+    //world.add(make_shared<sphere>(point3( 1,       0,   -1.0f),   0.5f,     material_left));
     
+    auto ground_material = make_shared<lambertian>(color(0.5f, 0.5f, 0.5f));
+    world.add(make_shared<sphere>(point3(0,-1000,0), 1000, ground_material));
+
+    for (int a = -6; a < 6; a++){
+        for (int b = -6; b < 6; b++){
+            auto choose_mat = random_float();
+            point3 centre(a+0.9f*random_float(), 0.2,b + 0.9*random_float());
+
+            if ((centre - point3(4,0.2f,0)).length() > 0.9f){
+                shared_ptr<material> sphere_material;
+
+                if (choose_mat < 0.0f){
+                    auto albedo = color::random() * color::random();
+                    sphere_material = make_shared<lambertian>(albedo);
+                    world.add(make_shared<sphere>(centre,0.2f,sphere_material));
+                }
+                if (choose_mat < 0.95f){
+                    auto albedo = color::random(0.5,1);
+                    auto fuzz = random_float(0,0.5f);
+                    sphere_material = make_shared<metal>(albedo, fuzz);
+                    world.add(make_shared<sphere>(centre,0.2f,sphere_material));
+                }
+                else{
+                    sphere_material = make_shared<dielectric>(1.5);
+                    world.add(make_shared<sphere>(centre,0.2f,sphere_material));
+                }
+
+            }
+        }
+    }
+
+    auto material1 = make_shared<dielectric>(1.5);
+    world.add(make_shared<sphere>(point3(0,1,0), 1.0, material1));
+
+    auto material2 = make_shared<lambertian>(color(0.4f,0.2f,0.1f));
+    world.add(make_shared<sphere>(point3(-4,1,0), 1.0, material2));
+
+    auto material3 = make_shared<metal>(color(0.7f,0.6f,0.5f), 0.0);
+    world.add(make_shared<sphere>(point3(4,1,0), 1.0, material3));
+
+
 
     camera cam;
     
@@ -138,6 +182,13 @@ void create(){
     cam.buffer_width = BUFFER_WIDTH;
     cam.samples_per_pixel = SAMPLES;
     cam.max_depth = MAX_DEPTH;
+
+    cam.vfov = 20;
+    cam.lookfrom = point3(13,2,3);
+    cam.lookat = point3(0,0,0);
+
+    cam.defocus_angle = 0.6f;
+    cam.focus_dist = 10.0f;
 
     cam.render(world,image);
 
