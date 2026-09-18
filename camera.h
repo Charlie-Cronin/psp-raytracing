@@ -12,6 +12,7 @@ class camera{
         int buffer_width = 512;
         int samples_per_pixel = 25;
         int max_depth = 10;
+        color background;
 
         // camera positioning parameters 
         float vfov = 90;
@@ -110,6 +111,7 @@ class camera{
         // use for loop instead of recurrsive function to save psp memory 
         color ray_color(const ray& r_in, int depth, const hittable& world) const {
             ray current_ray = r_in;
+            color accumulated_emission(0.0f, 0.0f, 0.0f);
             color accumulated_attenuation(1.0f, 1.0f, 1.0f);
 
             for (int d = 0; d < depth; d++) {
@@ -118,24 +120,28 @@ class camera{
                 if (world.hit(current_ray, interval(0.001f, infinity_f), rec)) {
                     ray scattered;
                     color attenuation;
+                    color color_from_emission = rec.mat->emitted(rec.u, rec.v, rec.p);
+
+                    accumulated_emission += accumulated_attenuation * color_from_emission;
 
                     if (rec.mat->scatter(current_ray, rec, attenuation, scattered)) {
                         accumulated_attenuation = accumulated_attenuation * attenuation;
                         current_ray = scattered;
                     } else {
-                        return color(0, 0, 0);
+                        return accumulated_emission;
                     }
                 } else {
                     // Skybox hit
-                    vec3 unit_direction = unit_vector(current_ray.direction());
-                    auto a = 0.5f * (unit_direction.y() + 1.0f);
-                    color sky_color = (1.0f - a) * color(1.0f, 1.0f, 1.0f) + a * color(0.5f, 0.7f, 1.0f);
-                    return accumulated_attenuation * sky_color;
+                    //vec3 unit_direction = unit_vector(current_ray.direction());
+                    //auto a = 0.5f * (unit_direction.y() + 1.0f);
+                    //color sky_color = (1.0f - a) * color(1.0f, 1.0f, 1.0f) + a * color(0.5f, 0.7f, 1.0f);
+                    accumulated_emission += accumulated_attenuation * background;
+                    return accumulated_emission;
                 }
             }
 
         // Exceeded ray bounce limit
-        return color(0, 0, 0);
+        return accumulated_emission;
     }
 
         point3 defocus_disk_sample() const {

@@ -77,6 +77,8 @@ class scenes{
 
             cam.defocus_angle = 0.6f;
             cam.focus_dist = 10.0f;
+            
+            cam.background = color(0.7, 0.8, 1);
 
             return world;
         }
@@ -103,6 +105,8 @@ class scenes{
 
             cam.defocus_angle = 0.6f;
             cam.focus_dist = 10.0f;
+
+            cam.background = color(0.7, 0.8, 1);
 
             return world;
         }
@@ -137,6 +141,39 @@ class scenes{
 
             cam.defocus_angle = 0.6f;
             cam.focus_dist = 10.0f;
+
+            cam.background = color(0.7, 0.8, 1);
+
+            return world;
+        }
+
+        hittable_list simple_light(camera& cam){
+            hittable_list world;
+
+            auto pertext = make_shared<noise_texture>(4);
+            world.add(make_shared<sphere>(point3(0,-1000,0),1000,make_shared<lambertian>(pertext)));
+            world.add(make_shared<sphere>(point3(0,2,0),2,make_shared<lambertian>(pertext)));
+
+            auto difflight = make_shared<diffuse_light>(color(4,4,4));
+            world.add(make_shared<quad>(point3(3,1,-2), vec3(2,0,0), vec3(0,2,0), difflight));
+
+            world = hittable_list(make_shared<bvh_node>(world));
+
+            // CAMERA SETTINGS
+            cam.image_width = IMAGE_WIDTH;
+            cam.image_height = IMAGE_HEIGHT;
+            cam.buffer_width = BUFFER_WIDTH;
+            cam.samples_per_pixel = SAMPLES;
+            cam.max_depth = MAX_DEPTH;
+
+            cam.vfov = 20;
+            cam.lookfrom = point3(26,3,6);
+            cam.lookat = point3(0,2,0);
+
+            cam.defocus_angle = 0.6f;
+            cam.focus_dist = 10.0f;
+
+            cam.background = color(0, 0, 0);
 
             return world;
         }

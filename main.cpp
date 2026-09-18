@@ -125,7 +125,8 @@ void create(){
     scenes scene = scenes(IMAGE_WIDTH, IMAGE_HEIGHT, BUFFER_WIDTH, SAMPLES, MAX_DEPTH);
     camera cam;
 
-    world = scene.quads(cam);
+    world = scene.simple_light(cam);
+    //world = scene.quads(cam);
     //world = scene.perlin_scene();
     //world = scene.RT_Weekend();
 
