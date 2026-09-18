@@ -3,6 +3,8 @@
 
 CMakeFiles/Raytracing.dir/main.cpp.obj
  /home/c-cronin/Documents/GitHub/psp-raytracing/main.cpp
+ /home/c-cronin/Documents/GitHub/psp-raytracing/aabb.h
+ /home/c-cronin/Documents/GitHub/psp-raytracing/bvh.h
  /home/c-cronin/Documents/GitHub/psp-raytracing/camera.h
  /home/c-cronin/Documents/GitHub/psp-raytracing/color.h
  /home/c-cronin/Documents/GitHub/psp-raytracing/hittable.h
@@ -22,9 +24,11 @@ CMakeFiles/Raytracing.dir/main.cpp.obj
  /home/c-cronin/pspdev/psp/include/_newlib_version.h
  /home/c-cronin/pspdev/psp/include/alloca.h
  /home/c-cronin/pspdev/psp/include/bits/posix_opt.h
+ /home/c-cronin/pspdev/psp/include/c++/15.2.0/algorithm
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/backward/auto_ptr.h
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/backward/binders.h
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/bit
+ /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/algorithmfwd.h
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/align.h
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/alloc_traits.h
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/allocated_ptr.h
@@ -74,10 +78,12 @@ CMakeFiles/Raytracing.dir/main.cpp.obj
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/shared_ptr_base.h
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/specfun.h
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/std_abs.h
+ /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/stl_algo.h
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/stl_algobase.h
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/stl_bvector.h
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/stl_construct.h
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/stl_function.h
+ /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/stl_heap.h
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/stl_iterator.h
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/stl_iterator_base_funcs.h
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/stl_iterator_base_types.h
@@ -90,6 +96,7 @@ CMakeFiles/Raytracing.dir/main.cpp.obj
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/streambuf_iterator.h
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/string_view.tcc
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/stringfwd.h
+ /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/uniform_int_dist.h
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/unique_ptr.h
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/uses_allocator.h
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/uses_allocator_args.h
@@ -137,6 +144,7 @@ CMakeFiles/Raytracing.dir/main.cpp.obj
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/psp/bits/gthr.h
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/psp/bits/os_defines.h
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/pstl/execution_defs.h
+ /home/c-cronin/pspdev/psp/include/c++/15.2.0/pstl/glue_algorithm_defs.h
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/pstl/glue_memory_defs.h
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/pstl/pstl_config.h
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/stdexcept

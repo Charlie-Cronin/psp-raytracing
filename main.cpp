@@ -11,6 +11,7 @@
 #include "hittable_list.h"
 #include "sphere.h"
 #include "camera.h"
+#include "bvh.h"
 
 // PSP_MODULE_INFO IS REQUIRED 
 // name attributes major version minor version
@@ -120,7 +121,7 @@ void endGu(){
 void create(){
     hittable_list world;
     //material definitions
-    //auto material_ground = make_shared<lambertian>(color(0.8f, 0.8f, 0.0f));
+    //auto material_ground = make_shared<lambertian>(color(0.8f, 0.8f, 0.0gf));
     //auto material_center = make_shared<lambertian>(color(0.1f, 0.2f, 0.5f));
     //auto material_left = make_shared<metal>(color(0.8f, 0.8f, 0.8f), 0.0f);
     //auto material_right = make_shared<dielectric>(1.5f);
@@ -136,7 +137,9 @@ void create(){
     auto ground_material = make_shared<lambertian>(color(0.5f, 0.5f, 0.5f));
     world.add(make_shared<sphere>(point3(0,-1000,0), 1000, ground_material));
 
-    for (int a = -6; a < 6; a++){
+    
+
+    for (int a = -3; a < 3; a++){
         for (int b = -6; b < 6; b++){
             auto choose_mat = random_float();
             point3 centre(a+0.9f*random_float(), 0.2,b + 0.9*random_float());
@@ -174,7 +177,7 @@ void create(){
     world.add(make_shared<sphere>(point3(4,1,0), 1.0, material3));
 
 
-
+    world = hittable_list(make_shared<bvh_node>(world));
     camera cam;
     
     cam.image_width = IMAGE_WIDTH;
