@@ -34,7 +34,7 @@ inline uint32_t __attribute__((always_inline)) write_color(const color& pixel_co
     //ARGB
     uint32_t packed = (0xFFu << 24) | (bbyte << 16) | (gbyte << 8) | rbyte;
 
-    pspDebugScreenSetXY(0, 0);
+    //pspDebugScreenSetXY(0, 0);
     
     // no clue why but the program does not run on the psp without this, the text doesnt even display over the texture
     //pspDebugScreenPrintf("packed=0x%08X\n", (unsigned int)packed);

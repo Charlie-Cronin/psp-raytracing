@@ -52,7 +52,8 @@ class sphere : public hittable{
         aabb bbox;
 
         static void get_sphere_uv(const point3& p, float& u, float& v){
-            auto theta = std::acos(-p.y());
+            float y_clamped = std::fmax(-1.0f, std::fmin(1.0f, -p.y()));
+            auto theta = std::acos(y_clamped);
             auto phi = std::atan2(-p.z(), p.x()) + pi;
 
             u = phi / (2*pi);

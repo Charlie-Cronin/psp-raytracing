@@ -1,6 +1,8 @@
 #ifndef TEXTURE_H
 #define TEXTURE_H
 
+#include "perlin.h"
+
 class texture {
     public:
         virtual ~texture() = default;
@@ -39,6 +41,19 @@ class checker_texture : public texture {
         float inv_scale;
         shared_ptr<texture> even;
         shared_ptr<texture> odd;
+};
+
+class noise_texture : public texture {
+    public:
+        noise_texture(float scale) : scale(scale) {}
+
+        color value(float u, float v, const point3& p) const override{
+            return color(0.5f,0.5f,0.5f) * (1.0f + std::sin(scale * p.z() + 10 * noise.turb(p, 7)));
+        }
+
+    private:
+        perlin noise;
+        float scale;
 };
 
 #endif

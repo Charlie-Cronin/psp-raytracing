@@ -10,8 +10,10 @@ CMakeFiles/Raytracing.dir/main.cpp.obj: /home/c-cronin/Documents/GitHub/psp-rayt
   /home/c-cronin/Documents/GitHub/psp-raytracing/hittable_list.h \
   /home/c-cronin/Documents/GitHub/psp-raytracing/interval.h \
   /home/c-cronin/Documents/GitHub/psp-raytracing/material.h \
+  /home/c-cronin/Documents/GitHub/psp-raytracing/perlin.h \
   /home/c-cronin/Documents/GitHub/psp-raytracing/ray.h \
   /home/c-cronin/Documents/GitHub/psp-raytracing/rtweekend.h \
+  /home/c-cronin/Documents/GitHub/psp-raytracing/scenes.h \
   /home/c-cronin/Documents/GitHub/psp-raytracing/sphere.h \
   /home/c-cronin/Documents/GitHub/psp-raytracing/texture.h \
   /home/c-cronin/Documents/GitHub/psp-raytracing/vec3.h \
@@ -292,10 +294,6 @@ CMakeFiles/Raytracing.dir/main.cpp.obj: /home/c-cronin/Documents/GitHub/psp-rayt
 
 /home/c-cronin/pspdev/psp/include/pthread.h:
 
-/home/c-cronin/pspdev/psp/include/sys/_pthreadtypes.h:
-
-/home/c-cronin/pspdev/psp/include/pte_types.h:
-
 /home/c-cronin/pspdev/psp/include/math.h:
 
 /home/c-cronin/pspdev/psp/include/machine/types.h:
@@ -378,11 +376,7 @@ CMakeFiles/Raytracing.dir/main.cpp.obj: /home/c-cronin/Documents/GitHub/psp-rayt
 
 /home/c-cronin/pspdev/psp/include/c++/15.2.0/limits:
 
-/home/c-cronin/pspdev/psp/include/c++/15.2.0/tr1/legendre_function.tcc:
-
-/home/c-cronin/pspdev/psp/include/c++/15.2.0/pstl/glue_memory_defs.h:
-
-/home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/localefwd.h:
+/home/c-cronin/pspdev/psp/include/c++/15.2.0/iostream:
 
 /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/istream.tcc:
 
@@ -408,6 +402,12 @@ CMakeFiles/Raytracing.dir/main.cpp.obj: /home/c-cronin/Documents/GitHub/psp-rayt
 
 /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/locale_classes.tcc:
 
+/home/c-cronin/pspdev/psp/include/c++/15.2.0/tr1/ell_integral.tcc:
+
+/home/c-cronin/pspdev/psp/include/c++/15.2.0/istream:
+
+/home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/basic_ios.tcc:
+
 /home/c-cronin/pspdev/psp/include/sys/_types.h:
 
 /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/charconv.h:
@@ -422,23 +422,13 @@ CMakeFiles/Raytracing.dir/main.cpp.obj: /home/c-cronin/Documents/GitHub/psp-rayt
 
 /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/atomic_base.h:
 
-/home/c-cronin/pspdev/psp/include/c++/15.2.0/cerrno:
+/home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/locale_classes.h:
 
-/home/c-cronin/pspdev/psp/include/c++/15.2.0/stdexcept:
+/home/c-cronin/pspdev/psp/include/sys/types.h:
 
-/home/c-cronin/pspdev/psp/include/c++/15.2.0/psp/bits/ctype_base.h:
+/home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/specfun.h:
 
-/home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/range_access.h:
-
-/home/c-cronin/pspdev/psp/include/c++/15.2.0/new:
-
-/home/c-cronin/Documents/GitHub/psp-raytracing/texture.h:
-
-/home/c-cronin/pspdev/psp/include/c++/15.2.0/cstddef:
-
-/home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/alloc_traits.h:
-
-/home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/stl_algo.h:
+/home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/align.h:
 
 /home/c-cronin/Documents/GitHub/psp-raytracing/ray.h:
 
@@ -450,21 +440,37 @@ CMakeFiles/Raytracing.dir/main.cpp.obj: /home/c-cronin/Documents/GitHub/psp-rayt
 
 /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/hash_bytes.h:
 
-/home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/allocated_ptr.h:
+/home/c-cronin/Documents/GitHub/psp-raytracing/rtweekend.h:
+
+/home/c-cronin/pspdev/psp/include/c++/15.2.0/cerrno:
+
+/home/c-cronin/pspdev/psp/include/sys/_pthreadtypes.h:
+
+/home/c-cronin/pspdev/psp/include/pte_types.h:
+
+/home/c-cronin/Documents/GitHub/psp-raytracing/scenes.h:
 
 /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/move.h:
 
-/home/c-cronin/Documents/GitHub/psp-raytracing/rtweekend.h:
+/home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/allocated_ptr.h:
 
-/home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/locale_classes.h:
+/home/c-cronin/pspdev/psp/include/c++/15.2.0/tr1/legendre_function.tcc:
 
-/home/c-cronin/pspdev/psp/include/sys/types.h:
+/home/c-cronin/pspdev/psp/include/c++/15.2.0/pstl/glue_memory_defs.h:
 
-/home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/specfun.h:
+/home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/localefwd.h:
 
-/home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/align.h:
+/home/c-cronin/pspdev/psp/include/machine/ieeefp.h:
+
+/home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/std_abs.h:
+
+/home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/memory_resource.h:
 
 /home/c-cronin/Documents/GitHub/psp-raytracing/hittable_list.h:
+
+/home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/alloc_traits.h:
+
+/home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/stl_algo.h:
 
 /home/c-cronin/Documents/GitHub/psp-raytracing/camera.h:
 
@@ -498,6 +504,8 @@ CMakeFiles/Raytracing.dir/main.cpp.obj: /home/c-cronin/Documents/GitHub/psp-rayt
 
 /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/basic_string.tcc:
 
+/home/c-cronin/Documents/GitHub/psp-raytracing/perlin.h:
+
 /home/c-cronin/pspdev/lib/gcc/psp/15.2.0/include/stddef.h:
 
 /home/c-cronin/pspdev/psp/include/sys/syslimits.h:
@@ -506,11 +514,17 @@ CMakeFiles/Raytracing.dir/main.cpp.obj: /home/c-cronin/Documents/GitHub/psp-rayt
 
 /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/streambuf_iterator.h:
 
-/home/c-cronin/pspdev/psp/include/c++/15.2.0/tr1/ell_integral.tcc:
+/home/c-cronin/pspdev/psp/include/c++/15.2.0/stdexcept:
 
-/home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/basic_ios.tcc:
+/home/c-cronin/pspdev/psp/include/c++/15.2.0/psp/bits/ctype_base.h:
 
-/home/c-cronin/pspdev/psp/include/c++/15.2.0/istream:
+/home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/range_access.h:
+
+/home/c-cronin/pspdev/psp/include/c++/15.2.0/new:
+
+/home/c-cronin/Documents/GitHub/psp-raytracing/texture.h:
+
+/home/c-cronin/pspdev/psp/include/c++/15.2.0/cstddef:
 
 /home/c-cronin/Documents/GitHub/psp-raytracing/material.h:
 
@@ -563,8 +577,6 @@ CMakeFiles/Raytracing.dir/main.cpp.obj: /home/c-cronin/Documents/GitHub/psp-rayt
 /home/c-cronin/Documents/GitHub/psp-raytracing/hittable.h:
 
 /home/c-cronin/pspdev/psp/include/c++/15.2.0/debug/debug.h:
-
-/home/c-cronin/pspdev/psp/include/c++/15.2.0/iostream:
 
 /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/atomic_lockfree_defines.h:
 
@@ -630,12 +642,6 @@ CMakeFiles/Raytracing.dir/main.cpp.obj: /home/c-cronin/Documents/GitHub/psp-rayt
 
 /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/shared_ptr_atomic.h:
 
-/home/c-cronin/pspdev/psp/include/machine/ieeefp.h:
-
-/home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/memory_resource.h:
-
-/home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/std_abs.h:
-
 /home/c-cronin/pspdev/psp/include/c++/15.2.0/tr1/poly_hermite.tcc:
 
 /home/c-cronin/pspdev/psp/include/c++/15.2.0/ios:
@@ -684,9 +690,9 @@ CMakeFiles/Raytracing.dir/main.cpp.obj: /home/c-cronin/Documents/GitHub/psp-rayt
 
 /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/version.h:
 
-/home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/locale_facets.h:
-
 /home/c-cronin/pspdev/psp/include/c++/15.2.0/cstdio:
+
+/home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/locale_facets.h:
 
 /home/c-cronin/pspdev/psp/include/c++/15.2.0/clocale:
 

@@ -13,6 +13,7 @@
 #include "camera.h"
 #include "bvh.h"
 #include "texture.h"
+#include "scenes.h"
 
 // PSP_MODULE_INFO IS REQUIRED 
 // name attributes major version minor version
@@ -30,11 +31,11 @@ PSP_MAIN_THREAD_ATTR(THREAD_ATTR_VFPU | THREAD_ATTR_USER);
 //#define IMAGE_WIDTH 256
 //#define IMAGE_HEIGHT 128
 
-#define IMAGE_WIDTH 480
-#define IMAGE_HEIGHT 272
+//#define IMAGE_WIDTH 480
+//#define IMAGE_HEIGHT 272
 
-//#define IMAGE_WIDTH 240
-//#define IMAGE_HEIGHT 136
+#define IMAGE_WIDTH 240
+#define IMAGE_HEIGHT 136
 
 //#define SAMPLES 25
 //#define MAX_DEPTH 40
@@ -121,65 +122,11 @@ void endGu(){
 
 void create(){
     hittable_list world;
-    //material definitions
-    //auto material_ground = make_shared<lambertian>(color(0.8f, 0.8f, 0.0gf));
-    //auto material_center = make_shared<lambertian>(color(0.1f, 0.2f, 0.5f));
-    //auto material_left = make_shared<metal>(color(0.8f, 0.8f, 0.8f), 0.0f);
-    //auto material_right = make_shared<dielectric>(1.5f);
-    //auto material_bubble = make_shared<dielectric>(1.0f / 1.5f);
+    scenes scene;
 
-    //world definitions
-    //world.add(make_shared<sphere>(point3( 0, -100.5f,   -1.0f),   100,     material_ground));
-    //world.add(make_shared<sphere>(point3( 0,       0,   -1.2f),   0.5f,     material_center));
-    //world.add(make_shared<sphere>(point3(-1,       0,   -1.0f),   0.5f,     material_right));
-    //world.add(make_shared<sphere>(point3(-1,       0,   -1.0f),   0.4f,     material_bubble));
-    //world.add(make_shared<sphere>(point3( 1,       0,   -1.0f),   0.5f,     material_left));
-    
-    //auto ground_material = make_shared<lambertian>(color(0.5f, 0.5f, 0.5f));
-    auto checker = make_shared<checker_texture>(0.32f, color(0.2f, 0.3f, 0.1f), color(0.9f, 0.9f, 0.9f));
-    world.add(make_shared<sphere>(point3(0,-1000,0), 1000, make_shared<lambertian>(checker)));
+    world = scene.perlin_scene();
+    //world = scene.RT_Weekend();
 
-    
-
-    for (int a = -3; a < 3; a++){
-        for (int b = -6; b < 6; b++){
-            auto choose_mat = random_float();
-            point3 centre(a+0.9f*random_float(), 0.2,b + 0.9*random_float());
-
-            if ((centre - point3(4,0.2f,0)).length() > 0.9f){
-                shared_ptr<material> sphere_material;
-
-                if (choose_mat < 0.0f){
-                    auto albedo = color::random() * color::random();
-                    sphere_material = make_shared<lambertian>(albedo);
-                    world.add(make_shared<sphere>(centre,0.2f,sphere_material));
-                }
-                if (choose_mat < 0.95f){
-                    auto albedo = color::random(0.5,1);
-                    auto fuzz = random_float(0,0.5f);
-                    sphere_material = make_shared<metal>(albedo, fuzz);
-                    world.add(make_shared<sphere>(centre,0.2f,sphere_material));
-                }
-                else{
-                    sphere_material = make_shared<dielectric>(1.5);
-                    world.add(make_shared<sphere>(centre,0.2f,sphere_material));
-                }
-
-            }
-        }
-    }
-
-    auto material1 = make_shared<dielectric>(1.5);
-    world.add(make_shared<sphere>(point3(0,1,0), 1.0, material1));
-
-    auto material2 = make_shared<lambertian>(color(0.4f,0.2f,0.1f));
-    world.add(make_shared<sphere>(point3(-4,1,0), 1.0, material2));
-
-    auto material3 = make_shared<metal>(color(0.7f,0.6f,0.5f), 0.0);
-    world.add(make_shared<sphere>(point3(4,1,0), 1.0, material3));
-
-
-    world = hittable_list(make_shared<bvh_node>(world));
     camera cam;
     
     cam.image_width = IMAGE_WIDTH;

@@ -11,8 +11,10 @@ CMakeFiles/Raytracing.dir/main.cpp.obj
  /home/c-cronin/Documents/GitHub/psp-raytracing/hittable_list.h
  /home/c-cronin/Documents/GitHub/psp-raytracing/interval.h
  /home/c-cronin/Documents/GitHub/psp-raytracing/material.h
+ /home/c-cronin/Documents/GitHub/psp-raytracing/perlin.h
  /home/c-cronin/Documents/GitHub/psp-raytracing/ray.h
  /home/c-cronin/Documents/GitHub/psp-raytracing/rtweekend.h
+ /home/c-cronin/Documents/GitHub/psp-raytracing/scenes.h
  /home/c-cronin/Documents/GitHub/psp-raytracing/sphere.h
  /home/c-cronin/Documents/GitHub/psp-raytracing/texture.h
  /home/c-cronin/Documents/GitHub/psp-raytracing/vec3.h
