@@ -40,7 +40,7 @@ PSP_MAIN_THREAD_ATTR(THREAD_ATTR_VFPU | THREAD_ATTR_USER);
 //#define SAMPLES 25
 //#define MAX_DEPTH 40
 
-#define SAMPLES 15
+#define SAMPLES 20
 #define MAX_DEPTH 25
 
 // display list
@@ -125,7 +125,8 @@ void create(){
     scenes scene = scenes(IMAGE_WIDTH, IMAGE_HEIGHT, BUFFER_WIDTH, SAMPLES, MAX_DEPTH);
     camera cam;
 
-    world = scene.simple_light(cam);
+    world = scene.cornell_box1(cam);
+    //world = scene.simple_light(cam);
     //world = scene.quads(cam);
     //world = scene.perlin_scene();
     //world = scene.RT_Weekend();

@@ -178,6 +178,42 @@ class scenes{
             return world;
         }
 
+        hittable_list cornell_box1(camera& cam){
+            hittable_list world;
+
+            auto red = make_shared<lambertian>(color(.65, 0.05, 0.05));
+            auto white = make_shared<lambertian>(color(.73, .73, .73));
+            auto green = make_shared<lambertian>(color(.12, 0.45, 0.15));
+            auto light = make_shared<diffuse_light>(color(7, 7, 7));
+
+            world.add(make_shared<quad>(point3(555,0,0), vec3(0,555,0), vec3(0,0,555), green));
+            world.add(make_shared<quad>(point3(0,0,0), vec3(0,555,0), vec3(0,0,555), red));
+            world.add(make_shared<quad>(point3(113,554,127), vec3(330,0,0), vec3(0,0,305), light));
+            world.add(make_shared<quad>(point3(0,0,0), vec3(555,0,0), vec3(0,0,555), white));
+            world.add(make_shared<quad>(point3(555,555,555), vec3(-555,0,0), vec3(0,0,-555), white));
+            world.add(make_shared<quad>(point3(0,0,555), vec3(555,0,0), vec3(0,555,0), white));
+
+            world = hittable_list(make_shared<bvh_node>(world));
+
+            // CAMERA SETTINGS
+            cam.image_width = IMAGE_WIDTH;
+            cam.image_height = IMAGE_HEIGHT;
+            cam.buffer_width = BUFFER_WIDTH;
+            cam.samples_per_pixel = 40;
+            cam.max_depth = 12;
+
+            cam.vfov = 40;
+            cam.lookfrom = point3(278,278,-800);
+            cam.lookat = point3(278,278,0);
+
+            cam.defocus_angle = 0.6f;
+            cam.focus_dist = 10.0f;
+
+            cam.background = color(0, 0, 0);
+
+            return world;
+        }
+
 };
 
 
