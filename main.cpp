@@ -122,25 +122,13 @@ void endGu(){
 
 void create(){
     hittable_list world;
-    scenes scene;
+    scenes scene = scenes(IMAGE_WIDTH, IMAGE_HEIGHT, BUFFER_WIDTH, SAMPLES, MAX_DEPTH);
+    camera cam;
 
-    world = scene.perlin_scene();
+    world = scene.quads(cam);
+    //world = scene.perlin_scene();
     //world = scene.RT_Weekend();
 
-    camera cam;
-    
-    cam.image_width = IMAGE_WIDTH;
-    cam.image_height = IMAGE_HEIGHT;
-    cam.buffer_width = BUFFER_WIDTH;
-    cam.samples_per_pixel = SAMPLES;
-    cam.max_depth = MAX_DEPTH;
-
-    cam.vfov = 20;
-    cam.lookfrom = point3(13,2,3);
-    cam.lookat = point3(0,0,0);
-
-    cam.defocus_angle = 0.6f;
-    cam.focus_dist = 10.0f;
 
     cam.render(world,image);
 

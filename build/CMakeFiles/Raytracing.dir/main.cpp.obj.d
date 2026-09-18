@@ -242,4 +242,5 @@ CMakeFiles/Raytracing.dir/main.cpp.obj: \
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/stl_heap.h \
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/uniform_int_dist.h \
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/pstl/glue_algorithm_defs.h \
- /home/c-cronin/Documents/GitHub/psp-raytracing/scenes.h
+ /home/c-cronin/Documents/GitHub/psp-raytracing/scenes.h \
+ /home/c-cronin/Documents/GitHub/psp-raytracing/quad.h

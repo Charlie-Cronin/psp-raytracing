@@ -11,6 +11,7 @@ CMakeFiles/Raytracing.dir/main.cpp.obj: /home/c-cronin/Documents/GitHub/psp-rayt
   /home/c-cronin/Documents/GitHub/psp-raytracing/interval.h \
   /home/c-cronin/Documents/GitHub/psp-raytracing/material.h \
   /home/c-cronin/Documents/GitHub/psp-raytracing/perlin.h \
+  /home/c-cronin/Documents/GitHub/psp-raytracing/quad.h \
   /home/c-cronin/Documents/GitHub/psp-raytracing/ray.h \
   /home/c-cronin/Documents/GitHub/psp-raytracing/rtweekend.h \
   /home/c-cronin/Documents/GitHub/psp-raytracing/scenes.h \
@@ -380,8 +381,6 @@ CMakeFiles/Raytracing.dir/main.cpp.obj: /home/c-cronin/Documents/GitHub/psp-rayt
 
 /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/istream.tcc:
 
-/home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/ios_base.h:
-
 /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/concept_check.h:
 
 /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/functexcept.h:
@@ -430,6 +429,12 @@ CMakeFiles/Raytracing.dir/main.cpp.obj: /home/c-cronin/Documents/GitHub/psp-rayt
 
 /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/align.h:
 
+/home/c-cronin/pspdev/psp/sdk/include/pspintrman.h:
+
+/home/c-cronin/pspdev/psp/include/c++/15.2.0/bit:
+
+/home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/shared_ptr_base.h:
+
 /home/c-cronin/Documents/GitHub/psp-raytracing/ray.h:
 
 /home/c-cronin/pspdev/psp/sdk/include/pspuser.h:
@@ -442,14 +447,6 @@ CMakeFiles/Raytracing.dir/main.cpp.obj: /home/c-cronin/Documents/GitHub/psp-rayt
 
 /home/c-cronin/Documents/GitHub/psp-raytracing/rtweekend.h:
 
-/home/c-cronin/pspdev/psp/include/c++/15.2.0/cerrno:
-
-/home/c-cronin/pspdev/psp/include/sys/_pthreadtypes.h:
-
-/home/c-cronin/pspdev/psp/include/pte_types.h:
-
-/home/c-cronin/Documents/GitHub/psp-raytracing/scenes.h:
-
 /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/move.h:
 
 /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/allocated_ptr.h:
@@ -460,13 +457,21 @@ CMakeFiles/Raytracing.dir/main.cpp.obj: /home/c-cronin/Documents/GitHub/psp-rayt
 
 /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/localefwd.h:
 
-/home/c-cronin/pspdev/psp/include/machine/ieeefp.h:
+/home/c-cronin/Documents/GitHub/psp-raytracing/hittable_list.h:
 
-/home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/std_abs.h:
+/home/c-cronin/pspdev/psp/include/c++/15.2.0/cerrno:
+
+/home/c-cronin/pspdev/psp/include/sys/_pthreadtypes.h:
+
+/home/c-cronin/pspdev/psp/include/pte_types.h:
+
+/home/c-cronin/Documents/GitHub/psp-raytracing/scenes.h:
+
+/home/c-cronin/pspdev/psp/include/machine/ieeefp.h:
 
 /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/memory_resource.h:
 
-/home/c-cronin/Documents/GitHub/psp-raytracing/hittable_list.h:
+/home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/std_abs.h:
 
 /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/alloc_traits.h:
 
@@ -480,17 +485,19 @@ CMakeFiles/Raytracing.dir/main.cpp.obj: /home/c-cronin/Documents/GitHub/psp-rayt
 
 /home/c-cronin/pspdev/psp/include/c++/15.2.0/ext/numeric_traits.h:
 
+/home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/ios_base.h:
+
+/home/c-cronin/Documents/GitHub/psp-raytracing/quad.h:
+
+/home/c-cronin/pspdev/psp/sdk/include/pspge.h:
+
+/home/c-cronin/pspdev/psp/include/_ansi.h:
+
 /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/uses_allocator.h:
 
 /home/c-cronin/pspdev/psp/include/c++/15.2.0/cctype:
 
 /home/c-cronin/pspdev/psp/include/c++/15.2.0/cstdlib:
-
-/home/c-cronin/pspdev/psp/sdk/include/pspintrman.h:
-
-/home/c-cronin/pspdev/psp/include/c++/15.2.0/bit:
-
-/home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/shared_ptr_base.h:
 
 /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/invoke.h:
 
@@ -563,10 +570,6 @@ CMakeFiles/Raytracing.dir/main.cpp.obj: /home/c-cronin/Documents/GitHub/psp-rayt
 /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/ostream.tcc:
 
 /home/c-cronin/pspdev/lib/gcc/psp/15.2.0/include/stdint.h:
-
-/home/c-cronin/pspdev/psp/sdk/include/pspge.h:
-
-/home/c-cronin/pspdev/psp/include/_ansi.h:
 
 /home/c-cronin/pspdev/psp/include/c++/15.2.0/ostream:
 
@@ -680,9 +683,9 @@ CMakeFiles/Raytracing.dir/main.cpp.obj: /home/c-cronin/Documents/GitHub/psp-rayt
 
 /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/stringfwd.h:
 
-/home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/locale_facets.tcc:
-
 /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/basic_ios.h:
+
+/home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/locale_facets.tcc:
 
 /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/unique_ptr.h:
 

@@ -2,11 +2,20 @@
 #define SCENES_H
 
 #include "hittable_list.h"
+#include "quad.h"
 
 class scenes{
     public:
+        int IMAGE_WIDTH;
+        int IMAGE_HEIGHT;
+        int BUFFER_WIDTH;
+        int SAMPLES;
+        int MAX_DEPTH;
 
-        hittable_list RT_Weekend(){
+        scenes(int IMAGE_WIDTH, int IMAGE_HEIGHT, int BUFFER_WIDTH, int SAMPLES, int MAX_DEPTH) : IMAGE_WIDTH(IMAGE_WIDTH), IMAGE_HEIGHT(IMAGE_HEIGHT), BUFFER_WIDTH(BUFFER_WIDTH), SAMPLES(SAMPLES), MAX_DEPTH(MAX_DEPTH) {}
+
+
+        hittable_list RT_Weekend(camera& cam){
             hittable_list world;
 
             auto checker = make_shared<checker_texture>(0.32f, color(0.2f, 0.3f, 0.1f), color(0.9f, 0.9f, 0.9f));
@@ -53,10 +62,26 @@ class scenes{
 
 
             world = hittable_list(make_shared<bvh_node>(world));
+
+
+            // CAMERA SETTINGS
+            cam.image_width = IMAGE_WIDTH;
+            cam.image_height = IMAGE_HEIGHT;
+            cam.buffer_width = BUFFER_WIDTH;
+            cam.samples_per_pixel = SAMPLES;
+            cam.max_depth = MAX_DEPTH;
+
+            cam.vfov = 20;
+            cam.lookfrom = point3(13,2,3);
+            cam.lookat = point3(0,0,0);
+
+            cam.defocus_angle = 0.6f;
+            cam.focus_dist = 10.0f;
+
             return world;
         }
 
-        hittable_list perlin_scene(){
+        hittable_list perlin_scene(camera& cam){
             hittable_list world;
 
             auto pertext = make_shared<noise_texture>(4);
@@ -64,6 +89,55 @@ class scenes{
             world.add(make_shared<sphere>(point3(0,2,0),2,make_shared<lambertian>(pertext)));
 
             world = hittable_list(make_shared<bvh_node>(world));
+
+            // CAMERA SETTINGS
+            cam.image_width = IMAGE_WIDTH;
+            cam.image_height = IMAGE_HEIGHT;
+            cam.buffer_width = BUFFER_WIDTH;
+            cam.samples_per_pixel = SAMPLES;
+            cam.max_depth = MAX_DEPTH;
+
+            cam.vfov = 20;
+            cam.lookfrom = point3(13,2,3);
+            cam.lookat = point3(0,0,0);
+
+            cam.defocus_angle = 0.6f;
+            cam.focus_dist = 10.0f;
+
+            return world;
+        }
+
+        hittable_list quads(camera& cam){
+            hittable_list world;
+
+            auto left_red     = make_shared<lambertian>(color(1.0, 0.2, 0.2));
+            auto back_green   = make_shared<lambertian>(color(0.2, 1.0, 0.2));
+            auto right_blue   = make_shared<lambertian>(color(0.2, 0.2, 1.0));
+            auto upper_orange = make_shared<lambertian>(color(1.0, 0.5, 0.0));
+            auto lower_teal   = make_shared<lambertian>(color(0.2, 0.8, 0.8));
+
+            world.add(make_shared<quad>(point3(-3,-2, 5), vec3(0,0,-4), vec3(0,4, 0), left_red));
+            world.add(make_shared<quad>(point3(-2,-2, 0), vec3(4,0, 0), vec3(0,4, 0), back_green));
+            world.add(make_shared<quad>(point3( 3,-2, 1), vec3(0,0, 4), vec3(0,4, 0), right_blue));
+            world.add(make_shared<quad>(point3(-2, 3, 1), vec3(4,0, 0), vec3(0,0, 4), upper_orange));
+            world.add(make_shared<quad>(point3(-2,-3, 5), vec3(4,0, 0), vec3(0,0,-4), lower_teal));
+
+            world = hittable_list(make_shared<bvh_node>(world));
+
+            // CAMERA SETTINGS
+            cam.image_width = IMAGE_WIDTH;
+            cam.image_height = IMAGE_HEIGHT;
+            cam.buffer_width = BUFFER_WIDTH;
+            cam.samples_per_pixel = SAMPLES;
+            cam.max_depth = MAX_DEPTH;
+
+            cam.vfov = 80;
+            cam.lookfrom = point3(0,0,9);
+            cam.lookat = point3(0,0,0);
+
+            cam.defocus_angle = 0.6f;
+            cam.focus_dist = 10.0f;
+
             return world;
         }
 
