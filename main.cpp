@@ -12,6 +12,7 @@
 #include "sphere.h"
 #include "camera.h"
 #include "bvh.h"
+#include "texture.h"
 
 // PSP_MODULE_INFO IS REQUIRED 
 // name attributes major version minor version
@@ -134,8 +135,9 @@ void create(){
     //world.add(make_shared<sphere>(point3(-1,       0,   -1.0f),   0.4f,     material_bubble));
     //world.add(make_shared<sphere>(point3( 1,       0,   -1.0f),   0.5f,     material_left));
     
-    auto ground_material = make_shared<lambertian>(color(0.5f, 0.5f, 0.5f));
-    world.add(make_shared<sphere>(point3(0,-1000,0), 1000, ground_material));
+    //auto ground_material = make_shared<lambertian>(color(0.5f, 0.5f, 0.5f));
+    auto checker = make_shared<checker_texture>(0.32f, color(0.2f, 0.3f, 0.1f), color(0.9f, 0.9f, 0.9f));
+    world.add(make_shared<sphere>(point3(0,-1000,0), 1000, make_shared<lambertian>(checker)));
 
     
 

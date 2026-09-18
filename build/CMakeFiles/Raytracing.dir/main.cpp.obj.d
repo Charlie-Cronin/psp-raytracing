@@ -226,6 +226,7 @@ CMakeFiles/Raytracing.dir/main.cpp.obj: \
  /home/c-cronin/Documents/GitHub/psp-raytracing/material.h \
  /home/c-cronin/Documents/GitHub/psp-raytracing/hittable.h \
  /home/c-cronin/Documents/GitHub/psp-raytracing/aabb.h \
+ /home/c-cronin/Documents/GitHub/psp-raytracing/texture.h \
  /home/c-cronin/Documents/GitHub/psp-raytracing/hittable_list.h \
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/vector \
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/stl_vector.h \
