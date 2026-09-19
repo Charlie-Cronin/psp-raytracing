@@ -20,7 +20,7 @@
 
 // PSP_MODULE_INFO IS REQUIRED 
 // name attributes major version minor version
-PSP_MODULE_INFO("Raytracing", 0, 1, 0);
+PSP_MODULE_INFO("Raytracing", 1, 0, 0);
 // starts the thread in user mode
 PSP_MAIN_THREAD_ATTR(THREAD_ATTR_VFPU | THREAD_ATTR_USER);
 
