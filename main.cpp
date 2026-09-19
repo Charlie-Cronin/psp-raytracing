@@ -134,7 +134,7 @@ void create(){
     scenes scene = scenes(IMAGE_WIDTH, IMAGE_HEIGHT, BUFFER_WIDTH, SAMPLES, MAX_DEPTH);
     camera cam;
 
-    world = scene.cornell_box_cubes(cam);
+    world = scene.cornell_box_cubes2(cam);
     //world = scene.simple_light(cam);
     //world = scene.quads(cam);
     //world = scene.perlin_scene();
