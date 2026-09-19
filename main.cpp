@@ -3,6 +3,8 @@
 #include <pspdisplay.h>
 #include <pspgu.h>
 #include <psppower.h>
+#include <pspiofilemgr.h>
+#include <cstring> 
 
 #include "rtweekend.h"
 
@@ -59,6 +61,13 @@ typedef struct
     float x, y, z;
 } TextureVertex;
 
+void log_msg(const char* msg) {
+    SceUID fd = sceIoOpen("ms0:/raytrace_log.txt", PSP_O_WRONLY | PSP_O_APPEND | PSP_O_CREAT, 0777);
+    if (fd >= 0) {
+        sceIoWrite(fd, msg, strlen(msg));
+        sceIoClose(fd);
+    }
+}
 
 int exit_callback(int arg1, int arg2, void *common){
     sceKernelExitGame();

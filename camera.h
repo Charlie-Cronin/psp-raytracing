@@ -28,11 +28,14 @@ class camera{
             initialize();
 
             for (int j = 0; j < image_height; j++){
+                //if (j != 68) continue;
+                
                 std::string msg = "Rendering Scene...\n" + std::to_string(j) + "/" + std::to_string(image_height) + " lines done";
                 pspDebugScreenSetXY(0, 0);
                 pspDebugScreenPrintf("%s\n", msg.c_str());
                 sceKernelDelayThread(1000);
                 for (int i = 0; i < image_width; i++){
+                    //if (!((i >= 15 && i < 30) || (i >= 60 && i <= 70))) continue;
                     color pixel_color(0,0,0);
                     for (int sample = 0; sample < samples_per_pixel; sample++){
                         ray r = get_ray(i, j);

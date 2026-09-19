@@ -203,10 +203,10 @@ class scenes{
             cam.max_depth = 12;
 
             cam.vfov = 40;
-            cam.lookfrom = point3(278,278,-800);
+            cam.lookfrom = point3(278,278.001f,-800);
             cam.lookat = point3(278,278,0);
 
-            cam.defocus_angle = 0.6f;
+            cam.defocus_angle = 0.0f;
             cam.focus_dist = 10.0f;
 
             cam.background = color(0, 0, 0);

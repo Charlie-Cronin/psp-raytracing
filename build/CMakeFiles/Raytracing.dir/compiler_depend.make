@@ -114,6 +114,7 @@ CMakeFiles/Raytracing.dir/main.cpp.obj: /home/c-cronin/Documents/GitHub/psp-rayt
   /home/c-cronin/pspdev/psp/include/c++/15.2.0/cstddef \
   /home/c-cronin/pspdev/psp/include/c++/15.2.0/cstdio \
   /home/c-cronin/pspdev/psp/include/c++/15.2.0/cstdlib \
+  /home/c-cronin/pspdev/psp/include/c++/15.2.0/cstring \
   /home/c-cronin/pspdev/psp/include/c++/15.2.0/cwchar \
   /home/c-cronin/pspdev/psp/include/c++/15.2.0/cwctype \
   /home/c-cronin/pspdev/psp/include/c++/15.2.0/debug/assertions.h \
@@ -195,6 +196,8 @@ CMakeFiles/Raytracing.dir/main.cpp.obj: /home/c-cronin/Documents/GitHub/psp-rayt
   /home/c-cronin/pspdev/psp/include/stdint.h \
   /home/c-cronin/pspdev/psp/include/stdio.h \
   /home/c-cronin/pspdev/psp/include/stdlib.h \
+  /home/c-cronin/pspdev/psp/include/string.h \
+  /home/c-cronin/pspdev/psp/include/strings.h \
   /home/c-cronin/pspdev/psp/include/sys/_intsup.h \
   /home/c-cronin/pspdev/psp/include/sys/_locale.h \
   /home/c-cronin/pspdev/psp/include/sys/_pthreadtypes.h \
@@ -213,6 +216,7 @@ CMakeFiles/Raytracing.dir/main.cpp.obj: /home/c-cronin/Documents/GitHub/psp-rayt
   /home/c-cronin/pspdev/psp/include/sys/select.h \
   /home/c-cronin/pspdev/psp/include/sys/signal.h \
   /home/c-cronin/pspdev/psp/include/sys/stdio.h \
+  /home/c-cronin/pspdev/psp/include/sys/string.h \
   /home/c-cronin/pspdev/psp/include/sys/syslimits.h \
   /home/c-cronin/pspdev/psp/include/sys/time.h \
   /home/c-cronin/pspdev/psp/include/sys/timeb.h \
@@ -267,13 +271,15 @@ CMakeFiles/Raytracing.dir/main.cpp.obj: /home/c-cronin/Documents/GitHub/psp-rayt
 
 /home/c-cronin/pspdev/psp/include/wchar.h:
 
-/home/c-cronin/pspdev/psp/include/time.h:
-
 /home/c-cronin/pspdev/psp/include/sys/timespec.h:
 
 /home/c-cronin/pspdev/psp/include/sys/timeb.h:
 
 /home/c-cronin/pspdev/psp/include/sys/time.h:
+
+/home/c-cronin/pspdev/psp/include/time.h:
+
+/home/c-cronin/pspdev/psp/include/sys/string.h:
 
 /home/c-cronin/pspdev/psp/include/sys/stdio.h:
 
@@ -288,6 +294,8 @@ CMakeFiles/Raytracing.dir/main.cpp.obj: /home/c-cronin/Documents/GitHub/psp-rayt
 /home/c-cronin/pspdev/psp/include/sys/_sigset.h:
 
 /home/c-cronin/pspdev/psp/include/sys/_intsup.h:
+
+/home/c-cronin/pspdev/psp/include/strings.h:
 
 /home/c-cronin/pspdev/psp/include/stdint.h:
 
@@ -491,6 +499,8 @@ CMakeFiles/Raytracing.dir/main.cpp.obj: /home/c-cronin/Documents/GitHub/psp-rayt
 
 /home/c-cronin/pspdev/psp/sdk/include/pspge.h:
 
+/home/c-cronin/pspdev/psp/include/string.h:
+
 /home/c-cronin/pspdev/psp/include/_ansi.h:
 
 /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/uses_allocator.h:
@@ -692,6 +702,8 @@ CMakeFiles/Raytracing.dir/main.cpp.obj: /home/c-cronin/Documents/GitHub/psp-rayt
 /home/c-cronin/pspdev/psp/include/c++/15.2.0/ext/atomicity.h:
 
 /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/version.h:
+
+/home/c-cronin/pspdev/psp/include/c++/15.2.0/cstring:
 
 /home/c-cronin/pspdev/psp/include/c++/15.2.0/cstdio:
 

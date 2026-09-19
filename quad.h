@@ -3,6 +3,10 @@
 
 #include "hittable.h"
 
+#include <cmath>
+
+void log_msg(const char* msg);
+
 class quad : public hittable {
     public:
         quad(const point3& Q, const vec3& u, const vec3& v, shared_ptr<material> mat) : Q(Q), u(u), v(v), mat(mat){
@@ -25,10 +29,17 @@ class quad : public hittable {
         bool hit(const ray& r, interval ray_t, hit_record& rec) const override{
             auto denom = dot(normal, r.direction());
 
+            
+
             if (std::fabs(denom) < 1e-8)
                 return false;
             
             auto t = (D - dot(normal, r.origin())) / denom;
+
+            if (!std::isfinite(t)) {
+                return false;
+            }
+
             if(!ray_t.contains(t))
                 return false;
 

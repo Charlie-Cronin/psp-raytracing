@@ -37,11 +37,19 @@ class aabb{
             const vec3& ray_dir = r.direction();
 
             for (int axis = 0; axis < 3; axis ++){
+                const float dir_component = ray_dir[axis];
+                if (std::fabs(dir_component) < 1e-8f) {
+                    continue; 
+                }
                 const interval& ax = axis_interval(axis);
-                const float adinv = 1.0f / ray_dir[axis];
+                const float adinv = 1.0f / dir_component;
 
                 auto t0 = (ax.min - ray_orig[axis]) * adinv;
                 auto t1 = (ax.max - ray_orig[axis]) * adinv;
+
+                if (!std::isfinite(t0) || !std::isfinite(t1)) {
+                    return false;
+                }
 
                 if (t0 < t1){
                     if(t0 > ray_t.min) ray_t.min = t0;
