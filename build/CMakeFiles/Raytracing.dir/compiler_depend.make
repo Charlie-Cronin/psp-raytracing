@@ -225,6 +225,7 @@ CMakeFiles/Raytracing.dir/main.cpp.obj: /home/c-cronin/Documents/GitHub/psp-rayt
   /home/c-cronin/pspdev/psp/include/time.h \
   /home/c-cronin/pspdev/psp/include/wchar.h \
   /home/c-cronin/pspdev/psp/include/wctype.h \
+  /home/c-cronin/pspdev/psp/sdk/include/pspctrl.h \
   /home/c-cronin/pspdev/psp/sdk/include/pspdebug.h \
   /home/c-cronin/pspdev/psp/sdk/include/pspdisplay.h \
   /home/c-cronin/pspdev/psp/sdk/include/pspge.h \
@@ -704,6 +705,8 @@ CMakeFiles/Raytracing.dir/main.cpp.obj: /home/c-cronin/Documents/GitHub/psp-rayt
 /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/version.h:
 
 /home/c-cronin/pspdev/psp/include/c++/15.2.0/cstring:
+
+/home/c-cronin/pspdev/psp/sdk/include/pspctrl.h:
 
 /home/c-cronin/pspdev/psp/include/c++/15.2.0/cstdio:
 

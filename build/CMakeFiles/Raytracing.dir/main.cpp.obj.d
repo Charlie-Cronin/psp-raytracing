@@ -63,6 +63,7 @@ CMakeFiles/Raytracing.dir/main.cpp.obj: \
  /home/c-cronin/pspdev/psp/sdk/include/pspgu.h \
  /home/c-cronin/pspdev/psp/sdk/include/pspge.h \
  /home/c-cronin/pspdev/psp/sdk/include/psppower.h \
+ /home/c-cronin/pspdev/psp/sdk/include/pspctrl.h \
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/cstring \
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/bits/version.h \
  /home/c-cronin/pspdev/psp/include/c++/15.2.0/psp/bits/c++config.h \

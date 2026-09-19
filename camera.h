@@ -24,11 +24,13 @@ class camera{
         float defocus_angle = 0;
         float focus_dist = 10;
 
-        void render(const hittable& world, uint32_t* out){
+        void render(const hittable& world, uint32_t* out, bool prevent_sleep){
             initialize();
 
             for (int j = 0; j < image_height; j++){
-                //if (j != 68) continue;
+                if (prevent_sleep){
+                    scePowerTick(PSP_POWER_TICK_ALL);
+                }
                 
                 std::string msg = "Rendering Scene...\n" + std::to_string(j) + "/" + std::to_string(image_height) + " lines done";
                 pspDebugScreenSetXY(0, 0);
