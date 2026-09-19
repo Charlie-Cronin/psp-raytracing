@@ -23,15 +23,15 @@ class scenes{
 
             
 
-            for (int a = -3; a < 3; a++){
-                for (int b = -3; b < 3; b++){
+            for (int a = -9; a < 9; a++){
+                for (int b = -9; b < 9; b++){
                     auto choose_mat = random_float();
                     point3 centre(a+0.9f*random_float(), 0.2,b + 0.9*random_float());
 
                     if ((centre - point3(4,0.2f,0)).length() > 0.9f){
                         shared_ptr<material> sphere_material;
 
-                        if (choose_mat < 0.0f){
+                        if (choose_mat < 0.8f){
                             auto albedo = color::random() * color::random();
                             sphere_material = make_shared<lambertian>(albedo);
                             world.add(make_shared<sphere>(centre,0.2f,sphere_material));
@@ -297,6 +297,37 @@ class scenes{
             cam.focus_dist = 10.0f;
 
             cam.background = color(0, 0, 0);
+
+            return world;
+        }
+
+        hittable_list custom_3_balls(camera& cam){
+            hittable_list world;
+            
+            auto material_ground = make_shared<lambertian>(color(0.8f, 0.8f, 0.0f));
+            auto material_center = make_shared<lambertian>(color(0.1f, 0.2f, 0.5f));
+            auto material_left = make_shared<metal>(color(0.8f, 0.8f, 0.8f), 0.0f);
+            auto material_right = make_shared<dielectric>(1.5f);
+            auto material_bubble = make_shared<dielectric>(1.0f / 1.5f);
+
+            //world definitions
+            world.add(make_shared<sphere>(point3( 0, -100.5f,   -1.0f),   100,     material_ground));
+            world.add(make_shared<sphere>(point3( 0,       0,   -1.2f),   0.5f,     material_center));
+            world.add(make_shared<sphere>(point3(-1,       0,   -1.0f),   0.5f,     material_right));
+            world.add(make_shared<sphere>(point3(-1,       0,   -1.0f),   0.4f,     material_bubble));
+            world.add(make_shared<sphere>(point3( 1,       0,   -1.0f),   0.5f,     material_left));
+
+            cam.image_width = IMAGE_WIDTH;
+            cam.image_height = IMAGE_HEIGHT;
+            cam.buffer_width = BUFFER_WIDTH;
+            cam.samples_per_pixel = SAMPLES;
+            cam.max_depth = MAX_DEPTH;
+
+            cam.vfov = 35;
+            cam.lookfrom = point3(-2,0,1);
+            cam.lookat = point3(-.2f,0,-1.2f);
+
+            cam.background = color(0.7, 0.8, 1);
 
             return world;
         }

@@ -308,8 +308,6 @@ void interactive_menu(){
 }
 
 
-
-
 void create(){
     hittable_list world;
 
@@ -325,8 +323,7 @@ void create(){
         case 2: world = scene.simple_light(cam); break;
         case 3: world = scene.perlin_scene(cam); break;
         case 4: world = scene.RT_Weekend(cam); break;
-        // YET TO IMPLEMENT CUSTOM SCENE AGAIN
-        case 5: world = scene.quads(cam); break;
+        case 5: world = scene.custom_3_balls(cam); break;
     }
     
     //world = scene.simple_light(cam);
